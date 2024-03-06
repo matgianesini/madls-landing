@@ -1,0 +1,2778 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Más allá de la sombra</title>
+	<link rel="shortcut icon" href="assets/imgs/favicon.ico" />
+	<link rel="stylesheet" href="css/estilos.css?cache=4432431857" type="text/css">
+	<!-- <link rel="stylesheet" href="css/pace-theme-big-counter.tmpl.css" type="text/css"> -->
+	<script src="js/libs/handlebars-v2.0.0-min.js"></script>
+
+	<meta name="theme-color" content="#592a1a">
+	
+	<!-- Código Analytics -->
+</head>
+
+<body class="js--body" id="masalladelasombra">
+
+	<!-- Intro -->
+	<div class="js--intro full oculto atras intro">
+	</div>
+
+	<!-- Instrucciones -->
+	<div class="js--page full visible page" data-page="instrucciones">
+		<div class="instrucciones">
+			<div class="instrucciones__bloque">
+				<p><span class="instrucciones__titulo">OUT OF THE SHADOWS</span> is a journey through affective spaces, shaped by the stories of the women who are the protagonists of this documentary.</p>
+			</div>
+			<div class="instrucciones__bloque instrucciones__bloque--mitad">
+				<p>Explore these spaces by scrolling with your mouse or using your keyboard's arrow keys.</p>
+				<figure>
+					<img src="assets/imgs/img__instruc__mouse--1.png" alt="">
+				</figure>
+				<p>Each animated object holds valuable information and serves as a gateway to the stories of these extraordinary women. Engage with these objects to delve deeper.</p>
+				<figure>
+					<img src="assets/imgs/img__instruc__estufa.gif" alt="">
+				</figure>
+			</div>
+			<div class="instrucciones__bloque instrucciones__bloque--mitad">
+				<p>As you navigate through each chapter, progress towards the luminous area at the end of the space. This guiding light will lead you to the next space.</p>
+				<figure>
+					<img src="assets/imgs/img__instruc__luz.gif" alt="">
+				</figure>
+				<p>Feel free to navigate your surroundings using the arrow keys on your keyboard. If your initial visibility is limited, don't worry – as you step out of the shadows, your perspective will gradually expand.</p>
+				<figure>
+					<img src="assets/imgs/img__instruc__mouse--2.png" alt="">
+				</figure>
+			</div>
+			<div class="instrucciones__bloque">
+				<button class="instrucciones__cerrar js--intro--btn" data-seccion="prologo">
+					<img src="assets/imgs/img__instruc__enter.png" alt="">
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Interface Escenas -->
+	<div class="interface js--interface">
+		<button class="inter__btn inter__btn--sound js--inter__btn--sound">
+			<img
+				src="assets/imgs/icon__sound.png"
+				data-mute="assets/imgs/icon__sound.png"
+				data-play="assets/imgs/icon__sound--play.png"
+				alt="">
+		</button>
+		<button class="inter__btn inter__btn--fullscreen js--inter__btn--fullscreen">
+			<img src="assets/imgs/icon__fullscreen.png" alt="">
+		</button>
+		<button class="inter__btn inter__btn--menu js--menu__btn">
+			<img src="assets/imgs/icon__menu.png" alt="">
+		</button>
+		<a href="index.html" class="inter__btn inter__btn--logo">
+			<img src="assets/imgs/logo--eng-black.png" alt="Más allá de la sombra">
+		</a>
+	</div>
+	
+	<!-- Prólogo -->
+	<div class="js--page full page" data-page="prologo">
+		<div class="prologo js--escena" data-scena="prologo">
+			<div class="prologo__slide js--prologo__slide" prologo-slide="1">
+				<div class="prologo__bg">
+					<video src="assets/videos/prologo.mp4" preload class="js--prologo__video"></video>
+				</div>
+				<div class="prologo__slide--1">
+					<div class="prologo__slide__container">
+						<div class="">
+							<p class="prologo__title">
+								Dear Reader
+							</p>
+							<p>This documentary is an immersive experience centered around the stories of ten women who have lived and survived gender-based violence in Mexico. Divided into chapters, we delve into the very fabric of their experiences, examining the influential factors that shaped their paths and fueled their unwavering resilience.</p>
+						</div>
+						<div class="">
+							<p>These stories reverberate with urgency against the backdrop of systemic corruption, the unrelenting challenges posed by COVID-19, and distressingly high rates of gender-based violence. Crafted in collaboration with these brave women themselves, our documentary dares to shatter preconceptions, evoking <strong>radical empathy, fostering visibility, and igniting a powerful sense of empowerment</strong>.</p>
+						</div>
+					</div>
+				</div>
+				<div class="prologo__slide--2">
+					<div class="prologo__slide__container">
+						<p class="prologo__p--big">
+							In Mexico,
+						</p>
+						<p>
+							the struggle against gender violence has a deep-rooted historical significance. With over 11 women murdered each day, the legal system has demonstrated its incapacity to effectively address this issue. The normalization of violence has left women profoundly vulnerable, with perpetrators rarely held accountable.
+						</p>
+					</div>
+				</div>
+				<div class="prologo__slide--3">
+					<div class="prologo__slide__container">
+						<p>
+							A tireless feminist movement has been building for decades, culminating in a pivotal moment on March 8, 2020. More than 80,000 women took to the streets on that day, protesting against gender-based violence and structural machismo. However, just as this movement surged forward, a new crisis emerged, casting a shadow over their progress: the COVID-19 pandemic.
+						</p>
+					</div>
+				</div>
+				<div class="prologo__slide--4">
+					<div class="prologo__slide__container">
+						<p>
+							Austerity measures implemented during the pandemic disproportionately affected family caregivers, who are predominantly women, burdening them with increased care work and making access to justice and resources more difficult. This resulted in an unprecedented epidemic of gender-based violence in 2020.
+						</p>
+					</div>
+				</div>
+				<div class="prologo__slide--5">
+					<div class="prologo__slide__container">
+						<p>
+							These are the stories of ten women from different parts of Mexico. Their testimonies share their experiences of gender-based violence and resilience, from their childhood to the present. Despite the challenges, these women refuse to be silenced and fight for a better future for themselves and their communities.
+						</p>
+					</div>
+				</div>
+				<button class="page__cerrar js--prologo--btn_skip oculto">
+					Skip Prologue
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Video -->
+	<div class="js--trailer full page" data-page="trailer">
+		<div class="trailer">
+			<!-- <button class="page__cerrar js--trailer--btn_video">
+				Skip Trailer
+			</button>
+			<iframe src="https://player.vimeo.com/video/884644939?h=81514952c6&title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen id="trailer" class="trailer__video js--trailer__video"></iframe> -->
+			<div class="trailer__titulo">
+				<img src="assets/imgs/img__titulo--eng.gif">
+				<button class="trailer__btn_titulo js--trailer--btn_titulo">
+					Chapter 1
+				</button>
+			</div>
+		</div>
+	</div>
+	 
+	<!-- Regresar " oculto " cuando se muestren las demás secciones -->
+	<div id="interactivo" class="js--interactivo interactivo oculto">
+		<section class="body" data-scena="ep_one">
+			<!-- Quitar " visible " cuando se muestren las demás secciones -->
+			<!-- Episode One -->
+			<div class="scene js--escena" data-scena="ep_one">
+				<div class="esc-1--front"></div>
+				<div class="esc-1--floor"></div>
+
+				<!-- img__esc-1--puerta -->
+				<figure class="imagen js--imagen imagen--esc-1--puerta">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-1--puerta.gif"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- Btn salida -->
+				<button class="imagen imagen--esc-1--exit js--escene--exit"
+					data-sound="ep_one_cortinas"
+					data-scena="ep_two"
+				></button>
+				<!--  -->
+
+				<!-- img__esc-1--religion -->
+				<figure class="imagen js--imagen imagen--esc-1--religion">
+					<button
+						class="js--btn"
+						data-modal="esc-1--religion"
+						data-tooltip="esc-1--religion">
+						<img
+							src="assets/imgs/img__esc-1--religion.gif"
+							data-fijo="assets/imgs/img__esc-1--religion.gif"
+							data-hover="assets/imgs/img__esc-1--religion--hover.gif"
+							class="js--gif"
+							data-sound="ep_one_grieta"
+							>
+					</button>
+				</figure>
+				<!-- img__esc-1--zapatos -->
+				<figure class="imagen js--imagen imagen--esc-1--zapatos">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-1--zapatos.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-1--botella-rota -->
+				<figure class="imagen js--imagen imagen--esc-1--botella-rota">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-1--botella-rota.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-1--estufa -->
+				<figure class="imagen js--imagen imagen--esc-1--estufa">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-1--estufa">
+						<img
+							src="assets/imgs/img__esc-1--estufa.gif"
+							data-fijo="assets/imgs/img__esc-1--estufa.gif"
+							data-hover="assets/imgs/img__esc-1--estufa--hover.gif"
+							class="js--gif"
+							data-sound="ep_one_fuego"
+							>
+					</button>
+				</figure>
+				<!-- img__esc-1--muneca -->
+				<figure class="imagen js--imagen imagen--esc-1--muneca">
+					<button
+						class="js--btn"
+						data-modal="esc-1--muneca"
+						data-tooltip="esc-1--muneca">
+						<img
+							src="assets/imgs/img__esc-1--muneca.gif"
+							data-fijo="assets/imgs/img__esc-1--muneca.gif"
+							data-hover="assets/imgs/img__esc-1--muneca--hover.gif"
+							class="js--gif"
+							data-sound="ep_one_muneca"
+							>
+					</button>
+				</figure>
+				<!-- img__esc-1--silla
+				<figure class="imagen js--imagen imagen--esc-1--silla">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-1--silla.png"
+							class=""
+							>
+					</button>
+				</figure> -->
+				<!-- img__esc-1--carritos -->
+				<figure class="imagen js--imagen imagen--esc-1--carritos">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-1--carritos.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-1--mesa -->
+				<figure class="imagen js--imagen imagen--esc-1--mesa">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-1--mesa.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-1--foco -->
+				<figure class="imagen js--imagen imagen--esc-1--foco">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-1--foco.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-1--botellas -->
+				<figure class="imagen js--imagen imagen--esc-1--botellas">
+					<button
+						class="js--btn"
+						data-modal="esc-1--botellas"
+						data-tooltip="esc-1--botellas">
+						<img
+							src="assets/imgs/img__esc-1--botellas.gif"
+							data-fijo="assets/imgs/img__esc-1--botellas.gif"
+							data-hover="assets/imgs/img__esc-1--botellas--hover.gif"
+							class="js--gif"
+							data-sound="ep_one_copa"
+							>
+					</button>
+				</figure>
+				<!-- img__esc-1--jarron -->
+				<figure class="imagen js--imagen imagen--esc-1--jarron">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-1--jarron.png"
+							class=""
+							>
+					</button>
+				</figure>
+
+				<div class="esc-1--ceiling"></div>
+				<div class="esc-1--wall-left"></div>
+				<div class="esc-1--wall-right"></div>
+				<div class="esc-1--background-left"></div>
+				<!-- Intro de la escena -->
+				<button class="esc-1--intro scene__intro js--btn"
+					data-tooltip="esc-1--ep_one"
+					data-sound="ep_one_cortinas"
+				>
+					<img
+						src="assets/imgs/img__esc-1--cortina.gif"
+						class=""
+						>
+				</button>
+				<!--  -->
+				<div class="esc-1--cover scene__cover visible">
+					<figure class="scene__cover__container">
+						<img src="assets/imgs/img__esc-1--muneca--hover.gif" alt="">
+						<figcaption>
+							<h2 class="scene__title">
+								CHILDHOOD & INTRAFAMILIAL VIOLENCE
+							</h2>
+							<p class="scene__description">
+								
+							</p>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+			<!-- Episode Two -->
+			<div class="scene js--escena" data-scena="ep_two">
+				<div class="esc-2--front"></div>
+				<div class="esc-2--floor"></div>
+
+				<!-- Btn salida -->
+				<button class="imagen imagen--esc-2--exit js--escene--exit"
+					data-sound="ep_two_cortinas"
+					data-scena="ep_three"
+				></button>
+				<!--  -->
+
+				<!-- img__esc-2--cama -->
+				<figure class="imagen js--imagen imagen--esc-2--cama">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-2--cama-arriba.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-2--ropa_1
+				<figure class="imagen js--imagen imagen--esc-2--ropa_1">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-2--ropa_1.png"
+							class=""
+							>
+					</button>
+				</figure> -->
+				<!-- img__esc-2--cama-frente -->
+				<figure class="imagen js--imagen imagen--esc-2--cama-frente">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-2--cama-frente.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-2--cama-cojines -->
+				<figure class="imagen js--imagen imagen--esc-2--cama-cojines">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-2--cama-cojines.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-2--cama-cojines-1 -->
+				<figure class="imagen js--imagen imagen--esc-2--cama-cojines-1">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-2--cama-cojines-1.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-2--mesa--1 -->
+				<figure class="imagen js--imagen imagen--esc-2--mesa--1">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-2--mesa--1.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-2--mesa--2 -->
+				<figure class="imagen js--imagen imagen--esc-2--mesa--2">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-2--mesa--2.png"
+							class=""
+							>
+					</button>
+				</figure>
+
+				<!-- img__esc-2--cortina -->
+				<figure class="imagen js--imagen imagen--esc-2--cortina">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-2--espectadores">
+						<img
+							src="assets/imgs/img__esc-2--cortina.gif"
+							data-fijo="assets/imgs/img__esc-2--cortina.gif"
+							data-hover="assets/imgs/img__esc-2--cortina--hover.gif"
+							class="js--gif"
+							data-sound="ep_two_cortina"
+							>
+					</button>
+				</figure>
+
+				<!-- img__esc-2--celular -->
+				<figure class="imagen js--imagen imagen--esc-2--celular">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-2--celotipia">
+						<img
+							src="assets/imgs/img__esc-2--celular.gif"
+							data-fijo="assets/imgs/img__esc-2--celular.gif"
+							data-hover="assets/imgs/img__esc-2--celular--hover.gif"
+							class="js--gif"
+							data-sound="ep_two_celular"
+							>
+					</button>
+				</figure>
+				<!-- img__esc-2--cristo -->
+				<figure class="imagen js--imagen imagen--esc-2--cristo">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-2--religion">
+						<img
+							src="assets/imgs/img__esc-2--cristo.gif"
+							data-fijo="assets/imgs/img__esc-2--cristo.gif"
+							data-hover="assets/imgs/img__esc-2--cristo--hover.gif"
+							class="js--gif"
+							data-sound="ep_two_cristo"
+							>
+					</button>
+				</figure>
+				<!-- img__esc-2--cuna -->
+				<figure class="imagen js--imagen imagen--esc-2--cuna">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-2--hijes">
+						<img
+							src="assets/imgs/img__esc-2--cuna.gif"
+							data-fijo="assets/imgs/img__esc-2--cuna.gif"
+							data-hover="assets/imgs/img__esc-2--cuna--hover.gif"
+							class="js--gif"
+							data-sound="ep_two_cuna"
+							>
+					</button>
+				</figure>
+				<!-- img__esc-2--plancha -->
+				<figure class="imagen js--imagen imagen--esc-2--plancha">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-2--roles">
+						<img
+							src="assets/imgs/img__esc-2--plancha.gif"
+							data-fijo="assets/imgs/img__esc-2--plancha.gif"
+							data-hover="assets/imgs/img__esc-2--plancha--hover.gif"
+							class="js--gif"
+							data-sound="ep_two_plancha"
+							>
+					</button>
+				</figure>
+				<!-- img__esc-2--tocador -->
+				<figure class="imagen js--imagen imagen--esc-2--tocador">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-2--autoestima">
+						<img
+							src="assets/imgs/img__esc-2--tocador.gif"
+							data-fijo="assets/imgs/img__esc-2--tocador.gif"
+							data-hover="assets/imgs/img__esc-2--tocador--hover.gif"
+							class="js--gif"
+							data-sound="ep_two_espejo"
+							>
+					</button>
+				</figure>
+
+				<!-- img__esc-2--ventlador -->
+				<!-- Intro de la escena -->
+				<figure class="imagen js--imagen imagen--esc-2--ventlador">
+					<button class="js--btn"
+						data-tooltip="esc-2--ep_two"
+						data-sound="">
+						<img
+							src="assets/imgs/img__esc-2--ventlador.gif"
+							class=""
+							>
+					</button>
+				</figure>
+
+				<div class="esc-2--ceiling"></div>
+				<div class="esc-2--wall-left"></div>
+				<div class="esc-2--wall-right"></div>
+				<div class="esc-2--background-left"></div>
+				<!--  -->
+				<div class="esc-2--cover scene__cover visible">
+					<button class="page__cerrar js--escene--exit" data-scena="ep_one">
+						Return
+					</button>
+					<figure class="scene__cover__container">
+						<img src="assets/imgs/img__esc-2--celular.gif" alt="">
+						<figcaption>
+							<h2 class="scene__title">
+								INTIMATE PARTNER VIOLENCE 
+							</h2>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+			<!-- Episode Three -->
+			<div class="scene js--escena" data-scena="ep_three">
+				<div class="esc-3--background-front"></div>
+				<div class="esc-3--front"></div>
+				<div class="esc-3--floor"></div>
+
+				<!-- Btn salida -->
+				<button class="imagen imagen--esc-3--exit js--escene--exit"
+					data-sound=""
+					data-scena="ep_four"
+				></button>
+				<!--  -->
+				
+				<!-- img__esc-3--tribuna-patas -->
+				<figure class="imagen js--imagen imagen--esc-3--tribuna-patas">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--tribuna-patas.jpg"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--catre_lado -->
+				<figure class="imagen js--imagen imagen--esc-3--catre_lado">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--catre_lado.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--catre-base -->
+				<figure class="imagen js--imagen imagen--esc-3--catre-base">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--catre-base.jpg"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--catre-base1 -->
+				<figure class="imagen js--imagen imagen--esc-3--catre-base1">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--catre-base1.png"
+							class=""
+							>
+					</button>
+				</figure>
+
+				<!-- img__esc-3--catre_frente
+				<figure class="imagen js--imagen imagen--esc-3--catre_frente">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--catre_frente.png"
+							class=""
+							>
+					</button>
+				</figure>
+				 -->
+				<!-- img__esc-3--cojines -->
+				<figure class="imagen js--imagen imagen--esc-3--cojines">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--cojines.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--escritorio-base -->
+				<figure class="imagen js--imagen imagen--esc-3--escritorio-base">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--escritorio-base.jpg"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--escritorio-patas -->
+				<figure class="imagen js--imagen imagen--esc-3--escritorio-patas">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--escritorio-patas.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--escritorio-patas-1 -->
+				<figure class="imagen js--imagen imagen--esc-3--escritorio-patas-1">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--escritorio-patas.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--tribuna-base -->
+				<figure class="imagen js--imagen imagen--esc-3--tribuna-base">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--tribuna-base.jpg"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--tribuna-frente -->
+				<figure class="imagen js--imagen imagen--esc-3--tribuna-frente">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--tribuna-frente.jpg"
+							class=""
+							>
+					</button>
+				</figure>
+
+				<!-- img__esc-3--extintor -->
+				<figure class="imagen js--imagen imagen--esc-3--extintor">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--extintor.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--gaviotas -->
+				<figure class="imagen js--imagen imagen--esc-3--gaviotas">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--gaviotas.gif"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--hongos-1 -->
+				<figure class="imagen js--imagen imagen--esc-3--hongos-1">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--hongos-1.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--hongos-2 -->
+				<figure class="imagen js--imagen imagen--esc-3--hongos-2">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--hongos-2.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--hongos-3 -->
+				<figure class="imagen js--imagen imagen--esc-3--hongos-3">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--hongos-3.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--hongos-4 -->
+				<figure class="imagen js--imagen imagen--esc-3--hongos-4">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--hongos-4.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--hongos-5 -->
+				<figure class="imagen js--imagen imagen--esc-3--hongos-5">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--hongos-5.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--hongos-6 -->
+				<figure class="imagen js--imagen imagen--esc-3--hongos-6">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--hongos-6.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--hongos-7 -->
+				<figure class="imagen js--imagen imagen--esc-3--hongos-7">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--hongos-7.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--hongos-8 -->
+				<figure class="imagen js--imagen imagen--esc-3--hongos-8">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--hongos-8.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--hongos-9 -->
+				<figure class="imagen js--imagen imagen--esc-3--hongos-9">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--hongos-9.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--hongos-10 -->
+				<figure class="imagen js--imagen imagen--esc-3--hongos-10">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--hongos-10.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--hongos-11 -->
+				<figure class="imagen js--imagen imagen--esc-3--hongos-11">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--hongos-5.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--hongos-12 -->
+				<figure class="imagen js--imagen imagen--esc-3--hongos-12">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--hongos-6.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--diablito -->
+				<figure class="imagen js--imagen imagen--esc-3--diablito">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--diablito.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--papeles-cuerda -->
+				<figure class="imagen js--imagen imagen--esc-3--papeles-cuerda">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-3--papeles-cuerda.png"
+							class=""
+							>
+					</button>
+				</figure>
+
+				<!-- img__esc-3--alerta -->
+				<figure class="imagen js--imagen imagen--esc-3--alerta">
+					<button class="js--btn"
+						data-tooltip="esc-3--ep_three"
+						data-sound="">
+						<img
+							src="assets/imgs/img__esc-3--alerta.gif"
+							class=""
+							>
+					</button>
+				</figure>
+				
+
+				<!-- img__esc-3--compu -->
+				<figure class="imagen js--imagen imagen--esc-3--compu">
+					<button
+						class="js--btn"
+						data-modal=""
+						data-tooltip="esc-3--compu">
+						<img
+							src="assets/imgs/img__esc-3--compu.gif"
+							data-fijo="assets/imgs/img__esc-3--compu.gif"
+							data-hover="assets/imgs/img__esc-3--compu--hover.gif"
+							class="js--gif"
+							data-sound="ep_three_redes_sociales"
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--bolillo -->
+				<figure class="imagen js--imagen imagen--esc-3--bolillo">
+					<button
+						class="js--btn"
+						data-modal=""
+						data-tooltip="esc-3--bolillo">
+						<img
+							src="assets/imgs/img__esc-3--bolillo.gif"
+							data-fijo="assets/imgs/img__esc-3--bolillo.gif"
+							data-hover="assets/imgs/img__esc-3--bolillo--hover.gif"
+							class="js--gif"
+							data-sound="ep_three_pan"
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--mazo -->
+				<figure class="imagen js--imagen imagen--esc-3--mazo">
+					<button
+						class="js--btn"
+						data-modal=""
+						data-tooltip="esc-3--mazo">
+						<img
+							src="assets/imgs/img__esc-3--mazo.gif"
+							data-fijo="assets/imgs/img__esc-3--mazo.gif"
+							data-hover="assets/imgs/img__esc-3--mazo--hover.gif"
+							class="js--gif"
+							data-sound="ep_three_mazo"
+							>
+					</button>
+				</figure>
+				<!-- img__esc-3--papeles -->
+				<figure class="imagen js--imagen imagen--esc-3--papeles">
+					<button
+						class="js--btn"
+						data-modal=""
+						data-tooltip="esc-3--papeles">
+						<img
+							src="assets/imgs/img__esc-3--papeles.gif"
+							data-fijo="assets/imgs/img__esc-3--papeles.gif"
+							data-hover="assets/imgs/img__esc-3--papeles--hover.gif"
+							class="js--gif"
+							data-sound="ep_three_billetes"
+							>
+					</button>
+				</figure>
+				
+
+				<div class="esc-3--ceiling"></div>
+				<div class="esc-3--wall-left"></div>
+				<div class="esc-3--wall-right"></div>
+
+				<div class="esc-3--halls-1"></div>
+				<div class="esc-3--halls-2"></div>
+				<div class="esc-3--halls-3"></div>
+				<div class="esc-3--halls-4"></div>
+				<div class="esc-3--halls-5"></div>
+				<div class="esc-3--halls-6"></div>
+				<div class="esc-3--division-left"></div>
+				<div class="esc-3--division-right"></div>
+
+				<div class="esc-3--cover scene__cover visible js--esc-3--cover">
+					<button class="page__cerrar js--escene--exit" data-scena="ep_two">
+						Return
+					</button>
+					<figure class="scene__cover__container">
+						<img src="assets/imgs/img__esc-3--mazo.gif" alt="">
+						<figcaption>
+							<h2 class="scene__title">
+								INSTITUTIONAL VIOLENCE
+							</h2>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+			<!-- Episode Four -->
+			<div class="scene js--escena" data-scena="ep_four">
+				<div class="esc-4--background-front"></div>
+				<div class="esc-4--front"></div>
+				<div class="esc-4--floor"></div>
+
+				<!-- Btn salida -->
+				<button class="imagen imagen--esc-4--exit js--escene--exit"
+					data-sound="ep_four_flores"
+					data-scena="ep_five"
+				></button>
+				<!--  -->
+				<!-- img__esc-4--sillas -->
+				<figure class="imagen js--imagen imagen--esc-4--sillas">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-4--sillas.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-4--sillas_1 -->
+				<figure class="imagen js--imagen imagen--esc-4--sillas_1">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-4--sillas_1.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-4--sillas_2 -->
+				<figure class="imagen js--imagen imagen--esc-4--sillas_2">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-4--sillas_2.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-4--sillas_3 -->
+				<figure class="imagen js--imagen imagen--esc-4--sillas_3">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-4--sillas_3.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-4--sillas_4 -->
+				<figure class="imagen js--imagen imagen--esc-4--sillas_4">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-4--sillas_4.png"
+							class=""
+							>
+					</button>
+				</figure>
+
+				<!-- img__esc-4--pasto -->
+				<figure class="imagen js--imagen imagen--esc-4--pasto">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-4--pasto.png"
+							class=""
+							>
+					</button>
+				</figure>
+
+				<!-- img__esc-4--mesita -->
+				<figure class="imagen js--imagen imagen--esc-4--mesita">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-4--mesita.png"
+							class=""
+							>
+					</button>
+				</figure>
+
+
+				<!-- img__esc-4--arbol -->
+				<figure class="imagen js--imagen imagen--esc-4--arbol">
+					<button class="js--btn"
+						data-tooltip="esc-4--ep_four"
+						data-sound="ep_four_arbol">
+						<img
+							src="assets/imgs/img__esc-4--arbol.gif"
+							class=""
+							>
+					</button>
+				</figure>
+
+				<!-- img__esc-4--flores -->
+				<figure class="imagen js--imagen imagen--esc-4--flores">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-4--flores">
+						<img
+							src="assets/imgs/img__esc-4--flores.gif"
+							data-fijo="assets/imgs/img__esc-4--flores.gif"
+							data-hover="assets/imgs/img__esc-4--flores--hover.gif"
+							class="js--gif"
+							data-sound="ep_four_flores"
+							>
+					</button>
+				</figure>
+				<!-- img__esc-4--globos -->
+				<figure class="imagen js--imagen imagen--esc-4--globos">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-4--globos">
+						<img
+							src="assets/imgs/img__esc-4--globos.gif"
+							data-fijo="assets/imgs/img__esc-4--globos.gif"
+							data-hover="assets/imgs/img__esc-4--globos--hover.gif"
+							class="js--gif"
+							data-sound="ep_four_globo"
+							>
+					</button>
+				</figure>
+				<!-- img__esc-4--papel -->
+				<figure class="imagen js--imagen imagen--esc-4--papel">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-4--papel">
+						<img
+							src="assets/imgs/img__esc-4--papel.gif"
+							data-fijo="assets/imgs/img__esc-4--papel.gif"
+							data-hover="assets/imgs/img__esc-4--papel--hover.gif"
+							class="js--gif"
+							data-sound="ep_four_papel"
+							>
+					</button>
+				</figure>
+				<!-- img__esc-4--quetzal -->
+				<figure class="imagen js--imagen imagen--esc-4--quetzal">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-4--quetzal">
+						<img
+							src="assets/imgs/img__esc-4--quetzal.gif"
+							data-fijo="assets/imgs/img__esc-4--quetzal.gif"
+							data-hover="assets/imgs/img__esc-4--quetzal--hover.gif"
+							class="js--gif"
+							data-sound="ep_four_quetzal"
+							>
+					</button>
+				</figure>
+
+				<div class="esc-4--background-right"></div>
+				<div class="esc-4--ceiling"></div>
+				<div class="esc-4--wall-left"></div>
+				<div class="esc-4--wall-right"></div>
+
+				<div class="esc-4--cover scene__cover visible js--esc-4--cover">
+					<button class="page__cerrar js--escene--exit" data-scena="ep_three">
+						Return
+					</button>
+					<figure class="scene__cover__container">
+						<img src="assets/imgs/img__esc-4--globos.gif" alt="">
+						<figcaption>
+							<h2 class="scene__title">
+								Organized institutional support systems
+							</h2>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+			<!-- Episode Five -->
+			<div class="scene js--escena" data-scena="ep_five">
+				<div class="esc-5--background-front"></div>
+				<div class="esc-5--front"></div>
+				<div class="esc-5--floor"></div>
+
+				<!-- Btn salida -->
+				<!--  -->
+				<button class="imagen imagen--esc-5--exit js--escene--exit"
+					data-sound="ep_five_cortinas"
+					data-scena="ep_six"
+				></button>
+				<!-- <a class="imagen imagen--esc-5--exit" href="index.html"></a> -->
+				<!--  -->
+
+				<!-- img__esc-5--fogata -->
+				<figure class="imagen js--imagen imagen--esc-5--fogata">
+					<button class="js--btn"
+						data-tooltip="esc-5--ep_five"
+						data-sound="ep_five_fogata">
+						<img
+							src="assets/imgs/img__esc-5--fogata.gif"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--fogata-chispas -->
+				<figure class="imagen js--imagen imagen--esc-5--fogata-chispas">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--fogata-chispas.gif"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--piedras -->
+				<figure class="imagen js--imagen imagen--esc-5--piedras js--temazcal temazcal">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--piedras.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--tarot -->
+				<figure class="imagen js--imagen imagen--esc-5--tarot js--temazcal temazcal">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--tarot.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--veg_cent-1 -->
+				<figure class="imagen js--imagen imagen--esc-5--veg_cent-1">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--veg_cent-1.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--veg_cent-2 -->
+				<figure class="imagen js--imagen imagen--esc-5--veg_cent-2">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--veg_cent-2.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--veg_cent-3 -->
+				<figure class="imagen js--imagen imagen--esc-5--veg_cent-3">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--veg_cent-3.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--veg_cent-4 -->
+				<figure class="imagen js--imagen imagen--esc-5--veg_cent-4">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--veg_cent-4.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--veg_der-1 -->
+				<figure class="imagen js--imagen imagen--esc-5--veg_der-1">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--veg_der-1.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--veg_der-2 -->
+				<figure class="imagen js--imagen imagen--esc-5--veg_der-2">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--veg_der-2.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--veg_izq-1 -->
+				<figure class="imagen js--imagen imagen--esc-5--veg_izq-1">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--veg_izq-1.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--veg_izq-2 -->
+				<figure class="imagen js--imagen imagen--esc-5--veg_izq-2">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--veg_izq-2.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--veg_izq-3 -->
+				<figure class="imagen js--imagen imagen--esc-5--veg_izq-3">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--veg_izq-3.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--veg-3 -->
+				<figure class="imagen js--imagen imagen--esc-5--veg-3">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--veg-3.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--veg-4 -->
+				<figure class="imagen js--imagen imagen--esc-5--veg-4">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--veg-4.png"
+							class=""
+							>
+					</button>
+				</figure>
+
+				<!-- img__esc-5--luciernaga_1 -->
+				<figure class="imagen js--imagen imagen--esc-5--luciernaga_1">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--luciernaga_1.gif"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--luciernaga_2 -->
+				<figure class="imagen js--imagen imagen--esc-5--luciernaga_2">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--luciernaga_2.gif"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--luciernaga_3 -->
+				<figure class="imagen js--imagen imagen--esc-5--luciernaga_3">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--luciernaga_3.gif"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--luciernaga_4 -->
+				<figure class="imagen js--imagen imagen--esc-5--luciernaga_4">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--luciernaga_4.gif"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--palomas -->
+				<figure class="imagen js--imagen imagen--esc-5--palomas js--temazcal temazcal">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--palomas.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--pasto_1 -->
+				<figure class="imagen js--imagen imagen--esc-5--pasto_1">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--pasto_1.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--pasto_2 -->
+				<figure class="imagen js--imagen imagen--esc-5--pasto_2">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--pasto_2.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--pasto_3 -->
+				<figure class="imagen js--imagen imagen--esc-5--pasto_3">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--pasto_3.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-5--pasto_4 -->
+				<figure class="imagen js--imagen imagen--esc-5--pasto_4">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-5--pasto_4.png"
+							class=""
+							>
+					</button>
+				</figure>
+
+				<!-- img__esc-5--constelacion -->
+				<figure class="imagen js--imagen imagen--esc-5--constelacion">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-5--constelacion">
+						<img
+							src="assets/imgs/img__esc-5--constelacion.gif"
+							data-fijo="assets/imgs/img__esc-5--constelacion.gif"
+							data-hover="assets/imgs/img__esc-5--constelacion--hover.gif"
+							class="js--gif"
+							data-sound="ep_five_constelacion"
+							>
+					</button>
+				</figure>
+
+				<!-- img__esc-5--maguey -->
+				<figure class="imagen js--imagen imagen--esc-5--maguey">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-5--maguey">
+						<img
+							src="assets/imgs/img__esc-5--maguey.gif"
+							data-fijo="assets/imgs/img__esc-5--maguey.gif"
+							data-hover="assets/imgs/img__esc-5--maguey--hover.gif"
+							class="js--gif"
+							data-sound="ep_five_maguey"
+							>
+					</button>
+				</figure>
+
+				<!-- img__esc-5--maices -->
+				<figure class="imagen js--imagen imagen--esc-5--maices js--temazcal temazcal">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-5--maices">
+						<img
+							src="assets/imgs/img__esc-5--maices.gif"
+							data-fijo="assets/imgs/img__esc-5--maices.gif"
+							data-hover="assets/imgs/img__esc-5--maices--hover.gif"
+							class="js--gif"
+							data-sound="ep_five_maiz"
+							>
+					</button>
+				</figure>
+
+				<!-- img__esc-5--sapo -->
+				<figure class="imagen js--imagen imagen--esc-5--sapo">
+					<button
+						class="js--btn"
+						data-modal="esc-5--sapo"
+						data-tooltip="esc-5--sapo">
+						<img
+							src="assets/imgs/img__esc-5--sapo.gif"
+							data-fijo="assets/imgs/img__esc-5--sapo.gif"
+							data-hover="assets/imgs/img__esc-5--sapo--hover.gif"
+							class="js--gif"
+							data-sound="ep_five_rana"
+							>
+					</button>
+				</figure>
+
+				<!-- img__esc-5--veladora -->
+				<figure class="imagen js--imagen imagen--esc-5--veladora js--temazcal temazcal">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-5--veladora">
+						<img
+							src="assets/imgs/img__esc-5--veladora.gif"
+							data-fijo="assets/imgs/img__esc-5--veladora.gif"
+							data-hover="assets/imgs/img__esc-5--veladora--hover.gif"
+							class="js--gif"
+							data-sound="ep_five_vela"
+							>
+					</button>
+				</figure>
+
+
+				<div class="esc-5--temazcal-front js--temazcal-entrada visible"></div>
+				<div class="esc-5--temazcal-back js--temazcal"></div>
+				<div class="esc-5--temazcal-wall-left js--temazcal"></div>
+				<div class="esc-5--temazcal-wall-right js--temazcal"></div>
+				<div class="esc-5--temazcal-wall-left-2 js--temazcal"></div>
+				<div class="esc-5--temazcal-wall-right-2 js--temazcal"></div>
+				<div class="esc-5--temazcal-floor js--temazcal"></div>
+				<div class="esc-5--temazcal-ceiling js--temazcal"></div>
+
+				<div class="esc-5--ceiling"></div>
+				<div class="esc-5--wall-left"></div>
+				<div class="esc-5--wall-right"></div>
+				<div class="esc-5--wall-left-2"></div>
+				<div class="esc-5--wall-right-2"></div>
+				<!--  -->
+				<div class="esc-5--cover scene__cover visible js--esc-5--cover">
+					<button class="page__cerrar js--escene--exit" data-scena="ep_four">
+						Return
+					</button>
+					<figure class="scene__cover__container">
+						<img src="assets/imgs/img__esc-5--maguey.gif" alt="">
+						<figcaption>
+							<h2 class="scene__title">
+								HEALING PRACTICES
+							</h2>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+			<!-- Episode Six -->
+			<div class="scene js--escena" data-scena="ep_six">
+				<div class="esc-6--background-front"></div>
+				<div class="esc-6--front"></div>
+				<div class="esc-6--back"></div>
+				<div class="esc-6--floor"></div>
+
+				<!-- img__esc-6--arbol -->
+				<figure class="imagen js--imagen imagen--esc-6--arbol">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-6--arbol">
+						<img
+							src="assets/imgs/img__esc-6--arbol.gif"
+							data-fijo="assets/imgs/img__esc-6--arbol.gif"
+							data-hover="assets/imgs/img__esc-6--arbol--hover.gif"
+							class="js--gif"
+							data-sound="ep_six_rama"
+							>
+					</button>
+				</figure>
+
+				<!-- img__esc-6--arbol-1 -->
+				<figure class="imagen js--imagen imagen--esc-6--arbol-1">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-6--arbol-1.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-6--arbol-2 -->
+				<figure class="imagen js--imagen imagen--esc-6--arbol-2">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-6--arbol-2.webp"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-6--arbol-3 -->
+				<figure class="imagen js--imagen imagen--esc-6--arbol-3">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-6--arbol-3.png"
+							class=""
+							>
+					</button>
+				</figure>
+				<!-- img__esc-6--arbusto -->
+				<figure class="imagen js--imagen imagen--esc-6--arbusto">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-6--arbusto">
+						<img
+							src="assets/imgs/img__esc-6--arbusto.gif"
+							data-fijo="assets/imgs/img__esc-6--arbusto.gif"
+							data-hover="assets/imgs/img__esc-6--arbusto--hover.gif"
+							class="js--gif"
+							data-sound="ep_six_arbusto"
+							>
+					</button>
+				</figure>
+				<!-- img__esc-6--aves -->
+				<figure class="imagen js--imagen imagen--esc-6--aves">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-6--aves">
+						<img
+							src="assets/imgs/img__esc-6--aves.gif"
+							data-fijo="assets/imgs/img__esc-6--aves.gif"
+							data-hover="assets/imgs/img__esc-6--aves--hover.gif"
+							class="js--gif"
+							data-sound="ep_six_ave_de_papel"
+							>
+					</button>
+				</figure>
+				<!-- img__esc-6--balcon-mujeres -->
+				<figure class="imagen js--imagen imagen--esc-6--balcon-mujeres">
+					<button
+						class="js--btn"
+						data-modal="esc-1--prueba"
+						data-tooltip="esc-6--balcon">
+						<img
+							src="assets/imgs/img__esc-6--balcon-mujeres.gif"
+							data-fijo="assets/imgs/img__esc-6--balcon-mujeres.gif"
+							data-hover="assets/imgs/img__esc-6--trueno--hover.gif"
+							class="js--gif"
+							data-sound="ep_six_balcon"
+							>
+					</button>
+				</figure>
+				<!-- img__esc-6--aves-2 -->
+				<figure class="imagen js--imagen imagen--esc-6--aves-2">
+					<button class="">
+						<img
+							src="assets/imgs/img__esc-6--aves-2.gif"
+							class=""
+							>
+					</button>
+				</figure>
+
+				<!-- img__esc-6--flores -->
+				<figure class="imagen js--imagen imagen--esc-6--flores">
+					<button class="js--btn"
+						data-tooltip="esc-6--ep_six">
+						<img
+							src="assets/imgs/img__esc-6--flores.gif"
+							class=""
+							>
+					</button>
+				</figure>
+
+				<!-- img__esc-6--luz-danzante -->
+				<figure class="imagen js--imagen imagen--esc-6--luz-danzante">
+					<button
+						class="js--btn js--escene--exit"
+						data-tooltip="esc-6--luz-danzante"
+						data-scena="ep_one">
+						<img
+							src="assets/imgs/img__esc-6--luz-danzante.gif"
+							class=""
+							>
+					</button>
+				</figure>
+
+				<div class="esc-6--ceiling"></div>
+				<div class="esc-6--wall-left"></div>
+				<div class="esc-6--wall-right"></div>
+				<div class="esc-6--wall-left-2"></div>
+				<div class="esc-6--wall-right-2"></div>
+				<div class="esc-6--wall-left-3"></div>
+				<div class="esc-6--wall-right-3"></div>
+				<!-- <div class="esc-6--wall-left-4"></div>
+				<div class="esc-6--wall-right-4"></div> -->
+				<!--  -->
+				<div class="esc-6--cover scene__cover visible js--esc-6--cover">
+					<button class="page__cerrar js--escene--exit" data-scena="ep_five">
+						Return
+					</button>
+					<figure class="scene__cover__container">
+						<img src="assets/imgs/img__esc-6--arbol--hover.gif" alt="">
+						<figcaption>
+							<h2 class="scene__title">
+								OUT OF THE SHADOWS
+							</h2>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+		<!-- Modales Textos Episode One -->
+		<div class="scene__intro__modal js--tooltip__modal" data-tooltip="esc-1--ep_one">
+			<p>Gender-based violence is influenced by power structures and norms, extending beyond individual pathologies. In this chapter, women's personal narratives illuminate how cultural and institutional practices within the family perpetuate and normalize such violence. These stories provide a deeper understanding of the enduring impact of a violent upbringing on individuals' encounters with gender-based violence in adulthood. Early exposure to violence engenders profound psychological effects, leading to enduring sentiments of shame, guilt, and powerlessness. These consequences heighten vulnerability to future abusive behaviors, impair the women’s capacity to recognize and respond to abuse and erect formidable barriers to seeking assistance and support. The narratives underscore four recurrent themes: the role of religious education in perpetuating victim-blaming, the repercussions of family fragmentation and alcoholism, the socialization process surrounding gender roles, and the disconcerting normalization of violence within society.</p>
+		</div>
+		<div class="scene__intro__logline js--tooltip__modal" data-tooltip="esc-1--religion">
+			<h3 class="modal__title">RELIGION</h3>
+			<p>Religion's impact on women's lives is complex. While some find strength and solidarity in their faith, others grapple with conflicting expectations. It can both empower and impede efforts to combat gender-based violence. Religious teachings and socialization deeply influence women's perspectives, perpetuating stereotypes and normalizing misogyny, leading to feelings of guilt and self-blame regarding violence. Traditional interpretations of religious doctrines often affirm male authority and subordinate women. These restrictions, coupled with limited education, result in self-blame, lack of awareness about violence, and reluctance to seek help.Ultimately, religion plays a foundational role in shaping women's lives and, in many instances, contributes to the prevalence of gender-based violence.</p>
+		</div>
+		<div class="scene__intro__logline js--tooltip__modal" data-tooltip="esc-1--muneca">
+			<h3 class="modal__title">NORMALIZATION OF VIOLENCE</h3>
+			<p>Violence during childhood leaves enduring marks on women's lives, shaping their trajectories. Those who experience violence as children may become perpetrators or face a higher risk of victimization as adults. The normalization of violence hampers women's ability to recognize and heal from their trauma, impacting their self-image and relationships, and leading to struggles with self-esteem and boundary establishment. Distorted notions of "normal" relationships often perpetuate cycles of mistreatment. Additionally, marginalized women face compounded challenges due to the intersection of childhood gender-based violence and other forms of discrimination, limiting their agency and well-being. Different cultural contexts play a pivotal role, often reinforcing oppressive gender dynamics through societal beliefs, practices, and norms that silence women and discourage seeking help or justice.</p>
+		</div>
+		<div class="scene__intro__logline js--tooltip__modal" data-tooltip="esc-1--botellas">
+			<h3 class="modal__title">ALCOHOLISM</h3>
+			<p>Alcoholism often fuels childhood violence and has a profound impact on women's lives. Women describe how alcoholism fosters a culture of male dominance, normalizing aggression and control, while societal norms view violence as a manifestation of masculinity. These factors contribute to violence in certain communities. Alcoholism strains family relationships, ultimately leading to dysfunctional and fragmented families. Behaviors associated with alcoholism, such as physical and emotional abuse, neglect, financial instability, and unpredictable mood swings, destroy trust and create a hostile environment. Children, particularly girls, are highly vulnerable and endure fear, anxiety, and insecurity due to the unpredictable actions of their alcoholic parent. Families affected by alcoholism face immense stress, conflicts, and breakdowns in communication, often resulting in distancing, seeking refuge elsewhere, or cutting ties.</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-1--estufa">
+			<h3 class="modal__title">GENDER ROLE SOCIALIZATION</h3>
+			<p>The prevalence of gender norms in childhood significantly impacts women in adulthood, shaping their career choices, self-perception, relationships, and overall well-being. These norms limit career opportunities and reinforce traditional roles, leading to occupational segregation. They also contribute to body image issues and low self-confidence due to societal beauty standards. In relationships, women face expectations of caregiving and emotional labor, while gender-based violence and limited autonomy persist.</p>
+		</div>
+		<!-- Modales Textos Episode Two -->
+		<div class="scene__intro__modal js--tooltip__modal" data-tooltip="esc-2--ep_two">
+			<p>
+				This chapter delves into how cultural and institutional practices perpetuate gender-based violence within intimate partnerships. It explores themes that encompass the impact of women's childhood experiences and the challenges they face later in life. The chapter emphasizes the interplay of cultural norms, economic factors, social hierarchies, and psychological mechanisms affecting women, with a particular focus on themes of power and control. Additionally, it highlights the profound impact of violence on self-esteem while examining potential empowering catalysts, such as support from caring bystanders or a protective instinct for their children, which can help women escape from abusive partnerships.
+			</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-2--espectadores">
+			<h3 class="modal__title">BYSTANDERS</h3>
+			<p>Women have underscored the vital role that bystanders can play, influencing their ability, or lack thereof, to leave such harmful situations. Cultural factors, community dynamics, and social norms often contribute to viewing violence against women within partnerships as normal, commonplace, and a private matter, discouraging intervention. Bystanders may choose inaction, leading to a diffusion of responsibility, or they might actively perpetuate the violence and exacerbate suffering by pressuring the victim to remain with the aggressor due to social and cultural pressures. However, there have been instances where active bystanders have brought about positive and transformative change. Empowering women to prioritize themselves and facilitating their exit requires believing in them, offering emotional support, and providing safe havens for both their physical and emotional well-being.</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-2--celotipia">
+			<h3 class="modal__title">JEALOUSY</h3>
+			<p>In the context of abusive partnerships, jealousy assumes a profound and influential role, tightly bound to reinforced gender roles. Men, conditioned to perceive women as possessions, find cultural norms justifying possessiveness as a form of control. When coupled with substance abuse, jealousy often escalates into violent behaviors, further exacerbating the situation. Jealousy is often used as a manipulative tool, isolating victims and eroding their autonomy while establishing dominance over their actions and relationships. This emotion becomes a crucial player in the repetitive cycle of abuse, first simmering during the tension-building phase and eventually reaching an explosive eruption of violence, followed by a remorseful or honeymoon period. The emotional entanglement of jealousy with various elements creates a daunting landscape for victims, ensnaring them in a distressing cycle of vulnerability and anguish.</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-2--religion">
+			<h3 class="modal__title">RELIGION</h3>
+			<p>In this intricate landscape of religious beliefs, women's experiences can be shaped by both empowerment and entrapment, profoundly impacting their journey toward healing and liberation.<br/>
+			Teachings that emphasize submission and obedience can burden women with unwarranted guilt and self-blame, convincing them that they bear responsibility for the abuse they live. The pervasive influence of Marianismo, which idolizes women as self-sacrificing and nurturing, adds further pressure for them to silently endure to uphold family unity and a virtuous image before society. The notions of forgiveness and endurance is also often encouraged, and certain religious communities discourage divorce or separation, leaving women feeling morally bound to persevere through ongoing abuse. Although some find comfort and support within their religious communities, others face judgment and dismissal when revealing their abuse, leading to isolation and reluctance to seek help.
+			</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-2--hijes">
+			<h3 class="modal__title">CHILDREN</h3>
+			<p>The involvement of children in abusive partnerships is deeply troubling. Women facing such situations highlight two main aspects: the use of children as weapons and their role as lifelines for survival. In abusive relationships or custody battles, one partner may manipulate and control the other by using the children to gain dominance. Conversely, some women feel compelled to stay in abusive relationships due to financial constraints or lack of support, viewing their children as a reason to endure the hardships for their stability and security. However, the ultimate reason most women decide to break free is the realization that their children are in direct danger or suffering, driving them to seek safety and escape the abusive environment.</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-2--roles">
+			<h3 class="modal__title">GENDER ROLES</h3>
+			<p>Gender roles within a partnership can lead to the emergence of violent dynamics through various mechanisms. Firstly, deeply ingrained traditional norms create an uneven distribution of power, with men assuming dominant roles and women adopting submissive positions. As a consequence, women find themselves involved in a domestic partnership, exacerbating their vulnerability and limiting their independence while diminishing ties with external support systems. This isolation often hampers their ability to seek assistance from sources beyond the household. The situation can be further compounded by social stigma, deterring victims from seeking help even when support is available, particularly if such action challenges conventional gender norms. Additionally, economic dependency on male partners poses a significant challenge, trapping women within abusive relationships due to financial constraints that hinder their ability to leave. Abusers often exploit this vulnerability to maintain control over their victims.</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-2--autoestima">
+			<h3 class="modal__title">HARM TO SELF-PERCEPTION</h3>
+			<p>Gender-based violence in partnerships profoundly impacts self-love and self-esteem. The emotional toll often starts with "Love bombing," creating a powerful bond that obscures warning signs. The abuser alternates between kindness and abuse, fostering a persistent sense of diminished self-perception and worth through invalidation, criticism, and blame. Gaslighting worsens the situation, sowing self-doubt and questioning sanity. Despite mistreatment, victims may seek validation from their abusers, holding onto memories of the initial "Love bombing" and grappling with the complex interplay between affection and harm. This distorted perception can hinder recognizing the abusive nature of the relationship, resulting in learned helplessness over time, where breaking free becomes a formidable challenge. Even after leaving the relationship, women have described how the scars on self-esteem can persist long after the abuse has ended.</p>
+		</div>
+		<!-- Modales Textos Episode Three -->
+		<div class="scene__intro__modal js--tooltip__modal" data-tooltip="esc-3--ep_three">
+			<p>
+				This chapter delves into institutional violence within the context of gender-based violence, highlighting its various forms when the criminal justice system fails women– survivors re-victimized, women judged without gender perspective, and those impacted by media sensationalism. These challenges, unforeseen by many women as they strive to extricate themselves from violent relationships, find their roots in a confluence of factors: the scarcity of resources, deeply ingrained institutional misogyny, bureaucratic malfunction, pervasive corruption, and the perils of inaction. While the chapter offers glimpses of instances where government institutions and the media have provided assistance, it critically dissects the roles and privileges of those who manage to maneuver within the system. Simultaneously, it lays bare the harsh reality confronted by the vast majority of women, traversing a path to seek solace in institutional support.
+			</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-3--compu">
+			<h3 class="modal__title">SOCIAL MEDIA</h3>
+			<p>Social media platforms offer rapid information dissemination, presenting both advantages and disadvantages for women's causes. While they enable swift sharing of valuable information, they also harbor potential drawbacks. Harmful stereotypes can be amplified, harassment and cyberbullying find a platform, and victims of crime may face retraumatization. Struggles in effective content moderation persist, with cumbersome reporting mechanisms allowing abusive material to persist. This hampers victim support and raises concerns about the dissemination of sensationalist and unethical reporting. Such coverage fosters harm and disrespect perpetuating violence against women. Hate speech, misogyny, and glorification thrive in these posts, fostering an atmosphere tolerant of gender-based violence. This is similar to issues concerning the proliferation of "revenge porn," which is abetted by social media.These instances yield emotional distress and foster a hostile online realm mirroring real-world gender-based violence.</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-3--bolillo">
+			<h3 class="modal__title">THE CRIMINAL JUSTICE SYSTEM</h3>
+			<p>The criminal justice system lacks a gender lens, perpetuating gender-based and institutional violence. This issue spans punishment design, defense and prosecution of women, and treatment of incarcerated individuals. The system consistently fails to defend women from gender-based violence due to inadequate investigation, prosecution, and sentencing. Bias against women, whether as victims or perpetrators, results in their experiences being denied, minimized, or blamed, while male aggressors frequently escape consequences. Simultaneously, women accused of crimes encounter swift guilty verdicts and harsher sentences than men. Certain women turn to crime due to self-defense or coercion, yet the system ignores these circumstances, worsening gender-based injustice. Furthermore, insufficient training on gender issues for law enforcement, prosecutors, and judges results in mishandling violence against women and gender-based crimes. Finally, incarcerated women disproportionately suffer due to the neglect of their gender-specific needs, impacting healthcare, safety, and family support.</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-3--mazo">
+			<h3 class="modal__title">CORRUPTION</h3>
+			<p>Corruption poses significant barriers for women seeking justice in Mexico. Biased investigations and prosecutions in cases of violence against women often result from corrupt practices, fostering a culture of impunity that discourages reporting of crimes. Moreover, corruption diverts crucial funds from women's rights programs, leaving the judicial system ill-prepared to address women's cases. Judges' decisions may be swayed by corruption, disproportionately favoring male perpetrators, while female victims may face intimidation, further hindering their access to justice. Consequently, a culture of silence and fear is reinforced, dissuading women from pursuing legal remedies.</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-3--papeles">
+			<h3 class="modal__title">GOVERNMENT DYSFUNCTION</h3>
+			<p>The inefficiencies within prosecutors' offices contribute to a backdrop of institutional violence that disproportionately impacts women. The criminal justice system's struggles in effectively addressing gender-based violence are driven by several factors, including inadequate resources, overwhelming caseloads concentrated in gender-based violence cases, and corrupt incentives. These elements perpetuate impunity and extend pre-trial detention, magnifying vulnerabilities for women within a challenging system. Furthermore, a culture of victim-blaming and gender stereotypes obstruct empathy for women, shaping case handling and often leading to skepticism and disbelief when reporting crimes. Outdated, insufficiently gender-sensitive training compounds these issues, often leading to re victimizing practices. These systemic deficiencies converge to create an inherently unjust environment for women. </p>
+		</div>
+		<!-- Modales Textos Episode Four -->
+		<div class="scene__intro__modal js--tooltip__modal" data-tooltip="esc-4--ep_four">
+			<p>
+				This chapter delves into the transformative journeys of women seeking healing through established institutions and organizations. Their narratives highlight the crucial roles of psychological support, education, support networks, and economic independence. These elements collectively empower women, equipping them with tools for emotional strength, informed decision-making, and recognition of harmful patterns. They foster community, enable autonomy, and lay a stable foundation for recovery, ultimately promoting liberation from violence and resilience. These recurring themes underscore the potential of gender-conscious and accessible institutional practices to drive meaningful change.
+			</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-4--flores">
+			<h3 class="modal__title">SUPPORT GROUPS</h3>
+			<p>Support groups play a crucial role in the recovery, strength, and healing process for individuals in or leaving violent situations. They provide a safe space for connecting with others who have experienced similar circumstances, offering validation and empathy, reducing isolation. Observing others' progress and success stories in the group inspires and gives hope to those overwhelmed by their own recovery journey. Additionally, support groups share coping strategies for challenges resulting from violence, contributing to rebuilding self-esteem, identifying unhealthy patterns, and fostering healthier relationships. Moreover, they challenge the stigma around abuse and mental health, encouraging help-seeking without fear of judgment.</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-4--globos">
+			<h3 class="modal__title">PSYCHOLOGICAL SUPPORT</h3>
+			<p>Psychological support has proven essential for many women, whether they are currently in, leaving, or recovering from violent relationships. It offers a safe space to express emotions and provides coping strategies and safety planning to navigate the challenges of leaving. Moreover, it aids in rebuilding self-esteem, healing from trauma, and recognizing and breaking free from unhealthy patterns. The support empowers individuals to make informed decisions, addresses mental health issues, and strengthens their support network, promoting resilience and preventing revictimization.</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-4--papel">
+			<h3 class="modal__title">EDUCATION</h3>
+			<p>Education and workshops on gender-based violence play a crucial role in empowering women. They provide essential knowledge about their rights, different types of abuse, and available resources. Through these programs, women learn to recognize abusive patterns and break the silence surrounding abuse. The workshops also help women build support networks and offer safety planning strategies to protect themselves in abusive relationships or during the process of leaving. Moreover, education and workshops promote healing from the trauma of abuse and contribute to preventing revictimization. Overall, these initiatives are instrumental in aiding women in abusive relationships, those leaving, or those who have already left, supporting their well-being and fostering resilience.</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-4--quetzal">
+			<h3 class="modal__title">ECONOMIC INDEPENDENCE</h3>
+			<p>Economic independence is a vital factor in empowering women to leave abusive relationships and rebuild their lives. It not only reduces their reliance on the abuser, easing their exit from such harmful situations, but also grants them access to counseling, legal aid, housing options, and other crucial resources during and after their departure. Financial self-sufficiency fosters a sense of empowerment, enabling women to make choices that align with their best interests and bolster their self-esteem. This newfound independence lays the groundwork for a brighter and more hopeful future post-abuse. Moreover, it sets a positive example for children, highlighting the significance of self-reliance and resilience, and encouraging the next generation to break the cycle of abuse.</p>
+		</div>
+		<!-- Modales Textos Episode Five -->
+		<div class="scene__intro__modal js--tooltip__modal" data-tooltip="esc-5--ep_five">
+			<p>
+				In this chapter, we explore the transformative experiences of women who have sought healing beyond conventional institutions and formal organizations. Their narratives reveal the importance of traditional medicine and spiritualism in their healing journeys. Their stories highlight the diverse resilience mechanisms women have discovered within alternative spaces and healing philosophies, fostering holistic approaches, community connections, cultural familiarity, and trust-building. Engaging with traditional medicine, nature, shamanic practices, and family constellations, these women navigate their trauma, reconnect with their bodies, reclaim their narratives, and draw strength from within. These recurring themes illuminate the multifaceted nature of healing practices, underscoring the cultural, symbolic, social, and embodied dimensions that shape women's transformative healing experiences.
+			</p>
+		</div>
+		<div class="scene__intro__logline js--tooltip__modal" data-tooltip="esc-5--maguey">
+			<h3 class="modal__title">NATURE</h3>
+			<p>Fostering and seeking a connection with one's natural surroundings can become a profound catalyst for recovery in the aftermath of gender-based violence. By embracing the natural world, individuals can invite a sense of interconnectedness with their community and surroundings, renewing their sense of belonging. Cultural and spiritual ties to the land provide an avenue to reclaim agency and establish a connection with ancestral heritage. Furthermore, nature's sensory tapestry can lead a person to engage their senses and offer respite from overwhelming experiences associated with trauma. Women have described how immersion in natural environments can help them ground themselves, regulate their emotions and find solace in the beauty of the natural world.</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-5--sapo">
+			<h3 class="modal__title">TRADITIONAL MEDICINE</h3>
+			<p>Through their cultural, social, and symbolic dimensions, traditional healing practices offer potential for overcoming trauma caused by gender-based violence . Rooted in cultural meanings and beliefs, these practices incorporate rituals and symbols for healing and transformation within a structured, symbolic space. They provide survivors with validation, support, and a sense of belonging within their communities, fostering resilience and recovery. Additionally, traditional medicine such as Kambô and Yopo, known for their purgative properties, can cleanse the body physically and spiritually. They restore balance, clear energetic blockages, and deepen the connection to oneself and the spiritual realm. Kambô and Yopo can also release emotional trauma, reduce anxiety, and alleviate symptoms of depression. Participants often find catharsis and gain insights into their emotions, relieving psychological burdens. These practices, complemented by sensory experiences, contribute to the overall healing process.</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-5--constelacion">
+			<h3 class="modal__title">FAMILY CONSTELLATIONS</h3>
+			<p>Family constellations offer a transformative approach for women healing from gender-based violence. By exploring systemic dynamics, these therapeutic sessions illuminate intergenerational influences and ancestral resonances. Through representation and guided facilitation, women confront generational wounds, reclaim personal power, and establish healthy boundaries. Facilitated by trained professionals, family constellations provide a supportive environment for resolution, integration, and narrative transformation. This process breaks the cycle of violence, fosters supportive connections, and restores a sense of safety, strength, and belonging.</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-5--maices">
+			<h3 class="modal__title">SHAMANISM</h3>
+			<p>Shamanism in Mexico is a culturally embedded tradition for healing and transformation, especially in trauma contexts. Rooted in indigenous practices, it restores harmony through techniques like soul retrieval, energy healing, and cleanses (limpias). Rituals and ceremonies empower individuals to release pain and self-blame, supported by the community and shamanic healers. The often syncretic nature of Mexican shamanism integrates indigenous and Catholic elements, respecting cultural and spiritual identities. Incorporating Catholic symbols and prayers into personal rituals honors this holistic approach.</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-5--veladora">
+			<h3 class="modal__title">SPIRITUALISM AND FAITH</h3>
+			<p>Spiritualism and faith play an integral role in the healing trajectories of many women, offering solace, meaning, and transformative experiences. Engaging with their beliefs allows survivors of gender-based violence to discover comfort and purpose. Within faith communities, communal support thrives, as rituals and ceremonies provide a platform for collective empathy, understanding, and empowerment. These concepts intersect with liminality and communitas, signifying milestones in the healing journey and nurturing resilience. By embracing faith and spirituality, survivors not only cultivate self-compassion but also address existential questions and find guidance in their path to healing.</p>
+		</div>
+		<!-- Modales Textos Episode Six -->
+		<div class="scene__intro__modal scene__intro__modal--left js--tooltip__modal" data-tooltip="esc-6--ep_six">
+			<p>
+				This chapter delves into the nuanced and highly individualized healing processes of women, which not only facilitate personal growth and well-being but also manifest as catalysts for collective healing and transformative change within society. Through engagement with artistic expression, activism, feminism, and mutual support, women navigate a trajectory of healing that extends beyond their own experiences, allowing them to contribute significantly to a broader movement aimed at challenging the pervasive normalization of gender-based violence. By serving as a mirror to fellow women, engaging in awareness-raising endeavors, reshaping societal attitudes, and advocating for policy reforms, survivors not only continue their personal healing journeys but also assume a pivotal role in the fundamental reconfiguration of societal norms, fostering an ethos characterized by gender equality and mutual respect.
+			</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-6--arbol">
+			<h3 class="modal__title">EMPATHY AND MUTUAL SUPPORT</h3>
+			<p>Women underscore the indispensable role of empathy and reciprocal support in their journey toward healing, serving as both beneficiaries and providers. The act of validating experiences wields a profound influence, countering the doubts and isolation stemming from trauma. This validation not only encourages women to listen to their inner voices but also propels them to proactively pursue their well-being. Supportive individuals establish connections that uplift survivors by accompanying them through healing processes. Post-transformation, many women aspire to reciprocate the support they received, a process that not only aids their own healing but also engenders purposeful and positive action. This empowerment facilitates survivors' reclamation of agency, catalyzing the cessation of traumatic cycles. This evolution from victim to survivor involves a narrative metamorphosis, wherein survivors redefine their roles by bolstering others, thereby fostering individual growth and healing.</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-6--arbusto">
+			<h3 class="modal__title">FEMINISM AND GENDER EQUITY</h3>
+			<p>Feminism or Gender Equity, as both a dynamic movement and a transformative shift in mindset, plays a pivotal role in women's recovery from gender-based violence and in shaping a resilient future for generations to come. By instilling self-worth and agency, feminism empowers survivors to reclaim control and pursue healing. Within feminist communities, survivors find support and collective healing, while feminist theories challenge gender norms. Addressing foundational underpinnings like power dynamics and toxic masculinity, feminism endeavors to unshackle society from sexist predispositions, while actively laboring to forestall prospective violence. Through resilience, coping strategies, and advocacy, survivors and their allies become agents of change, passing on vital insights. This interaction fortifies feminism's principles, guiding the movement with lived experiences. In essence, feminism bridges recovery, systemic change, and intergenerational resilience. </p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-6--aves">
+			<h3 class="modal__title">ARTISTIC PRACTICE AND CREATIVITY</h3>
+			<p>Artistic practice can be an essential source of empowerment for women healing from gender-based violence, providing a secure platform for expression, agency reclamation, and awareness building. Through art, survivors can convey complex emotions, using movement and symbolism to externalize pain and anger, reclaiming control over their narratives and identity. Art can also foster community among survivors through collaborative projects and performances, while amplifying voices challenging societal norms, fostering empathy, and driving action. These efforts contribute to education, prevention, and advocacy, inspiring others to speak out and seek help, creating a ripple of empowerment and change.</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-6--balcon">
+			<h3 class="modal__title">ACTIVISM AND PROTEST</h3>
+			<p>Engaging in activism and protest empowers survivors to turn pain into action, transforming personal struggles into a collective force for change. It not only fosters community and solidarity, but it connects women with shared experiences to counter isolation and shame. Through public demonstrations and story-sharing, survivors reclaim agency and empowerment stripped by violence. Activism raises awareness, educating both the public and survivors about the systemic issue of gender-based violence. It empowers survivors to advocate for policy changes and support services, contributing to legal reforms that protect women's rights. By challenging harmful norms, activism promotes gender equality and respect, driving social, cultural, and legal shifts.</p>
+		</div>
+		<div class="scene__intro__logline scene__intro__logline--left js--tooltip__modal" data-tooltip="esc-6--luz-danzante">
+			<!-- <h3 class="modal__title">LIGHT</h3> -->
+			<p>As we arrive at the conclusion of this immersive journey, remember that while this chapter of the interactive documentary may be closing, it is not the final page in the ongoing narrative of these remarkable women. Here, we've endeavored to honor the unwavering resilience that these survivors have displayed. Through their stories, we have painted a canvas of strength and determination, illuminating their triumphant ascent from disempowerment to empowerment.<br/>Nevertheless, while a beacon of hope, resilience is not a cure-all for the enduring atrocities that persist. Every day, women navigate the arduous path of reconstructing their lives after gender based violence.Our efforts continue onward; a rich array of narratives remains to be uncovered, stories waiting to be cast into the light of visibility.<br/>The sobering reality remains: According to the UN (2022), approximately 45,000 women worldwide are killed by a family member or intimate partner every year. The WHO (2021) reports that 30% of women worldwide have encountered or are currently facing the specter of gender-based violence. In Mexico, the heart-wrenching toll stands at 11 femicides daily. The most recent INEGI census, conducted in 2021, underscores the haunting truth that around 70.1% of women have experienced gender-based violence in their lives, with actual figures likely being even higher.<br/>As you conclude your experience with this documentary, remember that this battle extends beyond the screen; it's a universal call to action. Whether as survivors, witnesses, or even perpetrators, it resonates with each of us. This shared struggle touches our lives and resonates through our collective consciousness. Allow this narrative to inspire your solidarity, motivating you to seek or lend a helping hand. Together, with empathetic determination and collective action, we can forge a future where these stories no longer mar the fabric of society. Within each of us lies the potential to heal, uplift, and enact change.</p>
+		</div>
+
+	</div>
+
+	<audio src="assets/audios/esc-1--ambiente.mp3" class="js--audio" loop></audio>
+
+	<div class="modal animacion js--loader loader bloques--renglones--centrado visible">
+		<!-- <div class="js--spinner spinner">
+			<div class="spinner__dot1"></div>
+			<div class="spinner__dot2"></div>
+		</div> -->
+		<div class="js--loader__leyenda loader__leyenda">
+			<p>
+				Loading...
+			</p>
+		</div>
+	</div>
+
+	<!-- Modales Videos Episode One -->
+	<div class="modal js--modal" data-modal="esc-1--prueba">
+		<div class="modal__body">
+			<button class="modal__close js--modal__close">
+				<img src="assets/imgs/btn--close.png" alt="Close">
+			</button>
+			<div class="modal__container">
+				<div class="modal__video">
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/LuBAHJJPxQA?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen data-type="youtube"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal js--modal" data-modal="esc-1--religion">
+		<div class="modal__body">
+			<button class="modal__close js--modal__close">
+				<img src="assets/imgs/btn--close.png" alt="Close">
+			</button>
+			<div class="modal__container">
+				<div class="modal__video">
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/LuBAHJJPxQA?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen data-type="youtube"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal js--modal" data-modal="esc-1--muneca">
+		<div class="modal__body">
+			<button class="modal__close js--modal__close">
+				<img src="assets/imgs/btn--close.png" alt="Close">
+			</button>
+			<div class="modal__container">
+				<div class="modal__video">
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/azTA1TJQVfU?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen data-type="youtube"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modales Videos Episode Two -->
+	<!-- Modales Videos Episode Three -->
+	<!-- Modales Videos Episode Four -->
+	<!-- Modales Videos Episode Five -->
+	<div class="modal js--modal" data-modal="esc-5--sapo">
+		<div class="modal__body">
+			<button class="modal__close js--modal__close">
+				<img src="assets/imgs/btn--close.png" alt="Close">
+			</button>
+			<div class="modal__container">
+				<div class="modal__video">
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/A9FgDtqe1P8?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen data-type="youtube"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modales Videos Episode Six -->
+
+	<!-- Acerca de más allá de la sombra -->
+	<div class="js--page modal modal--page" data-page="acerca-de">
+		<div class="page__body">
+			<button class="modal__close js--pages__cerrar">
+				<img src="assets/imgs/btn--close.png" alt="Close">
+			</button>
+			<div class="page__container">
+				<h2 class="page__title">
+					<span class="txt--white">ABOUT</span> OUT OF THE SHADOWS<span class="txt--white">...</span>
+				</h2>
+				<p>
+					"Out of the Shadows" is an interactive documentary that delves into the lives of ten resilient women in Mexico, revealing a collective narrative of gender-based violence. Amidst rising violence and diminishing resources, these stories gain significant relevance. By documenting diverse adversities, the documentary explores the intricate interplay of socio-economic, environmental, and political factors fueling violence against women, while highlighting their empowering resilience. Ultimately, the documentary establishes how these experiences are universally relatable to all women––that no woman, no matter their background or position, is invulnerable.
+				</p>
+				<p>
+					This collaborative methodologies project ensures active participation of the women involved. The protagonists themselves lead the interviews, guiding the stories they wish to share. They have the freedom to choose their level of anonymity, select interview locations, and engage in the editing process, structuring their narratives alongside others. The women become our collaborative storytellers, empowering themselves through visibility, and this documentary is their platform for their voices.
+				</p>
+				<p>
+					Supported by a Fulbright Scholarship and other funders, this project has collaborated with the Center for Research and Higher Studies in Social Anthropology and local organizations dedicated to gender equity in Mexico. Working alongside survivors of gender-based violence, it aims to create meaningful change: the aim is to raise awareness, promote changes in society and provide support through stories to all affected women.
+				</p>
+
+				<iframe src="https://player.vimeo.com/video/837765203?h=568ceed6e2&title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" allow="fullscreen; picture-in-picture" allowfullscreen id="" class=""></iframe>
+			</div>
+		</div>
+	</div>
+
+	<!-- Instrucciones de navegación -->
+	<div class="js--page modal modal--page" data-page="instrucciones_page">
+		<div class="page__body">
+			<button class="modal__close js--pages__cerrar">
+				<img src="assets/imgs/btn--close.png" alt="Close">
+			</button>
+			<div class="page__container">
+				<h2 class="page__title">
+					Instructions
+				</h2>
+				<div class="instrucciones">
+					<div class="instrucciones__bloque">
+						<p><span class="instrucciones__titulo">OUT OF THE SHADOWS</span> is a journey through affective spaces, shaped by the stories of the women who are the protagonists of this documentary.</p>
+					</div>
+					<div class="instrucciones__bloque instrucciones__bloque--mitad">
+						<p>Explore these spaces by scrolling with your mouse or using your keyboard's arrow keys.</p>
+						<figure>
+							<img src="assets/imgs/img__instruc__mouse--1.png" alt="">
+						</figure>
+						<p>Each animated object holds valuable information and serves as a gateway to the stories of these extraordinary women. Engage with these objects to delve deeper.</p>
+						<figure>
+							<img src="assets/imgs/img__instruc__estufa.gif" alt="">
+						</figure>
+					</div>
+					<div class="instrucciones__bloque instrucciones__bloque--mitad">
+						<p>As you navigate through each chapter, progress towards the luminous area at the end of the space. This guiding light will lead you to the next space.</p>
+						<figure>
+							<img src="assets/imgs/img__instruc__luz.gif" alt="">
+						</figure>
+						<p>Feel free to navigate your surroundings using the arrow keys on your keyboard. If your initial visibility is limited, don't worry – as you step out of the shadows, your perspective will gradually expand.</p>
+						<figure>
+							<img src="assets/imgs/img__instruc__mouse--2.png" alt="">
+						</figure>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Ruta -->
+	<div class="js--page modal modal--page" data-page="ruta">
+		<div class="page__body">
+			<button class="modal__close js--pages__cerrar">
+				<img src="assets/imgs/btn--close.png" alt="Close">
+			</button>
+			<div class="page__container">
+				<h2 class="page__title">
+					ROUTE
+				</h2>
+				<div class="rute">
+					<figure class="rute__scene rute__scene--one">
+						<button class="js--escene--exit" data-scena="ep_one">
+							<img src="assets/imgs/img__esc-1--muneca.gif" alt="">
+							<figcaption>
+								<h2 class="rute__title">
+									CHILDHOOD &<br/>
+									INTRAFAMILIAL VIOLENCE
+								</h2>
+							</figcaption>
+						</button>
+					</figure>
+
+					<figure class="rute__scene rute__scene--two">
+						<button class="js--escene--exit" data-scena="ep_two">
+							<img src="assets/imgs/img__esc-2--celular.gif" alt="">
+							<figcaption>
+								<h2 class="rute__title">
+									INTIMATE PARTNER<br/>VIOLENCE
+								</h2>
+							</figcaption>
+						</button>
+					</figure>
+
+					<figure class="rute__scene rute__scene--three">
+						<button class="js--escene--exit" data-scena="ep_three">
+							<img src="assets/imgs/img__esc-3--mazo.gif" alt="">
+							<figcaption>
+								<h2 class="rute__title">
+									INSTITUTIONAL<br/>VIOLENCE
+								</h2>
+							</figcaption>
+						</button>
+					</figure>
+
+					<figure class="rute__scene rute__scene--four">
+						<button class="js--escene--exit" data-scena="ep_four">
+							<img src="assets/imgs/img__esc-4--globos.gif" alt="">
+							<figcaption>
+								<h2 class="rute__title">
+									organized institutional<br/>support systems
+								</h2>
+							</figcaption>
+						</button>
+					</figure>
+
+					<figure class="rute__scene rute__scene--five">
+						<button class="js--escene--exit" data-scena="ep_five">
+							<img src="assets/imgs/img__esc-5--maguey--hover.gif" alt="">
+							<figcaption>
+								<h2 class="rute__title">
+									HEALING<br/>PRACTICES
+								</h2>
+							</figcaption>
+						</button>
+					</figure>
+
+					<figure class="rute__scene rute__scene--six">
+						<button class="js--escene--exit" data-scena="ep_six">
+							<img src="assets/imgs/img__esc-6--arbol--hover.gif" alt="">
+							<figcaption>
+								<h2 class="rute__title">
+									OUT OF<br/>THE SHADOWS
+								</h2>
+							</figcaption>
+						</button>
+					</figure>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Fichas Biográfica -->
+	<div class="js--page modal modal--page" data-page="fichas-biograficas">
+		<div class="page__body">
+			<button class="modal__close js--pages__cerrar">
+				<img src="assets/imgs/btn--close.png" alt="Close">
+			</button>
+			<div class="page__container">
+				<h2 class="page__title">
+					Biographies
+				</h2>
+				<div class="records">
+					<div class="records__col--groups">
+						<ul class="records__groups">
+							<li class="records__group">
+								<button class="active js--records__group" data-group="mujeres">
+									Women Interviewed
+								</button>
+							</li>
+							<li class="records__group">
+								<button class="js--records__group" data-group="organizaciones">
+									Organizations
+								</button>
+							</li>
+						</ul>
+					</div>
+					<div class="records__col--sections">
+						<div class="records__section visible js--records__section" data-group="mujeres">
+							<ul class="records__thumbnails">
+								<li class="record__thumbnail">
+									<button class="js--record" data-record="mujeres-rosario">
+										<img src="assets/pages/img__mujeres--rosario.jpg" alt="">
+									</button>
+								</li>
+								<li class="record__thumbnail">
+									<button class="js--record" data-record="mujeres-gabina">
+										<img src="assets/pages/img__mujeres--gabina.jpg" alt="">
+									</button>
+								</li>
+								<li class="record__thumbnail">
+									<button class="js--record" data-record="mujeres-itzel">
+										<img src="assets/pages/img__mujeres--itzel.jpg" alt="">
+									</button>
+								</li>
+								<li class="record__thumbnail">
+									<button class="js--record" data-record="mujeres-reina">
+										<img src="assets/pages/img__mujeres--reina.jpg" alt="">
+									</button>
+								</li>
+								<li class="record__thumbnail">
+									<button class="js--record" data-record="mujeres-alex">
+										<img src="assets/pages/img__mujeres--alex.jpg" alt="">
+									</button>
+								</li>
+								<li class="record__thumbnail">
+									<button class="js--record" data-record="mujeres-jennifer">
+										<img src="assets/pages/img__mujeres--jennifer.jpg" alt="">
+									</button>
+								</li>
+								<li class="record__thumbnail">
+									<button class="js--record" data-record="mujeres-betty">
+										<img src="assets/pages/img__mujeres--betty.jpg" alt="">
+									</button>
+								</li>
+								<li class="record__thumbnail">
+									<button class="js--record" data-record="mujeres-luciana">
+										<img src="assets/pages/img__mujeres--luciana.jpg" alt="">
+									</button>
+								</li>
+								<li class="record__thumbnail">
+									<button class="js--record" data-record="mujeres-monica">
+										<img src="assets/pages/img__mujeres--monica.jpg" alt="">
+									</button>
+								</li>
+								<li class="record__thumbnail">
+									<button class="js--record" data-record="mujeres-barbara">
+										<img src="assets/pages/img__mujeres--barbara.jpg" alt="">
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="records__section js--records__section" data-group="organizaciones">
+							<ul class="records__thumbnails">
+								<li class="record__thumbnail">
+									<button class="js--record" data-record="orgs-femxfem">
+										<img src="assets/pages/img__col--femxfem.png" alt="">
+									</button>
+								</li>
+								<li class="record__thumbnail">
+									<button class="js--record" data-record="orgs-afrochingonas">
+										<img src="assets/pages/img__orgs--afrochingonas.jpg" alt="">
+									</button>
+								</li>
+								<li class="record__thumbnail">
+									<button class="js--record" data-record="orgs-equis-justicia">
+										<img src="assets/pages/img__orgs--equis-justicia.png" alt="">
+									</button>
+								</li>
+								<li class="record__thumbnail">
+									<button class="js--record" data-record="orgs-gesmujer">
+										<img src="assets/pages/img__orgs--gesmujer.png" alt="">
+									</button>
+								</li>
+								<li class="record__thumbnail">
+									<button class="js--record" data-record="orgs-frentenacional">
+										<img src="assets/pages/img__col--frentenacional.png" alt="">
+									</button>
+								</li>
+								<li class="record__thumbnail">
+									<button class="js--record" data-record="orgs-muxll">
+										<img src="assets/pages/img__col--muxll.png" alt="">
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="records__col--image">
+						<figure class="record__image">
+							<img src="" alt="" class="js--record__image">
+						</figure>
+					</div>
+					<div class="records__col--information">
+						<div class="records__information">
+							<div class="record__information js--record__information" data-record="mujeres-alex">
+								<h4 class="">Alex:</h4>
+								<div class="">
+									<p>
+										Alex, a Mexican-American woman from Mexico City and mother of four, has suffered economic and psychological violence at the hands of her ex-partner. She faces the effects of vicarious violence and a corrupt judicial system that has denied her access to her children for three years. As co-founder of the Front Against Vicarious Violence, she supports women and advocates for laws that recognize this form of gender-based violence. Her work has inspired change in other Latin American countries, paving the way for progress throughout the region.
+
+									</p>
+								</div>
+							</div>
+							<div class="record__information js--record__information" data-record="mujeres-barbara">
+								<h4 class="">Bárbara:</h4>
+								<div class="">
+									<p>
+										Barbara (41), a mother of two from Mexico City escaped the abuses of her powerful notary ex-husband. For six years, she has fought legally against institutional violence and police corruption. Now, her case is in the hands of Congress and she has a strong legal team. Her dedication to justice and love for her children fuel her struggle and inspire those around her.
+									</p>
+								</div>
+							</div>
+							<div class="record__information js--record__information" data-record="mujeres-betty">
+								<h4 class="">Betty: </h4>
+								<div class="">
+									<p>
+										Betty (55), a mother of three in Mexico City, suffered economic and psychological abuse before being imprisoned for her involvement in selling drugs, a desperate measure to pay off debts owed by her ex-partner. During that time, she faced threats from drug traffickers in her community. During her trial and in the Santa Marta and Islas Marias penitentiaries, she suffered institutional abuse in the prison system. Now, as co-founder of Mujeres Unidas por la Libertad, she uses her experience to support other women still fighting for justice within the prison system.
+									</p>
+								</div>
+							</div>
+							<div class="record__information js--record__information" data-record="mujeres-gabina">
+								<h4 class="">Gabina: </h4>
+								<div class="">
+									<p>
+										Gabina (33), an indigenous woman from San Esteban Atatlahuca in the Oaxacan Mixteca, has overcome physical and sexual abuse by her brother and economic and psychological abuse in her marriage. She has found solace in traditional medicines such as Kambô and Yopo in her healing process. Inspired by her own experience, Gabina is an advocate against gender violence. Today, she organizes workshops in different municipalities to empower women and address this severe problem in her community, which has been heightened by an agrarian conflict in recent years.
+									</p>
+								</div>
+							</div>
+							<div class="record__information js--record__information" data-record="mujeres-itzel">
+								<h4 class="">Itzel:</h4>
+								<div class="">
+									<p>
+										Itzel (34), an elementary school teacher and single mother from the Isthmus of Tehuantepec in Oaxaca, has overcome the challenges of domestic violence, including attempted femicide. Through personal healing, psychology, and activism, she inspires and supports other women in abusive situations. She raises awareness about gender-based violence and empowers women to reclaim their lives. In her classes, she promotes empathy and understanding using a gender lens.
+									</p>
+								</div>
+							</div>
+							<div class="record__information js--record__information" data-record="mujeres-jennifer">
+								<h4 class="">Jennifer:</h4>
+								<div class="">
+									<p>
+										Jennifer (40), a mother of two from Mexico City, suffered psychological and economic violence during her marriage. After separating, her husband took the children without her consent, plunging her into a painful struggle against "Vicarious Violence". She sought psychological, legal and spiritual help, and became an activist with the National Front Against Vicarious Violence. After institutional challenges, Jennifer was able to get her children back. Together, they are working to rebuild their relationship and overcome the effects of the separation.
+									</p>
+								</div>
+							</div>
+							<div class="record__information js--record__information" data-record="mujeres-luciana">
+								<h4 class="">Luciana: </h4>
+								<div class="">
+									<p>
+										Luciana, a visual artist from Mexico City and mother of two, has overcome psychological and economic abuse and attempted incarceration by her ex-partner. Navigating a demanding legal struggle, she finds solace in therapy, meditation, dance, and her art – a dual-purpose endeavor. Her creative work not only raises awareness about gender-based violence and women's experiences but also fuels her personal healing and the inspiration of others.
+									</p>
+								</div>
+							</div>
+							<div class="record__information js--record__information" data-record="mujeres-monica">
+								<h4 class="">Monica: </h4>
+								<div class="">
+									<p>
+										Monica (42), a mother of three children and a domestic worker in Mexico City, managed to overcome seven years of domestic violence by her ex-partner. During that difficult period, her ex-partner denied her the right to pursue her dream of returning to university. However, Monica remained strong and determined, and now aspires to resume her university education. Her courage and determination are reflected in her goal to break the cycle of abuse by passing on feminist principles to her children.
+									</p>
+								</div>
+							</div>
+							<div class="record__information js--record__information" data-record="mujeres-reina">
+								<h4 class="">Reina:</h4>
+								<div class="">
+									<p>
+										Reina, a single mother and an indigenous woman from Oaxaca, has faced institutional violence as a domestic worker in Mexico City and Oaxaca. During the COVID-19 pandemic, she dealt with unemployment, sexual harassment, and economic abuse. In her quest for justice, she has faced institutional obstacles. Inspired by her son's dreams of becoming a doctor, she finds solace in the shamanic practices passed down by her aunt and strength in her Catholic faith. With determination, Reina strives to create a better life for herself and her son.
+									</p>
+								</div>
+							</div>
+							<div class="record__information js--record__information" data-record="mujeres-rosario">
+								<h4 class="">Rosario</h4>
+								<div class="">
+									<p>
+										Rosario (45), a woman with indigenous roots in the Oaxacan Mixteca, has overcome various forms of gender-based violence. Since childhood, she has survived physical, sexual, psychological and economic abuse. In her quest for healing, she has participated in educational workshops and received comprehensive support from GESMujer. Inspired by her own transformation, she joined the organization and was named executive director. She leads the team to empower others and foster positive change.
+									</p>
+								</div>
+							</div>
+							<div class="record__information js--record__information" data-record="orgs-afrochingonas">
+								<h4 class="">
+									<a href="https://afrochingonas.com/" target="_blank">AFROCHINGONAS
+									</a>
+								</h4>
+								<div class="">
+									<p>
+										Afrochingonas is an interdisciplinary project centered around anti-racist creation, <a href="https://afrochingonas.com/podcast/" target="_blank">communication</a>, and research. Its primary aim is to foster collective healing and encourage participants to contemplate their roles within a societal framework defined by racism, patriarchy, and capitalism. Employing a non-academic approach, Afrochingonas cultivates knowledge and aspires to shape a world aligned with their ideals, all while championing a spirit of 'joyful rebellion'.
+									</p>
+									<p>
+										Click <a href="https://www.patreon.com/afrochingonas" target="_blank">here</a> if you wish to donate to the project 
+									</p>
+								</div>
+							</div>
+							<div class="record__information js--record__information" data-record="orgs-equis-justicia">
+								<h4 class="">
+									<a href="https://equis.org.mx/" target="_blank">EQUIS JUSTICIA PARA LAS MUJERES</a>
+								</h4>
+								<div class="">
+									<p>
+										Equis Justice for Women is a dedicated feminist organization advocating for accessible justice for women of diverse backgrounds. Their mission is to dismantle power structures that perpetuate oppression and exclusion. Equis operates within three key domains: preventing and safeguarding against gender-based violence, challenging the unjust criminalization of women, and advocating for impartial, nondiscriminatory justice.
+									</p>
+									<p>
+										Want to know more about Equis Justicia? 
+									</p>
+									<ul>
+										<li><a href="https://www.facebook.com/EquisJusticia" target="_blank">Facebook</a></li>
+										<li><a href="https://twitter.com/EquisJusticia" target="_blank">Twitter</a></li>
+										<li><a href="https://www.youtube.com/c/EquisJusticiaparalasMujeres" target="_blank">YouTube</a></li>
+									</ul>
+									<p>
+										Information to receive donations on behalf of EQUIS JUSTICIA PARA LAS MUJERES A.C.
+									</p>
+									<p>
+										In MXN 
+									</p>
+									<ul>
+										<li>Name of bank: BBVA/Bancomer </li>
+										<li>Account number: 0100757861</li>
+									</ul>
+									<p>
+										En USD 
+									</p>
+									<ul>
+										<li>Bank name: Banco Mercantil del Norte (BANORTE). </li>
+										<li>Account number: 1230657248 </li>
+										<li>SWIFT Code: MENOMXMTXXX </li>
+									</ul>
+								</div>
+							</div>
+							<div class="record__information js--record__information" data-record="orgs-femxfem">
+								<h4 class="">
+									<a href="https://www.instagram.com/femx.fem/?hl=en" target="_blank">FEMXFEM</a>
+								</h4>
+								<div class="">
+									<p>
+										Mujeres en Diálogo México, A.C., known as 'FEMXFEM,' is a civil society association established in 2019. Its primary objective is to conduct discussions, training sessions, and experiential activities related to gender violence. Additionally, FEMXFEM offers free legal, psychological, and medical assistance to women who are victims of gender violence.
+									</p>
+									<p>
+										Contact: 
+										<a href="mailto:femxfem.oficial@gmail.com">femxfem.oficial@gmail.com</a>
+									</p>
+								</div>
+							</div>
+							<div class="record__information js--record__information" data-record="orgs-frentenacional">
+								<h4 class="">
+									<a href="https://www.fncvv.com/" target="_blank">NATIONAL FRONT AGAINST VICARIOUS VIOLENCE </a>
+								</h4>
+								<div class="">
+									<p>
+										The National Front Against Vicarious Violence comprises a collective of women who have endured diverse manifestations of gender-based violence, with a particular emphasis on vicarious violence. Their central objective is to heighten awareness, advocate for legislation, and offer assistance to women impacted by this form of violence. Their dedicated efforts are aimed at driving social transformation, eradicating vicarious violence, and ensuring justice and protection for all affected individuals.
+									</p>
+								</div>
+							</div>
+							<div class="record__information js--record__information" data-record="orgs-gesmujer">
+								<h4 class="">
+									<a href="https://gesmujer.org/diplomado/" target="_blank">GES MUJER</a>
+								</h4>
+								<div class="">
+									<p>
+										Ges Mujer is an autonomous civil association dedicated to tackling gender inequality across various domains. Their primary goal is to champion the rights of women and girls through an equity-focused approach. They provide vital services such as psychological and legal counseling, engage in educational endeavors and applied research, curate specialized documentation, drive digital activism, and advance the principles of feminist economics. Operating within both urban and rural areas of Oaxaca, Ges Mujer collaborates extensively with education, health, justice, and municipal authorities. 
+									</p>
+								</div>
+							</div>
+							<div class="record__information js--record__information" data-record="orgs-muxll">
+								<h4 class="">
+									<a href="https://mujeresunidasxlalibertad.com/%C2%BFqui%C3%A9nes-somos%3F" target="_blank">WOMEN UNITED FOR FREEDOM</a>
+								</h4>
+								<div class="">
+									<p>
+										Women United for Freedom is an organization established by women who have undergone periods of incarceration. Their central mission revolves around safeguarding human rights both within and beyond the confines of prison. They concentrate their efforts on advancing access to justice, championing rights related to sexual and reproductive health, and advocating for mental health rights. Additionally, they engage in various community-based initiatives to foster employment opportunities and empower women, contributing to the holistic development of the community.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Mapa conceptual -->
+	<div class="js--page modal modal--page" data-page="mapa-conceptual">
+		<div class="page__body">
+			<button class="modal__close js--pages__cerrar">
+				<img src="assets/imgs/btn--close.png" alt="Close">
+			</button>
+			<div class="page__container">
+				<h2 class="page__title">
+					CONCEPTUAL MAP
+				</h2>
+				<p class="txt--center">
+					In this documentary, each experience shared by the protagonists is marked by various forms of violence and the presence of factors that either contribute to this violence or highlight their resilience. Explore the links between the different stories.
+				</p>
+				<div class="map map--english">
+					<figure class="map__icon js--map__icon" data-icon="activismo">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/activismo.png" class="" alt="activismo">
+							<img src="assets/map_eng/activismo__lineas.png" class="map__line" alt="activismo">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="alcoholismo">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/alcoholismo.png" class="" alt="alcoholismo">
+							<img src="assets/map_eng/alcoholismo__lineas.png" class="map__line" alt="alcoholismo">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="apoyo_psicologico">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/apoyo_psicologico.png" class="" alt="apoyo_psicologico">
+							<img src="assets/map_eng/apoyo_psicologico__lineas.png" class="map__line" alt="apoyo_psicologico">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="artistica_espiritualidad">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/artistica_espiritualidad.png" class="" alt="artistica_espiritualidad">
+							<img src="assets/map_eng/artistica_espiritualidad__lineas.png" class="map__line" alt="artistica_espiritualidad">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="autoestima">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/autoestima.png" class="" alt="autoestima">
+							<img src="assets/map_eng/autoestima__lineas.png" class="map__line" alt="autoestima">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="carencia">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/carencia.png" class="" alt="carencia">
+							<img src="assets/map_eng/carencia__lineas.png" class="map__line" alt="carencia">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="celotipia">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/celotipia.png" class="" alt="celotipia">
+							<img src="assets/map_eng/celotipia__lineas.png" class="map__line" alt="celotipia">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="chamanismo">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/chamanismo.png" class="" alt="chamanismo">
+							<img src="assets/map_eng/chamanismo__lineas.png" class="map__line" alt="chamanismo">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="circulos">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/circulos.png" class="" alt="circulos">
+							<img src="assets/map_eng/circulos__lineas.png" class="map__line" alt="circulos">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="constelaciones">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/constelaciones.png" class="" alt="constelaciones">
+							<img src="assets/map_eng/constelaciones__lineas.png" class="map__line" alt="constelaciones">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="corrupcion">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/corrupcion.png" class="" alt="corrupcion">
+							<img src="assets/map_eng/corrupcion__lineas.png" class="map__line" alt="corrupcion">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="disfuncion_gobierno">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/disfuncion_gobierno.png" class="" alt="disfuncion_gobierno">
+							<img src="assets/map_eng/disfuncion_gobierno__lineas.png" class="map__line" alt="disfuncion_gobierno">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="educacion">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/educacion.png" class="" alt="educacion">
+							<img src="assets/map_eng/educacion__lineas.png" class="map__line" alt="educacion">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="empatia">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/empatia.png" class="" alt="empatia">
+							<img src="assets/map_eng/empatia__lineas.png" class="map__line" alt="empatia">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="espectadores">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/espectadores.png" class="" alt="espectadores">
+							<img src="assets/map_eng/espectadores__lineas.png" class="map__line" alt="espectadores">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="espiritualidad">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/espiritualidad.png" class="" alt="espiritualidad">
+							<img src="assets/map_eng/espiritualidad__lineas.png" class="map__line" alt="espiritualidad">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="feminismo_solidaridad">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/feminismo_solidaridad.png" class="" alt="feminismo_solidaridad">
+							<img src="assets/map_eng/feminismo_solidaridad__lineas.png" class="map__line" alt="feminismo_solidaridad">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="hijes">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/hijes.png" class="" alt="hijes">
+							<img src="assets/map_eng/hijes__lineas.png" class="map__line" alt="hijes">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="independencia_economica">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/independencia_economica.png" class="" alt="independencia_economica">
+							<img src="assets/map_eng/independencia_economica__lineas.png" class="map__line" alt="independencia_economica">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="medicina_tradicional">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/medicina_tradicional.png" class="" alt="medicina_tradicional">
+							<img src="assets/map_eng/medicina_tradicional__lineas.png" class="map__line" alt="medicina_tradicional">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="medios_com">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/medios_com.png" class="" alt="medios_com">
+							<img src="assets/map_eng/medios_com__lineas.png" class="map__line" alt="medios_com">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="naturaleza">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/naturaleza.png" class="" alt="naturaleza">
+							<img src="assets/map_eng/naturaleza__lineas.png" class="map__line" alt="naturaleza">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="normalizacion">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/socializacion.png" class="" alt="socializacion">
+							<img src="assets/map_eng/normalizacion__lineas.png" class="map__line" alt="normalizacion">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="religion">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/religion.png" class="" alt="religion">
+							<img src="assets/map_eng/religion__lineas.png" class="map__line" alt="religion">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="religion_2">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/religion_2.png" class="" alt="religion_2">
+							<img src="assets/map_eng/religion_2__lineas.png" class="map__line" alt="religion_2">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="roles">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/roles.png" class="" alt="roles">
+							<img src="assets/map_eng/roles__lineas.png" class="map__line" alt="roles">
+						</button>
+					</figure>
+					<figure class="map__icon js--map__icon" data-icon="socializacion">
+						<button class="js--btn" data-modal="esc-1--prueba">
+							<img src="assets/map/normalizacion.png" class="" alt="normalizacion">
+							<img src="assets/map_eng/socializacion__lineas.png" class="map__line" alt="socializacion">
+						</button>
+					</figure>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Recursos -->
+	<div class="js--page modal modal--page" data-page="recursos">
+		<div class="page__body">
+			<button class="modal__close js--pages__cerrar">
+				<img src="assets/imgs/btn--close.png" alt="Close">
+			</button>
+			<div class="page__container">
+				<h2 class="page__title">
+					RESOURCES
+				</h2>
+				<p class="txt--center">
+					If you identify with the stories of the women in this documentary and are looking to talk to someone about your experience, check out the links below: 
+				</p>
+				<p class="txt--center">
+					Are you experiencing domestic or gender-based violence? Do you need help?<br/>
+					Contact the following resources:
+				</p>
+				<div class="instrucciones">
+					<div class="instrucciones__bloque instrucciones__bloque--mitad">
+						<h4 class="instrucciones__preguntas">Are You in Danger? </h4>
+
+						<p>
+							911 stands as a swift and direct channel for responding to emergencies encompassing a range of violence, including sexual abuse, sexual harassment, rape, intimate partner violence, and family violence.
+						</p>
+
+						<h4 class="instrucciones__preguntas">Within the Mexican Context:</h4>
+
+						<h4 class="instrucciones__titulo--4">
+							Attention to Women in a Situation of Violence through the Línea Sin Violencia (Violence Free Hotline)
+						</h4>
+						<p>800 10 84 053</p>
+
+						<h4 class="instrucciones__titulo--4">
+							Oaxacan Women's Institute
+						</h4>
+						<p>
+							Telephone assistance to women in situations of domestic and gender violence.<br/>
+							01 8008317656
+						</p>
+
+						<p>
+							You can also go to the <a href="https://failover.www.gob.mx/mantenimiento.html" target="_blank">Women's Justice Centers (CJM)</a>.  The CJMs are an initiative of the National Commission to Prevent and Eradicate Violence against Women (Conavim) of the Ministry of the Interior (Segob).
+						</p>
+						<!--  -->
+						<h4 class="instrucciones__preguntas">
+							Are you experiencing Vicarious Violence? 
+						</h4>
+
+						<p>
+							Get informed about vicarious violence <a href="https://www.fncvv.com/" target="_blank">here</a>:<br/>
+							<a href="https://www.instagram.com/frentenacionalviolenciavicaria/" target="_blank">@frentenacionalviolenciavicaria</a>
+						</p>
+
+						<p>
+							Do you need help? Contact us at: <br/>
+							<a href="mailto:frentenacional.informacion@gmail.com">frentenacional.informacion@gmail.com</a>
+						</p>
+						<!--  -->
+						<h4 class="instrucciones__preguntas">
+							Do you know someone experiencing injustice in the Mexican prison system? 
+						</h4>
+						<p>
+							Contact Mujeres Unidas por la Libertad <a href="https://mujeresunidasxlalibertad.com/" target="_blank">here</a>.
+						</p>
+						<!--  -->
+						<h4 class="instrucciones__preguntas">
+							Do you need immediate help and are looking for a shelter?
+						</h4>
+
+						<p>
+							All states in Mexico have services to provide psychological, legal or medical advice. Consult the infographic on <a href="https://www.gob.mx/inmujeres/articulos/servicios-de-atencion-a-mujeres-en-situacion-de-violencia-de-los-estados?idiom=es" target="_blank">this page</a>.
+						</p>
+
+						<p>
+							<a href="mailto:renarac@rednacionalderefugios.org.mx" target="_blank">renarac@rednacionalderefugios.org.mx</a><br/>
+							<a href="tel:8008224460">800 822 44 60</a>
+						</p>
+
+						<p>
+							<a href="https://www.gesmujer.org/sitio/" target="_blank">https://www.gesmujer.org/sitio/</a><br/>
+							<a href="tel:019515166810">(01951) 5166810</a>
+						</p>
+						<!--  -->
+					</div>
+					<div class="instrucciones__bloque instrucciones__bloque--mitad">
+						<h4 class="instrucciones__preguntas">
+							Do you need to talk to someone about your situation? 
+						</h4>
+
+						<p>
+							<strong>Ges Mujer</strong> Psychological Counseling<br/>
+							<a href="mailto:estefaniasanchez.contacto@gmail.com" target="_blank">estefaniasanchez.contacto@gmail.com</a><br/>
+							Instagram <a href="https://www.instagram.com/psicologaenoax/" target="_blank">@psicologaenoax</a>
+						</p>
+
+						<p>
+							<strong>FemXFem</strong> Psychological Counseling:<br/>
+							<a href="mailto:femxfem.oficial@gmail.com" target="_blank">femxfem.oficial@gmail.com</a><br/>
+							Instagram <a href="https://www.instagram.com/femx.fem/" target="_blank">@femx.fem</a>
+						</p>
+
+						<p>
+							For information on legal assistance:<br/>
+							<a href="https://equis.org.mx/" target="_blank">https://equis.org.mx/</a>
+						</p>
+						<!--  -->
+						<h4 class="instrucciones__preguntas">
+							Are you experiencing digital violence or cybercrime?
+						</h4>
+						<p>
+							You can report it to 088 in a safe and confidential way.<br/>
+							<a href="https://www.gob.mx/gncertmx" target="
+							">Learn more</a>.
+						</p>
+						<!--  -->
+						<h4 class="instrucciones__preguntas">
+							Looking to Report?  
+						</h4>
+
+						<h4 class="instrucciones__titulo--4">
+							OAXACA
+						</h4>
+
+						<p>
+							<a href="https://fge.oaxaca.gob.mx/index.php/fiscalia-delitos-contra-mujer" target="_blank">Specialized Prosecutor's Office for Attention to Gender-Based Crimes against Women</a><br/>
+							Centro Administrativo del Poder Ejecutivo y Judicial General Porfirio Díaz, Edificio Jesús "Chu" Rasgado y Álvaro Carrillo, Reyes Mantecón, San Bartolo Coyotepec, Oaxaca, C.P. 71257.<br/>
+							Phone: 5016900 ext. 20602<br/>
+							<a href="mailto:contacto.fiscalia@fge.oaxaca.gob.mx">contacto.fiscalia@fge.oaxaca.gob.mx</a>
+						</p>
+						<p>
+							<a href="https://violenciafeminicida.consorciooaxaca.org.mx/directorio" target="_blank">Comprehensive Directory for Women's Consulting Services</a>
+						</p>
+
+						<h4 class="instrucciones__titulo--4">
+							MEXICO CITY
+						</h4>
+
+						<p>
+							<strong>Prosecutor's Office for the Investigation of Crimes Committed by Public Servants</strong><br/>
+							Río de la Loza, number 156, 7th floor, Colonia Doctores, C.P. 06720, Alcaldía Cuauhtémoc, Mexico City.<br/>
+							55-52-00-90-85 │ 55-52-00-90-68 │ 55-52-00-90-69
+						</p>
+
+						<p>
+							<strong>Citizen Attention</strong>
+							Calle Gral. Gabriel Hernández, number 56, Colonia Doctores, C.P. 06720, Alcaldía Cuauhtémoc, Mexico City.<br/>
+							55-52-00-90-00<br/>
+							<a href="mailto:gestión_fiscal@fgjcdmx.gob.mx">gestion_fiscal@fgjcdmx.gob.mx</a>
+						</p>
+
+						<p>
+							<strong>Mexico City Human Rights Commission</strong><br/>
+							Avenida Universidad, number 1449, Colonia Axotla, C.P. 01030, Alcaldía Álvaro Obregón, Mexico City.<br/>
+							<a href="mailto:quejas@cdhdf.org.mx">quejas@cdhdf.org.mx</a>
+						</p>
+
+						<p>
+							<strong>CAVI Centro de Atención a la Violencia Intrafamiliar (Center for Attention to Domestic Violence)</strong><br/>
+							Digna Ochoa y Plácido Street, first floor, Col. Doctores, between Dr. Lavista and Río de la Loza, C.P. 06720. From 9:00 to 19:00 hours from Monday to Sunday, Telephone (55) 5345 5248, (55) 5345 5228, (55) 5345 5229.<br/>
+							<a href="https://mujeresseguras.cdmx.gob.mx/como-denunciar/" target="_blank">More Information</a>
+						</p>
+						<!--  -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Créditos -->
+	<div class="js--page modal modal--page" data-page="creditos">
+		<div class="page__body">
+			<button class="modal__close js--pages__cerrar">
+				<img src="assets/imgs/btn--close.png" alt="Close">
+			</button>
+			<div class="page__container">
+				<h2 class="page__title">
+					CREDITS
+				</h2>
+				<p class="team__subtitle">The Team</p>
+				<p>The team comprises Mexican artists who are either female or consider themselves advocates for women’s rights. We are engaged in this project because we relate to it personally and because we share the mission of creating a platform for the voices of those who have not been given the opportunity to be heard. As Mexicans who have lived in Mexico, we are not only immersed in the culture we are working with but understand the specific challenges of the theme due to our personal experiences. </p>
+				<figure class="team">
+					<img src="assets/pages/img__equipo--sofia.jpg" alt="" class="">
+					<figcaption class="team__information">
+						<h3 class="team__member">Sofia Navarrete Zur - Director </h3>
+						<p>Sofía is a Mexican-American visual anthropologist recognized for her work in the field of research and documentary filmmaking. With an academic background at Wesleyan University and The New School, she has specialized in relevant topics such as gender violence and migration. Her latest documentary short film, "Convite," has received international recognition, including a nomination for Best Documentary Short at the NFFTY and screening at L.A. Shorts. Through her work, Sofia seeks to raise awareness and promote dialogue on social issues.</p>
+					</figcaption>
+				</figure>
+				<figure class="team">
+					<img src="assets/pages/img__equipo--jose.jpg" alt="" class="">
+					<figcaption class="team__information">
+						<h3 class="team__member">José- Luis Rangel - Artistic Director </h3>
+						<p>José is a documentary filmmaker and designer, graduated from the Universidad Iberoamericana Ciudad de México. He has collaborated in projects that have been shown around the world in festivals such as IDFA, Muestra Internacional Documental de Bogotá, Festival de Cine Latinoamericano de Rosario, DocsMX and the Ambulante tour. His personal practice, inscribed in the tradition of experimental cinema, has been screened in cities such as Boston, Saigon, Acapulco and Celaya.</p>
+					</figcaption>
+				</figure>
+				<figure class="team">
+					<img src="assets/pages/img__equipo--adhara.jpg" alt="" class="">
+					<figcaption class="team__information">
+						<h3 class="team__member">Adhara Miguel - Illustrator</h3>
+						<p>Adhara is a graphic designer with academic training at the Faculty of Arts and Design and the Antigua Academia de San Carlos. She has collaborated with publishers such as Planeta, Encuentros 2050, Destino and Casa de Humanidades UNAM, excelling in the creation of cover designs, posters and interior layout. Her artwork has been exhibited in exhibitions such as Ilustrante at the Museo Morelense de Arte Contemporáneo Juan Soriano and Index ArtBook Fair at the Kurimanzutto gallery. Adhara also teaches art to children, participates in social projects and provides supervision to publishing and design companies.</p>
+					</figcaption>
+				</figure>
+				<figure class="team">
+					<img src="assets/pages/img__equipo--sharon.jpg" alt="" class="">
+					<figcaption class="team__information">
+						<h3 class="team__member">Sharon Aiza - Sound Designer</h3>
+						<p>Sharon is an audio engineer and composer who graduated from SAE Institute México and holds a second degree from Middlesex University London. She is the owner of Punctum Stans, a studio renowned for its expertise in music composition, production, sound design, mixing, and mastering. In recognition of her exceptional talent, Sharon was nominated for a Latin Grammy in 2013 for her remarkable collaboration with Phil Vinall. She currently works with a diverse range of national and international artists, establishing her presence and influence within the music and film industry.</p>
+					</figcaption>
+				</figure>
+				<figure class="team">
+					<img src="assets/pages/img__equipo--gerardo.jpg" alt="" class="">
+					<figcaption class="team__information">
+						<h3 class="team__member">Gerardo Vidal - Programmer</h3>
+						<p>Gerardo is a highly skilled professional with extensive expertise in graphic design, information design, and programming. He holds a Master's degree in Information Design and has accumulated 15 years of experience in the field, leading teams to develop innovative solutions that effectively connect customers with their product users through the implementation of cutting-edge UX design, UI, data visualization, and software development methodologies. Gerardo has been an educator for over 8 years, teaching design, visual arts, and new technologies, with a focus on practical applications.</p>
+					</figcaption>
+				</figure>
+				<h2 class="page__title">
+					Extra Credits
+				</h2>
+				<p><strong>Director:</strong><br/>
+				Sofía Navarrete Zur</p>
+
+				<p><strong>Producer(s):</strong><br/>
+				Sofía Navarrete Zur, Jose Luis Rangel</p>
+
+				<p><strong>Art Director:</strong><br/>
+				Jose Luis Rangel</p>
+
+				<p><strong>Cinematography:</strong><br/>
+				Sofía Navarrete Zur</p>
+
+				<p><strong>Editor:</strong><br/>
+				Sofía Navarrete Zur</p>
+
+				<p><strong>Illustration and Animation:</strong><br/>
+				Adhara Miguel</p>
+
+				<p><strong>Writer:</strong><br/>
+				Sofía Navarrete Zur</p>
+
+				<p><strong>Music and Sound Design:</strong><br/>
+				Sharon Aiza</p>
+
+				<p><strong>Sound Editor:</strong><br/>
+				Sharon Aiza<br/>
+				Shenan Ochoa</p>
+
+				<p><strong>Programmer:</strong><br/>
+				Gerardo Vidal</p>
+
+				<p><strong>Academic Team:</strong><br/>
+				Sofía Navarrete Zur - Researcher<br/>
+				Rachel Sieder - Academic Advisor<br/>
+				Paola Sesia - Academic Advisor</p>
+
+				<p><strong>Interviewees:</strong><br/>
+				Alexandra Volin<br/>
+				Barbara Ortigoza<br/>
+				Beatriz Maldonado Cruz<br/>
+				Gabina García Hernández<br/>
+				Itzel Cerón<br/>
+				Jennifer Seifert<br/>
+				Luciana Corres<br/>
+				María del Rosario Martínez<br/>
+				Monica Hernandez Moya<br/>
+				Reyna Martinez Martinez</p>
+
+				<p>Angelica Ayala - Director of Ges Mujer<br/>
+					Fatima Gamboa - Director of Equis Justicia<br/>
+					Soledad Venegas - Director of Technology at Ges Mujer<br/>
+					Estefanía Sánchez César - Psychologist<br/>
+					Leslie - Psychologist Fem X Fem<br/>
+					Marbella Figueroa - Co-director of Afrochingonas<br/>
+					Samantha Cerisola - Director of FemXFem<br/>
+					Valeria Angola - Co-director of Afrochingonas<br/>
+					Ximena Avellaneda - Co-founder of Ges Mujer</p>
+
+
+				<p><strong>Special Thanks:</strong><br/>
+
+				<p>Sergio Navarrete Pellicer<br/>
+				Judith Zur<br/>
+				Stefano Castro<br/>
+				Severine Durin<br/>
+				Vera Claire<br/>
+				Jorge Rosano Gamboa<br/>
+				Santiago Harvie</p>
+
+				<p>CIESAS Occidente<br/>
+				CIESAS Ciudad de México<br/>
+				The Fulbright Program<br/>
+				Awesome Without Borders<br/>
+				Equis Justicia Para las Mujeres<br/>
+				Cosa Buena<br/>
+				Ges Mujer<br/>
+				Frente Nacional en Contra de la Violencia Vicaria<br/>
+				Mujeres Unidas por la Libertad</p>
+
+
+				<p class="txt--bold">Our funders:<br/>
+				Fulbright<br/>
+				Awesome Without Borders </p>
+
+				<p class="txt--bold">Organisations of Institutional and non monitary support:<br/>
+				Ciesas<br/>
+				Ges Mujer<br/>
+				Equis Justicia</p>
+
+				<figure class="credits__logos">
+					<img src="assets/pages/img__col--muxll.png" alt="">
+					<img src="assets/pages/img__col--awb.png" alt="">
+					<img src="assets/pages/img__col--ciesas.png" alt="">
+					<img src="assets/pages/img__col--femxfem.png" alt="">
+					<img src="assets/pages/img__col--frentenacional.png" alt="">
+					<img src="assets/pages/img__col--fulbright.png" alt="">
+					<img src="assets/pages/img__col--gesmujer.png" alt="">
+					<img src="assets/pages/img__orgs--equis-justicia.png" alt="">
+					<img src="assets/pages/img__col--iberodocs.png" alt="">
+					<img src="assets/pages/img__col--nodo.png" alt="">
+				</figure>
+			</div>
+		</div>
+	</div>
+
+	<!-- Menu -->
+	<div class="header__menu js--header__menu">
+		<div class="page__cerrar js--menu__close">
+			Close
+		</div>
+		<!-- <figure>
+			<a href="index.html">
+				<img src="assets/imgs/logo--eng.png" alt="Más allá de la sombra">
+			</a>
+		</figure> -->
+		<ul class="">
+			<li>
+				<button class="js--pages__btn" data-page="acerca-de">ABOUT OUT OF THE SHADOWS</button>
+			</li>
+			<li>
+				<button class="js--pages__btn" data-page="instrucciones_page">NAVIGATION INSTRUCTIONS</button>
+			</li>
+			<li>
+				<button class="js--pages__btn" data-page="ruta">ROUTE</button>
+			</li>
+			<li>
+				<button class="js--pages__btn" data-page="fichas-biograficas">BIOGRAPHIES</button>
+			</li>
+			<li>
+				<button class="js--pages__btn" data-page="mapa-conceptual">CONCEPTUAL MAP</button>
+			</li>
+			<li>
+				<button class="js--pages__btn" data-page="recursos">RESOURCES</button>
+			</li>
+			<li>
+				<button class="js--pages__btn" data-page="creditos">CREDITS</button>
+			</li>
+		</ul>
+	</div>
+
+<!-- <script src="contenidos-min.js"></script> -->
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script src="js/libs--funciones.js"></script>
+<script src="js/libs/howler.min.js"></script>
+<script src="js/funciones.js?cache=4432431857"></script>
+
+</body>
+</html>

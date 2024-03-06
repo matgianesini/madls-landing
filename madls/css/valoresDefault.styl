@@ -1,0 +1,166 @@
+// Con argumentos
+alineados()
+	display: inline-block
+	vertical-align: arguments
+
+animacion()
+	-webkit-animation: arguments;
+	-ms-animation: arguments;
+	animation: arguments;
+
+bg()
+	background arguments
+
+centrado()
+	margin: 0 auto
+	width: arguments
+
+columnas(num,gap)
+	-webkit-column-count num
+	-webkit-column-gap gap
+	column-count num
+	column-gap gap
+
+degradado(primer,segundo, direccion)
+	background: primer;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(primer), to(segundo));
+	background: -webkit-linear-gradient(direccion, primer, segundo);
+	background: -ms-linear-gradient(direccion, primer, segundo);
+	background: linear-gradient(direccion, primer, segundo);
+
+flex()
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+
+
+fade()
+	transition: 0.3s all ease;
+
+flex_args()
+	// 0 1 auto
+	flex: arguments
+	-webkit-flex: arguments
+	-ms-flex: arguments
+
+flex_order()
+	order arguments
+	-ms-order arguments
+	-webkit-order arguments
+
+flex_grow()
+	-webkit-flex-grow arguments
+	flex-grow arguments
+
+ffamily()
+	font-family: arguments
+
+fsize()
+	font-size: arguments
+
+hewi()
+	height arguments
+	width arguments
+
+hw(w,h)
+	height h
+	width w
+
+inter()
+	line-height: arguments
+
+mp()
+	margin arguments
+	padding arguments
+
+mapa(m,p)
+	margin m
+	padding p
+
+opacidad(n)
+	if support-for-ie
+		filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')')
+	opacity: n;
+
+pad()
+	padding: arguments
+
+placeholder()
+	&::-webkit-input-placeholder {
+		color arguments
+	}
+	&:-moz-placeholder {
+		color arguments
+	}
+
+rotar()
+	-webkit-transform: rotate(arguments);
+	transform: rotate(arguments);
+
+round(r)
+	-webkit-border-radius: r
+	border-radius: r
+
+sombra() // rgba(0,0,0,0.5) 0 5px 10px
+	box-shadow: arguments
+	-webkit-box-shadow: arguments
+
+sombrat()
+	text-shadow: arguments
+	-webkit-text-shadow: arguments
+
+transicion()
+	-webkit-transition: (arguments);
+	-ms-transition: (arguments);
+	transition: (arguments);
+
+transformar()
+	-webkit-transform: (arguments);
+	transform: (arguments);
+
+tdecoration()
+	text-decoration: arguments
+
+ttransform()
+	text-transform: arguments
+
+talign()
+	text-align: arguments
+
+// Sin argumentos
+underline()
+	text-decoration: underline;
+
+bold()
+	font-weight bold
+
+box()
+	box-sizing border-box
+
+pointer()
+	cursor pointer
+
+italic()
+	font-style italic
+
+fixed()
+	position fixed
+
+absolute()
+	position absolute
+
+relative()
+	position relative
+
+block()
+	display block
+
+hide()
+	display none
+
+uppercase()
+	text-transform uppercase
+
+// Valores
+blanco = #fff
+negro = #000

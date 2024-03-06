@@ -1,0 +1,2544 @@
+@css {
+	/*
+		Theme Name: Más allá de la sombra
+		Author: Nodo
+		Author URI: http://nodo.pw/
+		Description: Hoja de estilos de la página Más allá de la sombra
+		Version: 1.0
+		*/
+}
+
+/* <---------- Valores Stylus ----------> */
+@import "valoresDefault.styl"
+
+// @import url('https://fonts.googleapis.com/css2?family=Imprima&family=Libre+Baskerville:ital,wght@0,4000,7001,400&display=swap')
+
+@import url('https://use.typekit.net/esf0ynx.css');
+
+el__color = #fbf0de
+color__fondo = #110906
+color__resaltado = #b47911
+font__primary = 'ff-nexus-sans', sans-serif
+font__secondary = 'Baskerville', 'Libre Baskerville', serif
+f__uno = 18px
+
+casi__blanco = #F6F6F6
+casi__negro = #474646
+color__gris = #e6e7e8
+
+
+color__ocre = #a64e30
+// #cfba9b
+// #110906
+// #592a1a
+// #838367
+// #565310
+// #b47911
+// #fbf0de
+// #688084
+// #2f474b
+
+
+max_width = 1200px
+med_query = 640px
+
+
+/* <---------- ID's ----------> */
+// #interactivo
+// 	opacity 0
+// 	z-index: 2
+// 	&.visible
+// 		opacity 1
+
+/* <---------- Classes ----------> */
+
+@import "style--framework.styl"
+
+
+
+// 
+
+// z-index
+// // 0 - 9 Base
+// // 10 - 19 Bloques principales del interactivo
+// // 20 - 29 Navegación e interfase
+
+h1
+h2
+h3
+h4
+h5
+h6
+	font-family font__primary
+
+:root
+	--turnSpeed: 40s
+	--speed: 300s
+
+.body
+	align-items: center
+	background-color: #000
+	display: flex
+	font-size: 40px
+	justify-content: center
+	min-height: 100vh
+	overflow: hidden
+	perspective-origin: 50% calc(50% - 2em)
+	perspective: 600px
+	transition 1s all ease 
+	width: 100%
+	&[data-scena="ep_two"]
+		perspective-origin: 50% calc(50% - 5em)
+	&[data-scena="ep_five"]
+	&[data-scena="ep_six"]
+		perspective: 400px
+
+.scene
+	position: relative
+	transform-style: preserve-3d
+	transition 0.1s ease all
+	// animation-play-state: paused, paused, paused, paused
+	display none
+	&.visible
+		display block
+	&__cover
+		flex()
+		justify-content center
+		align-items center
+		flex-direction column
+		&__container
+			flex()
+			justify-content center
+			align-items center
+			flex-direction column
+			max-width max_width
+			gap 1.5rem
+			img
+				width 150px
+	&__intro
+		&__modal
+			pointer-events: none
+			bg rgba(color__fondo, 0.75)
+			fixed()
+			hide()
+			right 2rem
+			max-width 800px
+			padding 1.2rem
+			top 50%
+			transform: translate(0, -50%)
+			width: calc( 100vw - 2rem )
+			max-height calc( 100vh - 4rem )
+			&--left
+				left 2rem
+				right unset
+			&.visible
+				block()
+			p
+				font-size 1rem
+				&:not(:last-of-type)
+					margin-bottom 1em
+		&__logline
+			
+			bg rgba(color__fondo, 0.75)
+			fixed()
+			hide()
+			right 2rem
+			max-width 800px
+			padding 1.2rem
+			top 50%
+			transform: translate(0, -50%)
+			width: calc( 100vw - 2rem )
+			max-height calc( 100vh - 4rem )
+			&.visible
+				block()
+			&--left
+				left 2rem
+				right unset
+			p
+				font-size 1rem
+				&:not(:last-of-type)
+					margin-bottom 1em
+	&__title
+		font-size 2.06rem
+		font-family font__primary
+		uppercase()
+		letter-spacing 0.18rem
+
+.imagen
+	absolute()
+	transform translate( -50%, -50% )
+	transicion 0.1s all ease
+	transform-origin: center
+	z-index 1
+	img
+		height: auto
+		width: auto
+	&--escena
+		height 100%
+		width 100%
+		z-index 0
+		position: relative
+		img
+			object-fit cover
+	&--esc-1--exit
+	&--esc-2--exit
+	&--esc-3--exit
+	&--esc-4--exit
+	&--esc-5--exit
+	&--esc-6--exit
+		cursor url(../assets/imgs/icon__cursor--hover.png),pointer !important
+
+.esc-1--cover
+.esc-2--cover
+.esc-3--cover
+.esc-4--cover
+.esc-5--cover
+.esc-6--cover
+	bg rgba(color__fondo, 0.65)
+	height: 110vh
+	left: 0
+	padding: 5vh
+	position: absolute
+	top: -76px
+	transform: translate(-50%, -50%) translateZ(570px) scale(0.05)
+	width: calc( 100vw + 10vh )
+	z-index 1
+	.page__cerrar
+		right calc( 5vh + 4rem )
+		top calc( 5vh + 2rem )
+
+.esc-5--cover
+.esc-6--cover
+	opacity 0
+	&.visible
+		opacity 1
+
+//
+// Episode One
+//
+
+.esc-1--ceiling
+.esc-1--front
+.esc-1--wall-left
+.esc-1--wall-right
+.esc-1--background-left
+.esc-1--intro
+	position: absolute
+	top: -540px
+	left: -960px
+	transform: translateZ(-1700px)
+	z-index 1
+	
+
+.esc-1--wall-left
+.esc-1--wall-right
+	width: 1920px // 1913px
+	height: 1080px
+
+.esc-1--wall-right
+	background url(../assets/imgs/esc-1--wall-right.jpg) no-repeat center center / cover
+	left: -1920px
+	transform: rotateY(-90deg) translateZ(-1919px) translateX(-750px)
+
+.esc-1--wall-left
+	background url(../assets/imgs/esc-1--wall-left.webp) no-repeat center center / cover
+	transform: rotateY(90deg) translateZ(-1920px) translateX(750px)
+	left: 0
+
+.esc-1--background-left
+	background url(../assets/imgs/esc-1--background-left.webp) no-repeat center center / cover
+	transform: rotateY(90deg) translateZ(-3200px) translateX(1800px) translateY(-350px) scale(1.1)
+	left: 0
+	width: 2304px // 1913px
+	height: 1296px
+
+.esc-1--floor
+.esc-1--ceiling
+	width: 1920px
+	height: 1920px
+
+.esc-1--floor
+	background url(../assets/imgs/esc-1--floor.jpg) no-repeat center center / cover
+	z-index: 0
+	absolute()
+	transform: translate(-50%, -50%) rotateX(90deg) translateZ(-540px) translateY(-750px)
+
+.esc-1--ceiling
+	background url(../assets/imgs/esc-1--ceiling.webp) no-repeat center center / cover
+	top: 0
+	left: 0
+	transform: translate(-50%, -50%) rotateX(90deg) translateZ(540px) translateY(-750px)
+
+.esc-1--front
+	width: 1920px
+	height: 1080px
+	background url(../assets/imgs/esc-1--front.webp) no-repeat center center / cover
+
+.esc-1--intro
+	width: 400px
+	transform: translate(-1160px, 300px) translateZ(-720px) rotateY(-90deg) scale(2.6)
+	left: 0
+
+.imagen
+	&--esc-1--puerta
+		transform: translate(0, 0) translateZ(-1701px) scale(1)
+		width: 1920px
+		height: 1080px
+	&--esc-1--exit
+		transform: translate(220px, 50px) translateZ(-1699px) scale(1)
+		width: 270px
+		height: 500px
+	&--esc-1--religion
+		transform: translate(-820px, -400px) translateZ(-1699px) scale(1)
+		width: 906.5px
+		height: 723px
+	&--esc-1--estufa
+		transform: translate(500px, -0px) translateZ(-700px) scale(1)
+		width: 433px
+		height: 519px
+	&--esc-1--muneca
+		transform: translate(100px, 300px) translateZ(-500px) scale(0.4)
+		width: 482px
+		height: 276px
+	&--esc-1--botellas
+		transform: translate(-540px, -93px) translateZ(148px) scale(0.3)
+		width: 472px
+		height: 371px
+	&--esc-1--foco
+		transform: translate(-90px, -450px) translateZ(-200px) scale(0.4)
+		width: 300px
+		height: 300px
+	&--esc-1--mesa
+		transform: translate(-442px, 4px) translateZ(147px) scale(1)
+		width: 400px
+	&--esc-1--carritos
+		transform: translate(-500px, 300px) translateZ(-550px) scale(1)
+		width: 180px
+		height: 180px
+	&--esc-1--silla
+		transform: translate(-230px, 10px) translateZ(-100px) scale(1)
+		width: 300px
+		height: 300px
+	&--esc-1--zapatos
+		transform: translate(580px, 300px) translateZ(-900px) scale(1)
+		width: 150px
+		height: 150px
+	&--esc-1--botella-rota
+		transform: translate(-300px, 300px) translateZ(-1150px) scale(1)
+		width: 250px
+		height: 250px
+	&--esc-1--jarron
+		transform: translate(450px, 200px) translateZ(-150px) scale(1)
+		width: 250px
+		height: 250px
+
+//
+// Episode Two
+//
+
+.esc-2--ceiling
+.esc-2--front
+.esc-2--wall-left
+.esc-2--wall-right
+.esc-2--background-left
+.esc-2--intro
+	position: absolute
+	top: -540px
+	left: -960px
+	transform: translateZ(-1700px)
+	z-index 1
+	
+
+.esc-2--wall-left
+.esc-2--wall-right
+	width: 1920px // 1913px
+	height: 1080px
+
+.esc-2--wall-right
+	background url(../assets/imgs/esc-2--wall-right.webp) no-repeat center center / cover
+	left: -1920px
+	transform: rotateY(-90deg) translateZ(-1919px) translateX(-750px)
+
+.esc-2--wall-left
+	background url(../assets/imgs/esc-2--wall-left.webp) no-repeat center center / cover
+	transform: rotateY(90deg) translateZ(-1920px) translateX(750px)
+	left: 0
+
+.esc-2--background-left
+	background: url("../assets/imgs/img__esc-1--puerta.gif") no-repeat center center/cover
+	transform: rotateY(90deg) translateZ(-2200px) translateX(2000px) translateY(450px) scale(1.1)
+	left: 0
+	width: 2304px
+	height: 1296px
+
+.esc-2--floor
+.esc-2--ceiling
+	width: 1920px
+	height: 1920px
+
+.esc-2--floor
+	background url(../assets/imgs/esc-2--floor.jpg) no-repeat center center / cover
+	z-index: 0
+	absolute()
+	transform: translate(-50%, -50%) rotateX(90deg) translateZ(-540px) translateY(-750px)
+
+.esc-2--ceiling
+	background url(../assets/imgs/esc-2--ceiling.jpg) no-repeat center center / cover
+	top: 0
+	left: 0
+	transform: translate(-50%, -50%) rotateX(90deg) translateZ(540px) translateY(-750px)
+
+.esc-2--front
+	width: 1920px
+	height: 1080px
+	background url(../assets/imgs/esc-2--front.jpg) no-repeat center center / cover
+
+.esc-2--intro
+	width: 700px
+	height: 600px
+	transform: rotateY(90deg) translateZ(-1900px) translate(650px, 150px)
+	left: 695px
+
+.imagen
+	// border 3px solid red
+	// opacity 0.8
+	&--esc-2--cama
+		transform translate(-600px, -200px) translateZ(-1175px) rotateX(90deg) scale(1)
+		width: 1300px
+	&--esc-2--cama-frente
+		transform: translate(-510px, 338px) translateZ(-675px) scale(1)
+		width: 1080px
+	&--esc-2--cama-cojines
+		transform: translate(-400px, 100px) translateZ(-1500px) rotateX(10deg) rotateZ(30deg) scale(1)
+		width: 300px
+	&--esc-2--cama-cojines-1
+		transform: translate(200px, 170px) translateZ(-1500px) rotateX(10deg) scale(1)
+		width: 300px
+	&--esc-2--mesa--1
+		transform translate(550px, 200px) translateZ(-1400px) rotateX(10deg) scale(1)
+		width: 250px
+	&--esc-2--mesa--2
+		transform translate(-750px, 170px) translateZ(-1350px) rotateX(10deg) scale(1)
+		width: 250px
+	// &--esc-2--ropa_1
+	// 	transform translate(-100px, 200px) translateZ(-1550px) rotateX(90deg) scale(1)
+	// 	width: 200px
+	&--esc-2--cortina
+		transform: translate(608px, -450px) translateZ(-900px) rotateY(-90deg)
+		width: 700px
+		// height: 1200px
+	&--esc-2--celular
+		transform: translate(660px, 200px) translateZ(-1400px) scale(1)
+		width: 110px
+		// height: 100px
+	&--esc-2--cristo
+		transform: translate(-180px, -500px) translateZ(-1699px) scale(1)
+		width: 450px
+	&--esc-2--cuna
+		transform: translate(200px, 160px) translateZ(-100px) scale(1)
+		width: 350px
+		// height: 800px
+	&--esc-2--exit
+		transform: rotateY(90deg) translate(970px, -150px) translateZ(-1000px) scale(1)
+		// background: rgba(0,0,0,0.2)
+		width: 350px
+		height: 600px
+	&--esc-2--plancha
+		transform: translate(250px, 190px) translateZ(-650px) scale(1)
+		width: 140px
+	&--esc-2--tocador
+		transform: translate(-950px, -50px) translateZ(-250px) scale(1)
+		width: 500px
+		// height: 900px
+	&--esc-2--ventlador
+		transform: translate(-250px, -560px) translateZ(-300px) scale(1)
+		width: 500px
+
+//
+// Episode Three
+//
+
+.esc-3--ceiling
+.esc-3--front
+.esc-3--background-front
+.esc-3--wall-left
+.esc-3--wall-right
+.esc-3--intro
+.esc-3--halls-1
+.esc-3--halls-2
+.esc-3--halls-3
+.esc-3--halls-4
+.esc-3--halls-5
+.esc-3--halls-6
+.esc-3--division-left
+.esc-3--division-right
+	position: absolute
+	top: -540px
+	left: -960px
+	transform: translateZ(-1700px)
+	z-index 1
+	// border 3px solid red
+	// opacity 0.8
+	
+
+.esc-3--wall-left
+.esc-3--wall-right
+	width: 1920px // 1913px
+	height: 1080px
+
+.esc-3--wall-right
+	background url(../assets/imgs/esc-3--wall-right.jpg) no-repeat center center / cover
+	left: -1920px
+	transform: translateZ(-740px) translateX(2190px) rotateY(-90deg)
+
+.esc-3--wall-left
+	background url(../assets/imgs/esc-3--wall-left.jpg) no-repeat center center / cover
+	transform: translateZ(-740px) translateX(-1230px) rotateY(90deg)
+
+.esc-3--halls-1
+.esc-3--halls-2
+.esc-3--halls-3
+.esc-3--halls-4
+.esc-3--halls-5
+.esc-3--halls-6
+	width: 400px // 1913px
+	height: 1080px
+
+.esc-3--halls-1
+	background url(../assets/imgs/esc-3--halls-r3.jpg) no-repeat center center / cover
+	left: -1920px
+	transform: translateZ(-1510px) translateX(2130px) rotateY(-90deg)
+
+.esc-3--halls-2
+	background url(../assets/imgs/esc-3--halls-r1.jpg) no-repeat center center / cover
+	left: -1920px
+	transform: translateZ(-700px) translateX(2130px) rotateY(-90deg)
+
+.esc-3--halls-3
+	background url(../assets/imgs/esc-3--halls-i3.jpg) no-repeat center center / cover
+	transform: translateZ(-1510px) translateX(350px) rotateY(90deg)
+	
+.esc-3--halls-4
+	background url(../assets/imgs/esc-3--halls-i1.jpg) no-repeat center center / cover
+	transform: translateZ(-700px) translateX(350px) rotateY(90deg)
+
+.esc-3--halls-5
+	background url(../assets/imgs/esc-3--halls-r2.jpg) no-repeat center center / cover
+	left: -1920px
+	transform: translateZ(200px) translateX(2130px) rotateY(-90deg)
+
+.esc-3--halls-6
+	background url(../assets/imgs/esc-3--halls-i2.jpg) no-repeat center center / cover
+	transform: translateZ(200px) translateX(350px) rotateY(90deg)
+
+
+.esc-3--floor
+.esc-3--ceiling
+	width: 2460px
+	height: 1920px
+
+.esc-3--floor
+	background url(../assets/imgs/esc-3--floor.jpg) no-repeat center center / cover
+	z-index: 0
+	absolute()
+	transform: translate(-50%, -50%) rotateX(90deg) translateZ(-540px) translateY(-750px)
+
+.esc-3--ceiling
+	background url(../assets/imgs/esc-3--ceiling.jpg) no-repeat center center / cover
+	top: 0
+	left: 0
+	transform: translate(-50%, -50%) rotateX(90deg) translateZ(540px) translateY(-750px)
+
+.esc-3--front
+	width: 2460px
+	height: 1080px
+	background url(../assets/imgs/esc-3--front.webp) no-repeat center center / cover
+	left: -1230px
+	// transform: translateZ(-1710px)
+
+.esc-3--division-left
+.esc-3--division-right
+	width: 820px
+	height: 1080px
+
+.esc-3--division-left
+	background url(../assets/imgs/esc-3--division-left.webp) no-repeat center center / cover
+	transform: translate(-270px, 0) translateZ(-740px)
+	
+.esc-3--division-right
+	background url(../assets/imgs/esc-3--division-right.webp) no-repeat center center / cover
+	transform: translate(1370px, 0) translateZ(-740px)
+
+.esc-3--background-front
+	background url(../assets/imgs/img__esc-1--puerta.gif) no-repeat center center / cover
+	height: 1080px
+	transform: translate(0, 0) translateZ(-1900px) scale(1.5)
+	width: 1920px
+
+.esc-3--intro
+	width: 700px
+	height: 600px
+	transform: rotateY(90deg) translateZ(-1900px) translate(650px, 150px)
+	left: 695px
+
+.imagen
+	&--esc-3--compu
+		transform: translate(600px, 0) translateZ(-1500px) scale(1)
+		width: 480px
+	&--esc-3--bolillo
+		transform: translate(700px, 190px) translateZ(-450px) rotateY(-30deg) scale(1)
+		width: 160px
+	&--esc-3--escritorio
+		transform: translate(600px, 50px) translateZ(-550px) rotateY(-30deg) scale(1)
+		width: 500px
+	&--esc-3--mazo
+		transform: translate(-1000px, 50px) translateZ(-1400px) scale(1)
+		width: 240px
+	&--esc-3--papeles
+		transform: translate(-1050px, 50px) translateZ(-500px) scale(1)
+		width: 338px
+	&--esc-3--alerta
+		transform: translate(-90px, -530px) translateZ(-550px) scale(1)
+		width: 180px
+	&--esc-3--catre_lado
+		transform: translate(380px, 320px) translateZ(-470px) rotateY(90deg) scale(1)
+		width: 750px
+	&--esc-3--catre-base
+		transform: translate(760px, -60px) translateZ(-480px) rotateX(90deg) scale(1)
+		width: 450px
+	&--esc-3--catre-base1
+		transform: translate(780px, 330px) translateZ(-600px) scale(1)
+		width: 300px
+	&--esc-3--catre_frente
+		transform: translate(-1050px, 50px) translateZ(-550px) scale(1)
+		width: 338px
+	&--esc-3--cojines
+		transform: translate(950px, 160px) translateZ(-720px) scale(1)
+		width: 300px
+	&--esc-3--escritorio-base
+		transform: translate(650px, 135px) translateZ(-1500px) rotateX(-90deg) scale(1)
+		width: 750px
+	&--esc-3--escritorio-patas
+		transform: translate(700px, 310px) translateZ(-1340px) scale(1)
+		width: 300px
+	&--esc-3--escritorio-patas-1
+		transform: translate(700px, 310px) translateZ(-1600px) scale(1)
+		width: 300px
+	&--esc-3--tribuna-base
+		transform: translate(-1160px, 180px) translateZ(-1480px) rotateX(-90deg) scale(1)
+		width: 400px
+	&--esc-3--tribuna-frente
+		transform: translate(-1150px, 268px) translateZ(-1377px) scale(1)
+		width: 400px
+	&--esc-3--tribuna-patas
+		transform: translate(-850px, 270px) translateZ(-1476px) rotateY(-90deg) scale(1)
+		width: 190px
+	&--esc-3--exit
+		transform: translate(-175px, -20px) translateZ(-1700px) scale(1)
+		width: 343px
+		height: 566px
+	//
+	&--esc-3--extintor
+		transform: translate(-485px, -100px) translateZ(-670px) rotateY(90deg) scale(1)
+		width: 160px
+	&--esc-3--gaviotas
+		transform: translate(1140px, -200px) translateZ(-300px) rotateY(-90deg) scale(2)
+		width: 160px
+	&--esc-3--hongos-1
+		transform: translate(550px, 300px) translateZ(-1700px) scale(1)
+		width: 200px
+	&--esc-3--hongos-2
+		transform: translate(-800px, 290px) translateZ(-1600px) scale(1)
+		width: 200px
+	&--esc-3--hongos-3
+		transform: translate(500px, 230px) translateZ(-680px) scale(1)
+		width: 250px
+	&--esc-3--hongos-4
+		transform: translate(-870px, 180px) translateZ(-1390px) scale(1)
+		width: 100px
+	&--esc-3--hongos-5
+		transform: translate(1000px, 210px) translateZ(-1400px) scale(1)
+		width: 100px
+	&--esc-3--hongos-6
+		transform: translate(1070px, -250px) translateZ(-735px) rotateY(0deg) scale(1)
+		width: 200px
+	&--esc-3--hongos-7
+		transform: translate(1100px, -50px) translateZ(-400px) rotateY(-90deg) scale(1)
+		width: 150px
+	&--esc-3--hongos-8
+		transform: translate(-1230px, -360px) translateZ(-1700px) scale(1)
+		width: 200px
+	&--esc-3--hongos-9
+		transform: translate(-1300px, 250px) translateZ(-1400px) rotateY(-90deg) scale(1)
+		width: 200px
+	&--esc-3--hongos-10
+		transform: translate(1000px, -260px) translateZ(-1700px) scale(1)
+		width: 300px
+	&--esc-3--hongos-11
+		transform: translate(-550px, 260px) translateZ(-280px) scale(1)
+		width: 140px
+	&--esc-3--hongos-12
+		transform: translate(-1329px, -360px) translateZ(-690px) rotateY(90deg) scale(1)
+		width: 200px
+	&--esc-3--diablito
+		transform: translate(-750px, 50px) translateZ(-550px) scale(1)
+		width: 350px
+	&--esc-3--papeles-cuerda
+		transform: translate(-1050px, 150px) translateZ(-300px) scale(1)
+		width: 338px
+
+
+//
+// Episode Four
+//
+
+.esc-4--ceiling
+.esc-4--front
+.esc-4--background-front
+.esc-4--wall-left
+.esc-4--wall-right
+.esc-4--background-right
+.esc-4--intro
+	position: absolute
+	top: -540px
+	left: -960px
+	transform: translateZ(-1700px)
+	z-index 1
+	
+
+.esc-4--wall-left
+.esc-4--wall-right
+	width: 3840px // 1913px
+	height: 1080px
+	left: 0
+
+.esc-4--wall-right
+	background url(../assets/imgs/esc-4--wall-right.webp) no-repeat center center / cover
+	left: -1920px
+	transform: translateZ(230px) translateX(940px) rotateY(-90deg)
+
+.esc-4--wall-left
+	background url(../assets/imgs/esc-4--wall-left.jpg) no-repeat center center / cover
+	transform: translateZ(230px) translateX(-2860px) rotateY(90deg)
+
+.esc-4--floor
+.esc-4--ceiling
+	width: 1920px
+	height: 3840px
+
+.esc-4--floor
+	background url(../assets/imgs/esc-4--floor.jpg) no-repeat center center / cover
+	z-index: 0
+	absolute()
+	transform: translate(-50%, -50%) rotateX(90deg) translateZ(-540px) translateY(-750px)
+
+.esc-4--ceiling
+	// background url(../assets/imgs/esc-4--ceiling.jpg) no-repeat center center / cover
+	background url("../assets/imgs/esc-4--ceiling.jpg") no-repeat right 50px / cover
+	top: 0
+	left: 0
+	transform: translate(-50%, -50%) rotateX(90deg) translateZ(540px) translateY(-750px)
+
+.esc-4--front
+	width: 1920px
+	height: 1080px
+	background url(../assets/imgs/esc-4--front.png) no-repeat center center / cover
+	pointer-events: none
+
+.esc-4--background-front
+	background url(../assets/imgs/esc-4--front--background.jpg) no-repeat center center / cover
+	height: 1080px
+	transform: translate(0, 0) translateZ(-1900px) scale(1.5)
+	width: 1920px
+
+.esc-4--background-right
+	background: url("../assets/imgs/img__esc-1--puerta.gif") no-repeat center center/cover
+	transform: translateZ(-1300px) translateX(600px) translateY(100px) rotateY(-90deg)
+	left: 0
+	width: 800px
+	height: 800px
+
+.esc-4--intro
+	width: 700px
+	height: 600px
+	transform: rotateY(90deg) translateZ(-1900px) translate(650px, 150px)
+	left: 695px
+
+.imagen
+	&--esc-4--sillas
+		transform: translate(-480px, 50px) translateZ(-100px)
+		width: 200px
+		pointer-events: none
+	&--esc-4--sillas_1
+		transform: translate(-480px, 50px) translateZ(-300px)
+		width: 200px
+		pointer-events: none
+	&--esc-4--sillas_2
+		transform: translate(-300px, 50px) translateZ(-440px)
+		width: 200px
+		pointer-events: none
+	&--esc-4--sillas_3
+		transform: translate(-70px, 50px) translateZ(-170px)
+		width: 200px
+		pointer-events: none
+	&--esc-4--sillas_4
+		transform: translate(-110px, 50px) translateZ(70px)
+		width: 200px
+		pointer-events: none
+	&--esc-4--pasto
+		transform: translate(-550px, 50px) translateZ(-1000px)
+		width: 300px
+	&--esc-4--mesita
+		transform: translate(250px, 50px) translateZ(-500px)
+		width: 350px
+	&--esc-4--exit
+		transform: rotateY(90deg) translateZ(500px) translateX(1070px) translateY(-340px)
+		// background: rgba(0,0,0,0.2)
+		width: 700px
+		height: 500px
+	&--esc-4--arbol
+		transform: translate(300px, -100px) translateZ(-200px)
+		width: 480px
+	&--esc-4--flores
+		transform: translate(-500px, 250px) translateZ(-500px) rotateX(90deg)
+		width: 400px
+	&--esc-4--globos
+		transform: translate(-400px, -300px) translateZ(-1000px)
+		width: 300px
+	&--esc-4--papel
+		transform: translate(-1130px, -200px) translateZ(-350px) rotateY(90deg)
+		width: 400px
+	&--esc-4--quetzal
+		transform: translate(-150px, -280px) translateZ(-1800px) scale(1.5)
+		width: 480px
+
+
+//
+// Episode Five
+//
+
+
+.esc-5--ceiling
+.esc-5--front
+.esc-5--background-front
+.esc-5--wall-left
+.esc-5--wall-right
+.esc-5--wall-left-2
+.esc-5--wall-right-2
+.esc-5--intro
+	position: absolute
+	top: -540px
+	left: -960px
+	// transform: translateZ(-1700px)
+	z-index 1
+
+.esc-5--wall-left
+.esc-5--wall-right
+.esc-5--wall-left-2
+.esc-5--wall-right-2
+	width: 3840px // 1913px
+	height: 1080px
+
+/*
+.esc-5--wall-right
+	background url(../assets/imgs/esc-5--derecho.jpg) no-repeat center center / cover
+	left: -1920px
+	transform: translate(3830px, -1000px) translateZ(-500px) rotateY(-90deg) scale(4)
+
+.esc-5--wall-left
+	background url(../assets/imgs/esc-5--izquierdo.jpg) no-repeat center center / cover
+	transform: translate(-3830px, -1000px) translateZ(-500px) rotateY(90deg) scale(4)
+	left: -1920px
+
+.esc-5--floor
+.esc-5--ceiling
+	width: 1920px
+	height: 3840px
+
+.esc-5--floor
+	background url(../assets/imgs/esc-5--fuera_pasto.jpg) no-repeat center center / cover
+	z-index 1
+	absolute()
+	transform: translate(-50%, -50%) rotateX(90deg) translateZ(-1140px) translateY(-500px) scale(4)
+
+.esc-5--ceiling
+	background url(../assets/imgs/esc-5--fuera_cielo.jpg) no-repeat center center / cover
+	top: 0
+	left: 0
+	transform: translate(-50%, -50%) rotateX(90deg) translateZ(3000px) translateY(-500px) scale(4)
+*/
+/**/
+.esc-5--wall-left
+	background url(../assets/imgs/esc-5--izquierdo.webp) no-repeat center center / cover
+	left: -1920px
+	transform: translate(-7060px, -1000px) translateZ(-1210px) rotateY(65deg) scale(4)
+
+.esc-5--wall-right
+	background url(../assets/imgs/esc-5--derecho.webp) no-repeat center center / cover
+	left: -1920px
+	transform: translate(7060px, -1000px) translateZ(-1210px) rotateY(-65deg) scale(4)
+
+.esc-5--wall-left-2
+	background url(../assets/imgs/esc-5--izquierdo.webp) no-repeat center center / cover
+	left: -1920px
+	transform: translate(-7060px, -1000px) translateZ(-1210px) rotateY(115deg) scale(4)
+	
+.esc-5--wall-right-2
+	background url(../assets/imgs/esc-5--derecho.webp) no-repeat center center / cover
+	left: -1920px
+	transform translate(7060px, -1000px) translateZ(-1210px) rotateY(-115deg) scale(4)
+
+.esc-5--floor
+.esc-5--ceiling
+	width: 1920px
+	height: 3840px
+
+.esc-5--floor
+	background url(../assets/imgs/esc-5--fuera_pasto.jpg) no-repeat center center / cover
+	z-index 1
+	absolute()
+	transform: translate(-50%, -1950px) rotateX(90deg) translateZ(-1140px) translateY(-500px) scale(7.5)
+
+.esc-5--ceiling
+	background url(../assets/imgs/esc-5--fuera_cielo.jpg) no-repeat center center / cover
+	top: 0
+	left: 0
+	transform: translate(-50%, -2060px) rotateX(90deg) translateZ(3000px) translateY(3300px) scale(7.5)
+
+/**/
+
+.esc-5--front
+	width: 1920px
+	height: 1080px
+	background url(../assets/imgs/esc-5--fuera.webp) no-repeat center center / cover
+	transform translateZ(-8190px) translateY(-1000px) scale(4)
+
+.esc-5--background-front
+	background url(../assets/imgs/img__esc-1--puerta.gif) no-repeat center center / cover
+	height: 1080px
+	transform: translateZ(-8195px) translateY(-1000px) scale(4)
+	width: 1920px
+
+.esc-5--temazcal-front
+.esc-5--temazcal-back
+.esc-5--temazcal-floor
+.esc-5--temazcal-ceiling
+.esc-5--temazcal-wall-left
+.esc-5--temazcal-wall-right
+.esc-5--temazcal-wall-left-2
+.esc-5--temazcal-wall-right-2
+	position: absolute
+	top: -540px
+	left: -960px
+	transform: translateZ(-1700px)
+	display none
+	z-index 1
+	&.visible
+		display block
+
+.esc-5--temazcal-wall-left
+.esc-5--temazcal-wall-right
+.esc-5--temazcal-wall-left-2
+.esc-5--temazcal-wall-right-2
+	width: 1920px // 1913px
+	height: 1080px
+
+.esc-5--temazcal-wall-right
+	background url(../assets/imgs/esc-5--temazcal_derecha.jpg) no-repeat center center / cover
+	left: -1920px
+	transform:  translate(-1700px, -110px) translateZ(-4500px) rotateY(-65deg) scale(1.9)
+
+.esc-5--temazcal-wall-left
+	background url(../assets/imgs/esc-5--temazcal_izquierda.jpg) no-repeat center center / cover
+	transform: translate(1700px, -150px) translateZ(-4500px) rotateY(65deg) scale(1.9)
+	left: 0
+	
+.esc-5--temazcal-wall-right-2
+	background url(../assets/imgs/esc-5--temazcal_derecha.jpg) no-repeat center center / cover
+	left: -1920px
+	transform:  translate(-800px, -110px) translateZ(-4500px) rotateY(-115deg) scale(1.9)
+
+.esc-5--temazcal-wall-left-2
+	background url(../assets/imgs/esc-5--temazcal_izquierda.jpg) no-repeat center center / cover
+	transform: translate(800px, -150px) translateZ(-4500px) rotateY(115deg) scale(1.9)
+	left: 0
+
+.esc-5--temazcal-floor
+.esc-5--temazcal-ceiling
+	width: 1920px
+	height: 1920px
+
+.esc-5--temazcal-floor
+	background url(../assets/imgs/esc-5--temazcal_piso.jpg) no-repeat center center / cover
+	// top: 1em
+	z-index: 0
+	absolute()
+	transform: translate(-50%, -50%) rotateX(90deg) translateZ(-900px) translateY(-3150px) scale(3)
+	left: 0
+	top: 0
+
+.esc-5--temazcal-ceiling
+	background url(../assets/imgs/esc-5--temazcal_techo.jpg) no-repeat center center / cover
+	top: 0
+	left: 0
+	transform: translate(-50%, -1500px) rotateX(90deg) translateZ(500px) translateY(-3150px) scale(3)
+
+.esc-5--temazcal-back
+	width: 1920px
+	height: 1080px
+	background url(../assets/imgs/esc-5--temazcal_centro.jpg) no-repeat center center / cover
+	transform: translate(-50%, -700px) translateY(0px) translateZ(-4700px) scale(2)
+	top: 0
+	left: 0
+	
+.esc-5--temazcal-front
+	width: 1920px
+	height: 1080px
+	background url(../assets/imgs/esc-5--temazcal_frente.png) no-repeat center center / cover
+	transform translate(-50%, -50%) translateY(0px) translateZ(-3400px)
+	top: 0
+	left: 0
+
+.esc-5--intro
+	width: 700px
+	height: 600px
+	transform: rotateY(90deg) translateZ(-1900px) translate(650px, 150px)
+	left: 695px
+	&:hover
+		& + .scene__intro__container
+			block()
+
+.imagen
+	&--esc-5--constelacion
+		transform: translate(-100px, -1300px) translateZ(-5700px) rotateX(-15deg) scale(2)
+		width: 400px
+	&--esc-5--maguey
+		transform: translate(-1500px, 0px) translateZ(-1200px) scale(1.5)
+		width: 361px
+	&--esc-5--maices
+		transform: translate(-950px, 400px) translateZ(-3900px)
+		width: 300px
+	&--esc-5--sapo
+		transform: translate(750px, 250px) translateZ(-1500px) scale(1)
+		width: 250px
+	&--esc-5--veladora
+		transform: translate(1100px, 600px) translateZ(-4250px)
+		width: 350px
+	// &--esc-5--cirio
+	// 	transform: translate(600px, 150px) translateZ(-3340px)
+	// 	width: 220px
+	// &--esc-5--espejo
+	// 	transform: translate(-1400px, -800px) translateZ(-3340px)
+	// 	width: 600px
+	&--esc-5--fogata
+		transform: translate(-60px, 300px) translateZ(-600px) scale(1.5)
+		width: 220px
+	&--esc-5--fogata-chispas
+		transform: translate(-40px, 100px) translateZ(-600px) scale(2.01)
+		width: 270px
+		pointer-events: none
+	&--esc-5--piedras
+		transform: translate(-300px, 500px) translateZ(-4200px) rotateX(90deg)
+		// translate(-300px, 500px) translateZ(-2850px) rotateX(90deg) rotate(300deg)
+		width: 700px
+	&--esc-5--tarot
+		transform: translate(500px, 500px) translateZ(-3800px) rotateX(90deg)
+		width: 250px
+	&--esc-5--veg_cent-1
+		pointer-events: none
+		transform: translate(1000px, 100px) translateZ(-1100px)
+		width: 482px
+	&--esc-5--veg_cent-2
+		pointer-events: none
+		transform: translate(680px, 500px) translateZ(-1699px)
+		width: 109px
+	&--esc-5--veg_cent-3
+		pointer-events: none
+		transform: translate(-480px, 500px) translateZ(-600px)
+		width: 96px
+	&--esc-5--veg_cent-4
+		pointer-events: none
+		transform: translate(400px, 500px) translateZ(-1400px)
+		width: 115px
+	&--esc-5--veg_der-1
+		pointer-events: none
+		transform: translate(1000px, 500px) translateZ(-1900px)
+		width: 291px
+	&--esc-5--veg_der-2
+		pointer-events: none
+		transform: translate(380px, 100px) translateZ(-450px)
+		width: 268px
+	&--esc-5--veg_izq-1
+		pointer-events: none
+		transform: translate(-1200px, 100px) translateZ(-1800px)
+		width: 300px
+	&--esc-5--veg_izq-2
+		pointer-events: none
+		transform: translate(-600px, 150px) translateZ(-2000px)
+		width: 325px
+	&--esc-5--veg_izq-3
+		pointer-events: none
+		transform: translate(-900px, -50px) translateZ(-5500px)
+		width: 504px
+	&--esc-5--veg-3
+		pointer-events: none
+		transform: translate(-500px, 200px) translateZ(-100px)
+		width: 68px
+	&--esc-5--veg-4
+		pointer-events: none
+		transform: translate(900px, 200px) translateZ(-5100px)
+		width: 482px
+	&--esc-5--luciernaga_1
+		transform: translate(-1900px, 200px) translateZ(-5350px)
+		width: 480px
+	&--esc-5--luciernaga_2
+		transform: translate(1600px, 300px) translateZ(-5300px)
+		width: 480px
+	&--esc-5--luciernaga_3
+		transform: translate(-200px, 200px) translateZ(-5800px)
+		width: 480px
+	&--esc-5--luciernaga_4
+		transform: translate(600px, 400px) translateZ(-5500px)
+		width: 244px
+	&--esc-5--palomas
+		transform: translate(850px, 400px) translateZ(-4300px)
+		width: 300px
+	&--esc-5--pasto_1
+		transform: translate(1300px, 350px) translateZ(-5900px)
+		width: 450px
+	&--esc-5--pasto_2
+		transform: translate(-1200px, 300px) translateZ(-5050px)
+		width: 450px
+	&--esc-5--pasto_3
+		// transform: translate(440px, 200px) translateZ(-4200px)
+		transform: translate(1100px, 100px) translateZ(-650px)
+		width: 482px
+	// Pasto tres translate(1000px, 100px) translateZ(-2200px)
+	&--esc-5--pasto_4
+		transform: translate(-1600px, 200px) translateZ(-650px)
+		width: 482px
+	&--esc-5--exit
+		transform: translate(-1000px, -700px) translateZ(-6200px) scale(2)
+		width: 2000px
+		height: 500px
+	&.temazcal
+		display none
+		&.visible
+			display block
+
+//
+// Episode Six
+//
+
+
+.esc-6--ceiling
+.esc-6--front
+.esc-6--back
+.esc-6--background-front
+.esc-6--wall-left
+.esc-6--wall-right
+.esc-6--wall-left-2
+.esc-6--wall-right-2
+.esc-6--wall-left-3
+.esc-6--wall-right-3
+// .esc-6--wall-left-4
+// .esc-6--wall-right-4
+.esc-6--intro
+	position: absolute
+	top: -540px
+	left: -960px
+	// transform: translateZ(-1700px)
+	z-index 1
+
+.esc-6--wall-left
+.esc-6--wall-right
+.esc-6--wall-left-2
+.esc-6--wall-right-2
+.esc-6--wall-left-3
+.esc-6--wall-right-3
+// .esc-6--wall-left-4
+// .esc-6--wall-right-4
+	width: 3840px // 1913px
+	height: 1080px
+
+.esc-6--wall-left
+	background url(../assets/imgs/esc-6--wall-left.jpg) no-repeat center center / cover
+	left: -1920px
+	transform: translate(-7060px, -1000px) translateZ(-1210px) rotateY(65deg) scale(4)
+
+.esc-6--wall-right
+	background url(../assets/imgs/esc-6--wall-right.jpg) no-repeat center center / cover
+	left: -1920px
+	transform: translate(7060px, -1000px) translateZ(-1210px) rotateY(-65deg) scale(4)
+
+.esc-6--wall-left-2
+	background url(../assets/imgs/esc-6--wall-left.jpg) no-repeat center center / cover
+	left: -1920px
+	transform: translate(-7060px, -1000px) translateZ(-1210px) rotateY(90deg) scale(4)
+	
+.esc-6--wall-right-2
+	background url(../assets/imgs/esc-6--wall-right.jpg) no-repeat center center / cover
+	left: -1920px
+	transform translate(7060px, -1000px) translateZ(-1210px) rotateY(-90deg) scale(4)
+	
+.esc-6--wall-left-3
+	background url(../assets/imgs/esc-6--wall-left.jpg) no-repeat center center / cover
+	left: -1920px
+	transform: translate(-7060px, -1000px) translateZ(-1210px) rotateY(115deg) scale(4)
+	
+.esc-6--wall-right-3
+	background url(../assets/imgs/esc-6--wall-right.jpg) no-repeat center center / cover
+	left: -1920px
+	transform translate(7060px, -1000px) translateZ(-1210px) rotateY(-115deg) scale(4)
+	
+// .esc-6--wall-left-4
+// 	background url(../assets/imgs/esc-6--wall-left.jpg) no-repeat center center / cover
+// 	left: -1920px
+// 	transform: translate(-7060px, -1000px) translateZ(-1210px) rotateY(115deg) scale(4)
+	
+// .esc-6--wall-right-4
+// 	background url(../assets/imgs/esc-6--derecho.jpg) no-repeat center center / cover
+// 	left: -1920px
+// 	transform translate(7060px, -1000px) translateZ(-1210px) rotateY(-115deg) scale(4)
+
+.esc-6--floor
+.esc-6--ceiling
+	width: 1920px
+	height: 3840px
+
+.esc-6--floor
+	background url(../assets/imgs/esc-6--floor.jpg) no-repeat center center / cover
+	z-index 1
+	absolute()
+	transform: translate(-50%, -1900px) rotateX(90deg) translateZ(-1140px) translateY(-500px) scale(7.5)
+
+.esc-6--ceiling
+	background url(../assets/imgs/esc-6--ceiling.jpg) no-repeat center center / cover
+	top: 0
+	left: 0
+	transform: translate(-50%, -2060px) rotateX(90deg) translateZ(3000px) translateY(-500px) scale(7.5)
+	
+.esc-6--front
+	width: 1920px
+	height: 1080px
+	background url(../assets/imgs/esc-6--front.jpg) no-repeat center center / cover
+	transform translateZ(-8190px) translateY(-1000px) scale(4)
+
+.esc-6--back
+	width: 1920px
+	height: 1080px
+	background url(../assets/imgs/esc-6--back.jpg) no-repeat center center / cover
+	transform translateZ(5750px) translateY(-1000px) scale(4) rotateY(180deg)
+
+.esc-6--intro
+	width: 700px
+	height: 600px
+	transform: rotateY(90deg) translateZ(-1900px) translate(650px, 150px)
+	left: 695px
+
+.imagen
+	&--esc-6--arbol
+		transform: translate(-1500px, -150px) translateZ(-500px) rotateY(35deg) scale(2)
+		width: 480px
+	&--esc-6--arbol-1
+		transform: translate(-3600px, -1800px) translateZ(-6000px) rotateY(45deg) scale(3.5)
+		width: 1200px
+	&--esc-6--arbol-2
+		transform: translate(600px, -1300px) translateZ(-6500px) scale(5.8)
+		width: 1200px
+	&--esc-6--arbol-3
+		transform: translate(-6200px, -1500px) translateZ(-000px) rotateY(100deg) scale(4)
+		width: 1200px
+	&--esc-6--arbusto
+		transform: translate(3000px, -50px) translateZ(600px) rotateY(-90deg) scale(3)
+		width: 339px
+	&--esc-6--aves
+		transform: translate(-500px, -350px) translateZ(-4500px) scale(3.5)
+		width: 291px
+	&--esc-6--aves-2
+		transform: translate(3400px, -1000px) translateZ(800px) rotateY(-90deg) scale(3)
+		width: 480px
+	&--esc-6--balcon-mujeres
+		transform: translate(-2800px, -1450px) translateZ(2500px) rotateY(115deg) scale(3.2)
+		width: 480px
+	&--esc-6--flores
+		transform: translate(650px, 250px) translateZ(-1600px) rotateY(0deg) scale(3)
+		width: 480px
+	&--esc-6--luz-danzante
+		transform: translate(-50px, -100px) translateZ(2500px) scale(5)
+		width: 480px
+
+
+// .escena
+// 	aspect-ratio 4 / 2.25
+// 	height: clamp( 56.25vw, 100vh, 1000vh )
+// 	width: clamp( 100vw, 177vh, 1000vw )
+// 	position: relative
+
+.atras
+	z-index: -1 !important
+	display none !important
+
+.btn
+	bg rgba(el__color, 0.15)
+	color el__color
+	display: block
+	font-family font__primary
+	font-size 1.1rem
+	font-weight bold
+	letter-spacing 0.45rem
+	line-height: 1
+	padding 0.8rem 1.2rem
+	transition 0.3s all ease
+	uppercase()
+	cursor url(../assets/imgs/icon__cursor--hover.png),pointer !important
+	&:hover
+		transform scale(1.05)
+
+.btn--cerrar
+	background-size: cover !important
+	bg url(../assets/imgs/icon--cerrar.svg) no-repeat
+	// cursor pointer
+	display: block
+	height: 37px
+	width: 37px
+	cursor url(../assets/imgs/icon__cursor--hover.png),pointer !important
+
+.credits
+	&__logos
+		align-items: center
+		flex()
+		flex-wrap: wrap
+		gap 2rem
+		justify-content center
+		img
+			width: 200px
+			max-height: 85px
+			object-fit: contain
+
+.full
+	fixed()
+	height 100vh
+	left 0
+	top 0
+	width 100vw
+	overflow hidden
+
+.header
+	&__menu
+		bg color__fondo
+		fixed()
+		height 100%
+		hide()
+		left 0
+		max-width 0
+		overflow hidden
+		top 0
+		width auto
+		flex-direction column
+		a
+		button
+			font-size 1.1rem
+			color el__color
+			uppercase()
+			font-family font__primary
+			&:hover
+				underline()
+				// font-weight 600
+		ul
+			flex()
+			flex-direction column
+			gap 1rem
+			justify-content space-around
+			flex-grow 1
+			padding-bottom 10vh
+		img
+			max-width 100px
+			margin-bottom 2rem
+		.page__titulo
+			margin-bottom 2rem
+		&.visible
+			max-width 1000vw
+			min-width 400px
+			padding 7rem 2rem 2rem 2rem
+			z-index 12
+			flex()
+
+.interactivo
+	align-items center
+	fixed()
+	flex()
+	height: 100vh
+	justify-content center
+	left 0
+	overflow hidden
+	top 0
+	width: 100vw
+	z-index: 0
+	opacity 1
+	&.oculto
+		opacity 0
+
+.interface
+	hide()
+	&.visible
+		block()
+	&.interface--prologo
+		.inter__btn--menu
+			hide()
+
+.inter__btn
+	fixed()
+	z-index 99
+	&--sound
+	&--fullscreen
+	&--menu
+		img
+			height 2rem
+	&--sound
+		left 4.5rem
+		bottom 1.5rem
+	&--fullscreen
+		left 1.5rem
+		bottom 1.5rem
+	&--menu
+		left 1.5rem
+		top 1.5rem
+	&--logo
+		right 1.5rem
+		bottom 1.5rem
+		img
+			height 5rem
+
+.intro
+	align-items center
+	bg color__fondo
+	flex()
+	flex-direction column
+	justify-content center
+	z-index: 9
+	fixed()
+	width 100vw
+	height 100vh
+	transition 0.3s all ease
+	&.oculto
+		opacity 0
+	&__block
+	&__description
+		align-items center
+		flex()
+		flex-direction column
+		max-width 1400px
+	&__btn
+		bg rgba(el__color, 0.15)
+		color el__color
+		font-family font__primary
+		letter-spacing 0.45rem
+		font-weight bold
+		font-size 1.4rem
+		margin-top 1rem
+		padding 0.7rem 3.2rem
+		relative()
+		transition 0.3s all ease
+		uppercase()
+		&:hover
+			transform scale(1.05)
+	&__cerrar
+		absolute()
+		top calc(50% + 20vw)
+		bg color__fondo
+		color el__color
+		font-family font__primary
+		letter-spacing 0.45rem
+		font-weight bold
+		font-size: 3rem
+		padding: 2rem 0.5rem
+		left calc(50% + 23vw)
+		transition: 0.3s all ease
+		transform translate(-50%, -50%)
+		uppercase()
+		z-index: 10
+		width: 350px
+		&:hover
+			transform translate(-50%, -50%) scale(1.05)
+	&__description
+		margin-top 2rem
+	&__img
+		relative()
+		flex()
+		flex-direction column
+		// width calc(100% - 4rem)
+		// max-width 400px
+		max-width calc(100% - 4rem)
+		max-height 45vh
+		gap 0
+		figure
+			width 100%
+			flex()
+			align-items center
+			justify-content center
+		img
+			height 100%
+			max-width 100%
+			max-height 100%
+	&__nav
+		flex()
+		justify-content center
+		gap calc(10vw - 1rem)
+		align-items center
+		position: relative
+		z-index: 9
+		max-width 1400px
+	&__text
+		width calc( 100% - 4rem )
+		max-width 900px
+		text-align center
+		p
+			font-size 1rem
+			inter 1.6
+			margin-bottom 1rem
+	&__title
+		hide()
+
+.instrucciones
+	align-items center
+	display: flex
+	flex-wrap: wrap
+	gap 2vh 2rem
+	height 100%
+	justify-content space-between
+	margin 3rem auto 0
+	max-width: max_width
+	overflow auto
+	transition 0.3s all ease
+	&__bloque
+		align-self: stretch
+		flex()
+		justify-content center
+		width 100%
+		p
+			font-size 1rem
+			inter 1.3
+			max-width 800px
+			text-align center
+			width calc( 100% - 2rem )
+	&__bloque--mitad
+		align-items center
+		flex()
+		flex-direction column
+		gap 1rem
+		justify-content flex-start
+		width calc( ( 100% / 2 ) - 2rem )
+		img
+			margin 1rem auto
+			max-height 15vh
+		p
+			max-width 400px
+			a
+				font-variant small-caps
+				text-decoration underline
+	&__cerrar
+		display: block
+		margin-top 2vh
+		transition 0.3s all ease
+		transform-origin center bottom
+		img
+			height 80px
+		&:hover
+			transform scale(1.05)
+	&__titulo
+		color color__ocre
+		uppercase()
+	&__preguntas
+		text-decoration underline
+		uppercase()
+		letter-spacing .36em
+		text-align center
+		&:not(:first-of-type)
+			margin-top 2rem
+	&__titulo--4
+		letter-spacing .36em
+		font-variant small-caps
+		text-align center
+		&:not(:first-of-type)
+			margin-top 1.5rem
+	&.visible
+		z-index 10
+		flex()
+
+.loader
+	&__leyenda
+		color: blanco
+		font-family: font__primary
+		font-size: 1.3rem
+		margin-top: 1rem
+		uppercase()
+		letter-spacing 0.45rem
+
+.map
+	// bg url(../assets/map/combinado.png) no-repeat center center / contain
+	position relative
+	width 100%
+	aspect-ratio: 1.6 / 1
+	overflow: hidden
+	flex-shrink: 0
+	container: map / inline-size
+	&:not(.map--english)
+		bg url(../assets/map/map__bg.png) no-repeat center center / contain
+	&.map--english
+		bg url(../assets/map_eng/map__bg.png) no-repeat center center / contain
+	&__icon
+		absolute()
+		transform scale(0.5)
+		// button
+		// &:has(+ * + .map__icon:hover)
+		&.fade
+			opacity 0.15
+		&:hover
+			z-index 2
+			opacity 1
+			.map__line
+				opacity 1
+		&[data-icon="activismo"]
+			left: 75%
+			top: 58%
+			.map__line
+				top: -570%
+				left: -820%
+		&[data-icon="alcoholismo"]
+			left: 33%
+			top: 22%
+			.map__line
+				top: -188%
+				left: -308%
+		&[data-icon="apoyo_psicologico"]
+			left: 47%
+			top: 44%
+			.map__line
+				top: -371%
+				left: -605%
+		&[data-icon="artistica_espiritualidad"]
+			left: 75%
+			top: 42%
+			.map__line
+				top: -315%
+				left: -1153%
+		&[data-icon="autoestima"]
+			left: 27%
+			top: 18%
+			.map__line
+				top: -69%
+				left: -330%
+		&[data-icon="carencia"]
+			left: 73%
+			top: 34%
+			.map__line
+				top: -379%
+				left: -1017%
+		&[data-icon="celotipia"]
+			left: 62%
+			top: 32%
+			.map__line
+				top: -324%
+				left: -864%
+		&[data-icon="chamanismo"]
+			left: 42%
+			top: 60%
+			.map__line
+				top: -695%
+				left: -488%
+		&[data-icon="circulos"]
+			left: 15%
+			top: 24%
+			.map__line
+				top: -159%
+				left: -71%
+		&[data-icon="constelaciones"]
+			left: 19%
+			top: 43%
+			.map__line
+				top: -375%
+				left: -146%
+		&[data-icon="corrupcion"]
+			left: 26%
+			top: 33%
+			.map__line
+				top: -330%
+				left: -245%
+		&[data-icon="disfuncion_gobierno"]
+			left: 29%
+			top: 4%
+			.map__line
+				top: -9%
+				left: -431%
+		&[data-icon="educacion"]
+			left: 54%
+			top: 55%
+			.map__line
+				top: -316%
+				left: -804%
+		&[data-icon="empatia"]
+			left: 65%
+			top: 40%
+			.map__line
+				top: -295%
+				left: -871%
+		&[data-icon="espectadores"]
+			left: 43%
+			top: 28%
+			.map__line
+				top: -210%
+				left: -649%
+		&[data-icon="espiritualidad"]
+			left: 16%
+			top: 58%
+			.map__line
+				top: -522%
+				left: -107%
+		&[data-icon="feminismo_solidaridad"]
+			left: 64%
+			top: 56%
+			.map__line
+				top: -375%
+				left: -970%
+		&[data-icon="hijes"]
+			left: 64%
+			top: 23%
+			.map__line
+				top: -143%
+				left: -869%
+		&[data-icon="independencia_economica"]
+			left: 60%
+			top: 39%
+			.map__line
+				top: -200%
+				left: -1736%
+		&[data-icon="medicina_tradicional"]
+			left: 31%
+			top: 65%
+			.map__line
+				top: -856%
+				left: -347%
+		&[data-icon="medios_com"]
+			left: 34%
+			top: 41%
+			.map__line
+				top: -411%
+				left: -321%
+		&[data-icon="naturaleza"]
+			left: 26%
+			top: 50%
+			.map__line
+				top: -530%
+				left: -205%
+		&[data-icon="normalizacion"]
+			left: 48%
+			top: 15%
+			.map__line
+				top: -120%
+				left: -550%
+		&[data-icon="religion"]
+			left: 56%
+			top: 21%
+			.map__line
+				top: -111%
+				left: -705%
+		&[data-icon="religion_2"]
+			left: 20%
+			top: 0%
+			.map__line
+				top: -20%
+				left: -177%
+		&[data-icon="roles"]
+			left: 52%
+			top: 34%
+			.map__line
+				top: -417%
+				left: -700%
+		&[data-icon="socializacion"]
+			left: 36%
+			top: 11%
+			.map__line
+				top: -83%
+				left: -520%
+	&__line
+		absolute()
+		opacity 0
+		z-index: -1
+		// height: max-content
+		max-width: none
+		transform: scale(0.98)
+		transition 0.3s all ease
+		pointer-events: none
+
+.menu
+	background rgba(negro, 0.5)
+	fixed()
+	flex()
+	justify-content(flex-end)
+	height: 100vh
+	right 0
+	max-width: 0
+	overflow: hidden !important
+	top 0
+	width: 100vw
+	z-index: 99
+	&.visible
+		max-width: 100vw
+	&__botones
+		text-align: right
+		width: 100%
+		img
+			max-width: 25px
+	&__creditos
+		font-size: 0.9rem
+		font-family: 'Oswald'
+		color: blanco
+		padding: 1rem 0 0 0
+		text-align: center
+	&__contenedor
+		align-items(center)
+		background: rgba(#cfba9b, 0.84);
+		background: -webkit-linear-gradient(-225deg,  rgba(#cfba9b, 0.84) 0%,rgba(#b47911, 0.84) 86%,rgba(#592a1a, 0.91) 100%,rgba(#b47911, 0.84) 100%);
+		background: linear-gradient(-225deg,  rgba(#cfba9b, 0.84) 0%,rgba(#b47911, 0.84) 86%,rgba(#592a1a, 0.91) 100%,rgba(#b47911, 0.84) 100%);
+		flex()
+		flex-direction(column)
+		height: 100vh
+		justify-content(space-between)
+		max-width: 50vw
+		min-width: 300px
+		padding 1rem 1rem 1rem 3rem
+		z-index: 1;
+	&__links
+		width: 100%
+		a
+		button
+			block()
+			color: blanco
+			font-family: 'Oswald'
+			font-size: 1.3rem
+			padding: 0.8rem 0
+			talign left
+	&__redes
+		margin-bottom: 1rem
+		width: 100%
+		img
+			max-width: 30px
+
+.modal
+	align-items center
+	background: rgba(color__fondo, 0.8);
+	fixed()
+	flex()
+	height: 100vh
+	justify-content center
+	left 0
+	max-height: 0
+	overflow: hidden !important
+	top 0
+	width: 100vw
+	z-index: 99
+	&--page
+		z-index: 98
+	&.visible
+		max-height: 100vh
+	&__body
+		bg color__fondo
+		color el__color
+		max-height: 100vh
+		// max-width: max_width
+		max-width: 100vw
+		min-height: 25vh
+		height:100%
+		padding 2rem
+		relative()
+		width: 100vw
+		z-index: 1
+	&__close
+		absolute()
+		right 0
+		top 0
+		z-index 2
+		transform: translate(-100%, 100%)
+		cursor url(../assets/imgs/icon__cursor--hover.png),pointer !important
+		&:hover
+			transform translate(-100%, 100%) scale(1.05)
+		img
+			max-width: 30px
+	&__content
+		p
+			margin-bottom 1em
+	&__container
+		overflow auto
+		width 100%
+		height 100%
+		padding-right 1rem
+		flex()
+		flex-direction column
+	&__header
+		align-items center
+		flex()
+		gap 2vw
+		justify-content space-between
+		text-align center
+		margin-bottom 2rem
+	&__more
+		flex()
+		align-items center
+		gap 1rem
+	&__subheader
+		text-align center
+		margin 2rem 0
+	&__title
+		font-size 1.2rem
+		uppercase()
+		margin-bottom 0.5rem
+		letter-spacing 0.45rem
+	&__video
+		flex-grow 1
+
+.modales
+	fixed()
+	left 0
+	top 0
+	z-index: 98
+
+.page
+	bg color__fondo
+	// flex()
+	hide()
+	flex-direction column
+	justify-content space-around
+	padding 1.5rem
+	z-index -1
+	transition: all 1s ease
+	&__body
+		// align-items center
+		align-items: flex-start
+		bg color__fondo
+		color el__color
+		flex()
+		height:100%
+		justify-content center
+		max-height: 100vh
+		max-width: 100vw
+		min-height: 25vh
+		padding 2rem
+		relative()
+		width: 100vw
+		z-index: 1
+	&__cerrar
+		@extend .btn
+		position: absolute
+		right: 2rem
+		top: 2rem
+		z-index: 99
+		// cursor url(../assets/imgs/icon__cursor--hover.png),pointer !important
+		&:hover
+			transform scale(1.05)
+		&.oculto
+			hide()
+	&__columna
+		width 45%
+	&__container
+		// flex-wrap wrap
+		flex()
+		flex-direction: column
+		gap 1.5rem
+		justify-content: flex-start
+		max-height: 100%
+		max-width max_width
+		min-height: 100%
+		overflow: auto
+		padding 2rem 1.5rem
+		width: 100%
+		iframe
+			width 100%
+			min-height: 50vh
+	&__image
+		max-width 800px
+		&--envivo
+			display: block
+			text-align: center
+	&__titulo
+		img
+			height 40px
+	&__title
+		text-align center
+		color color__ocre
+		letter-spacing 0.45rem
+		font-size: 2.5rem
+		uppercase()
+	&.visible
+		z-index 10
+		flex()
+	&.oculto
+		opacity 0
+
+.prologo
+	bg #030303
+	display: flex
+	flex-wrap: wrap
+	height 100vh
+	justify-content space-between
+	overflow auto
+	transition 0.3s all ease
+	width 100vw
+	&.visible
+		z-index 10
+	&__slide
+		fixed()
+		left 0
+		top 0
+		width 100vw
+		height 100vh
+		transition 0.3s all ease
+		&[prologo-slide="1"]
+			.prologo__slide--1
+			.prologo__slide--2
+			.prologo__slide--3
+			.prologo__slide--4
+			.prologo__slide--5
+				opacity 0
+		&[prologo-slide="2"]
+			.prologo__slide--2
+			.prologo__slide--3
+			.prologo__slide--4
+			.prologo__slide--5
+				opacity 0
+			.prologo__slide--1
+				opacity 1
+				z-index 2
+				.prologo__slide__container
+					transform translate( 0 )
+		&[prologo-slide="3"]
+			.prologo__slide--1
+			.prologo__slide--3
+			.prologo__slide--4
+			.prologo__slide--5
+				opacity 0
+			.prologo__slide--2
+				opacity 1
+				z-index 2
+				.prologo__slide__container
+					transform translate( 0 )
+		&[prologo-slide="4"]
+			.prologo__slide--1
+			.prologo__slide--4
+			.prologo__slide--5
+				opacity 0
+			.prologo__slide--2
+			.prologo__slide--3
+				opacity 1
+				z-index 2
+				.prologo__slide__container
+					transform translate( 0 )
+		&[prologo-slide="5"]
+			.prologo__slide--1
+			.prologo__slide--2
+			.prologo__slide--3
+			.prologo__slide--5
+				opacity 0
+			.prologo__slide--4
+				opacity 1
+				z-index 2
+				.prologo__slide__container
+					transform translate( 0 )
+		&[prologo-slide="6"]
+			.prologo__slide--1
+			.prologo__slide--2
+			.prologo__slide--3
+				opacity 0
+			.prologo__slide--4
+			.prologo__slide--5
+				opacity 1
+				z-index 2
+				.prologo__slide__container
+					transform translate( 0 )
+		&[prologo-slide="7"]
+			.prologo__slide--1
+			.prologo__slide--2
+			.prologo__slide--3
+			.prologo__slide--4
+			.prologo__slide--5
+				opacity 0
+		&.safari // Hack para Safari en prólogo
+			.prologo__bg
+				opacity 0
+			// Agregar los fondos de cada paso, respaldo para Safari
+			&[prologo-slide="1"]
+				background url("../assets/imgs/esc-prologo--bg-1.webp") no-repeat center center / cover
+			&[prologo-slide="2"]
+				background url("../assets/imgs/esc-prologo--bg-2.webp") no-repeat center center / cover
+			&[prologo-slide="3"]
+			&[prologo-slide="4"]
+				background url("../assets/imgs/esc-prologo--bg-3.webp") no-repeat center center / cover
+			&[prologo-slide="5"]
+			&[prologo-slide="6"]
+				background url("../assets/imgs/esc-prologo--bg-4.webp") no-repeat center center / cover
+			&[prologo-slide="7"]
+				background url("../assets/imgs/esc-prologo--bg-5.webp") no-repeat center center / cover
+		&__container
+			flex()
+			relative()
+			transform translate( 0, -100px )
+			transition 0.4s ease all
+			gap 2rem
+			max-width 550px
+			text-align left
+			p
+				font-family font__primary
+				margin-bottom 1em
+				text-shadow: rgba(0,0,0,0.9) 1px 1px 1px
+		&--1
+		&--2
+		&--3
+		&--4
+		&--5
+			fixed()
+			flex()
+			height: 90vh
+			max-height 750px
+			left 50%
+			max-width max_width
+			top 50%
+			transform translate( -50%, -50% )
+			transition 0.4s ease all
+			width calc( 100% - 4rem)
+		&--1
+			justify-content center
+			align-items center
+			.prologo__slide__container
+				flex-direction column
+				gap 30vh
+				max-width 850px
+				text-align center
+				strong
+					color color__ocre
+		&--2
+			justify-content flex-start
+			align-items flex-start
+			.prologo__slide__container
+				flex-direction column
+		&--3
+			justify-content flex-end
+			align-items flex-end
+		&--4
+			justify-content flex-end
+			align-items flex-start
+			padding-top: 4rem
+		&--5
+			justify-content flex-start
+			align-items flex-end
+	&__bg
+		fixed()
+		left 0
+		top 0
+		width 100vw
+		height 100vh
+		opacity 1
+		video
+			object-fit cover
+			width 100%
+			height 100%
+	// &__bg
+	// 	&--1
+	// 	&--2
+	// 	&--3
+	// 	&--4
+	// 	&--5
+	// 	&--6
+	// 	&--7
+	// 	&--8
+	// 		fixed()
+	// 		left 0
+	// 		top 0
+	// 		width 100vw
+	// 		height 100vh
+	// 		transition 0.5s all ease
+	// 		background-size cover
+	// 		background-position center center
+	// 		background-repeat no-repeat
+	// 		opacity 0
+	// 	&--1
+	// 		background-image url("../assets/imgs/bg__prologo--1.jpg")
+	// 	&--2
+	// 		background-image url("../assets/imgs/bg__prologo--2.jpg")
+	// 	&--3
+	// 		background-image url("../assets/imgs/bg__prologo--3.jpg")
+	// 	&--4
+	// 		background-image url("../assets/imgs/bg__prologo--4.jpg")
+	// 	&--5
+	// 		background-image url("../assets/imgs/bg__prologo--5.jpg")
+	// 	&--6
+	// 		background-image url("../assets/imgs/bg__prologo--6.jpg")
+	// 	&--7
+	// 		background-image url("../assets/imgs/bg__prologo--7.jpg")
+	// 	&--8
+	// 		background-image url("../assets/imgs/bg__prologo--8.jpg")
+	&__p--big
+		font-family font__primary
+		letter-spacing 3px
+		font-size 2.89rem
+		margin-bottom 1rem !important
+		uppercase()
+	&__title
+		font-family font__primary
+		letter-spacing: 8px
+		font-size: calc(2.89rem + 2vh)
+		margin-bottom 1rem !important
+		uppercase()
+		color color__ocre
+
+
+.record
+	&__image
+		max-width: 300px
+	&__information
+		max-height 0
+		overflow hidden
+		&.visible
+			max-height 1000vh
+		a
+			font-variant small-caps
+			text-decoration underline
+		p:not(:last-of-type)
+		ul:not(:last-of-type)
+			margin-bottom 1rem
+		h4
+			// text-decoration underline
+			uppercase()
+			letter-spacing .36em
+			margin-bottom 1rem
+		li
+			list-style: disc
+			margin-left: 1rem
+	&__thumbnail
+		button
+			width 100%
+		img
+			max-width 100%
+			height 120px
+			width 100%
+			object-fit cover
+			
+.records
+	flex()
+	gap: 2rem
+	flex-grow: 1
+	&__col
+		&--groups
+			flex()
+			align-items center
+			flex-shrink 0
+		&--sections
+			flex-shrink 0
+		&--image
+			flex-shrink 0
+		&--information
+			flex-grow 1
+	&__group
+		button
+			color el__color
+			text-align left
+			width 100%
+			padding 0.2em 0.5em
+			&.active
+				border-bottom 1px solid currentColor
+	&__groups
+		flex()
+		flex-direction column
+		gap 1.5rem
+	&__section
+		max-height 0
+		overflow hidden
+		&.visible
+			max-height 1000vh
+	&__thumbnails
+		display grid
+		gap 1rem
+		grid-template-columns: repeat(2, 120px)
+			
+.rute
+	relative()
+	bg url("../assets/imgs/img__ruta.png") no-repeat center center / 90%
+	width: 100%
+	aspect-ratio: 2 / 1
+	&__title
+		color casi__blanco
+		uppercase()
+		letter-spacing 0.45rem
+		text-align center
+		font-size: 0.9rem
+	&__scene
+		absolute()
+		max-width 300px
+		transform: translate(-50%, -50%)
+		button
+			flex()
+			flex-direction column
+			align-items center
+		img
+			max-width 100px
+			
+		&--one
+			left: 18%
+			top: 18%
+		&--two
+			left: 32%
+			top: 90%
+		&--three
+			left: 49%
+			top: 35%
+		&--four
+			left: 66%
+			top: 86%
+		&--five
+			left: 76%
+			top: 14%
+		&--six
+			left: 94%
+			top: 66%
+
+.spinner
+	width: 10vw;
+	height: 10vw;
+	position: relative;
+	text-align: center;
+	-webkit-animation: sk-rotate 2.0s infinite linear;
+	animation: sk-rotate 2.0s infinite linear;
+	&.invisible
+		hide();
+	&__dot1
+	&__dot2
+		-webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+		animation: sk-bounce 2.0s infinite ease-in-out;
+		background-color: blanco;
+		border-radius: 100%;
+		block()
+		height: 60%;
+		position: absolute;
+		top: 0;
+		width: 60%;
+	&__dot2
+		-webkit-animation-delay: -1.0s;
+		animation-delay: -1.0s;
+		bottom: 0;
+		top: auto;
+
+.team
+	flex()
+	gap 2rem
+	margin-bottom 1rem
+	img
+		width: 200px
+		height: 200px
+		// max-width: 1000vw
+		object-fit: cover
+		flex-shrink: 0
+	&__information
+		flex-grow 1
+	&__member
+		block()
+		uppercase()
+		letter-spacing 0.36em
+	&__subtitle
+		text-align center
+
+.trailer
+	width: 100%
+	height: 100%
+	&__btn_titulo
+		@extend .btn
+		&:hover
+			transform scale(1.05)
+	&__titulo
+		width: 100%
+		flex()
+		flex-direction column
+		height: 100%
+		justify-content: center
+		align-items: center
+		img
+			max-width: 800px
+			width: 100%
+	&__video
+		&.oculto
+			display none
+
+.txt--center
+	text-align center
+
+.txt--bold
+	bold()
+
+.txt--white
+	color casi__blanco
+	
+.txt--ocre
+	color color__ocre
+
+.u__wrap
+	margin-left auto
+	margin-right auto
+	width: 95vw
+	// max-width: max_width
+
+._oculto
+	border 0
+	clip rect(0 0 0 0)
+	height 1px
+	margin -1px
+	overflow hidden
+	padding 0
+	position absolute
+	width 1px
+	&.focusable:active, &.focusable:focus
+		clip auto
+		height auto
+		margin 0
+		overflow visible
+		position static
+		width auto
+
+
+@-webkit-keyframes sk-rotate
+	100%
+		-webkit-transform: rotate(360deg)
+@keyframes sk-rotate
+	100%
+		transform: rotate(360deg);
+		-webkit-transform: rotate(360deg)
+
+@-webkit-keyframes sk-bounce 
+	0%, 100%
+		-webkit-transform: scale(0.0)
+	50%
+		-webkit-transform: scale(1.0)
+
+@keyframes sk-bounce
+	0%, 100% 
+		transform: scale(0.0);
+		-webkit-transform: scale(0.0);
+	50%
+		transform: scale(1.0);
+		-webkit-transform: scale(1.0);
+
+@keyframes rotate
+	0%
+		transform: perspective(120px) rotateX(0deg) rotateY(0deg) translate(-50%, -50%);
+	50%
+		transform: perspective(120px) rotateX(-180deg) rotateY(0deg) translate(-50%, -50%);
+	100%
+		transform: perspective(120px) rotateX(-180deg) rotateY(-180deg) translate(-50%, -50%);
+
+@keyframes pulse
+	0%, 50%
+		opacity: 0.8
+	100%
+		opacity: 0
+		transformar( translate( -50%, -50% ) scale(7) )
+
+// Media queries
+
+
+// 1152 * 0.42 / 0.5
+@container map (max-width: 1050px)
+	.map
+		&__icon 
+			transform: scale(0.456)
+
+@container map (max-width: 967.68px)
+	.map
+		&__icon 
+			transform: scale(0.42)
+@container map (max-width: 921.6px)
+	.map
+		&__icon 
+			transform: scale(0.4)
+@container map (max-width: 829.44px)
+	.map
+		&__icon 
+			transform: scale(0.36)
+	
+@container map (max-width: 737.28px)
+	.map
+		&__icon 
+			transform: scale(0.32)
+
+@container map (max-width: 645.12px)
+	.map
+		&__icon 
+			transform: scale(0.28)
+
+@container map (max-width: 599.04px)
+	.map
+		&__icon 
+			transform: scale(0.26)
+
+@container map (max-width: 506.88px)
+	.map
+		&__icon 
+			transform: scale(0.22)
+
+@container map (max-width: 414.72px)
+	.map
+		&__icon 
+			transform: scale(0.18)
+
+@media screen and (max-width : 900px)
+	.bloque--cuarto
+	.bloque--tercio
+		width 49%
+
+@media screen and (max-width : med_query)
+	.bloques--reticula
+	.bloques--reticula--centrado
+	.bloques--reticula--around
+	.bloques--reticula__renglon
+		flex-direction(column)
+		align-items(center);
+	.bloque--cuarto
+	.bloque--mitad
+	.bloque--tercio
+		width 100%
+	.bloque__columnas
+		-webkit-column-count: 1
+		-moz-column-count: 1
+		column-count: 1
+
+@media print
+	@page
+		margin: 1cm;
+	*
+	*:before
+	*:after
+	*:first-letter
+	p:first-line
+	div:first-line
+	blockquote:first-line
+	li:first-line
+		background: transparent !important;
+		color: #000 !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	*
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	a[href]:after
+		content: " (" attr(href) ")";
+	a[href^="http"]:not([href*="mywebsite.com"]):after
+		content: " (" attr(href) ")";
+	body > *:not(main)
+		display: none;
+	h1
+	h2
+		page-break-after: always;
+	img
+		max-width 100% !important
+	p, h2, h3
+		orphans: 3;
+		widows: 3;
+	section
+		page-break-before: always;
+
