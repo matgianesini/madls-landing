@@ -75,7 +75,7 @@ a#lang_switcher {
 #title_image {
     max-width: 100vw;
     height: 100vh;
-    background: url("https://masalladelasombra.com/assets/imgs/img__titulo--esp.gif");
+    background: url("assets/img__titulo--esp.gif");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
