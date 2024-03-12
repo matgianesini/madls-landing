@@ -86,6 +86,10 @@ a#lang_switcher {
     text-align: center;
 }
 
+.en #title_image {
+    background-image: url("madls/assets/imgs/img__titulo--eng.gif");
+}
+
 @media (max-height: 460px) {
     #title_image {
         background-size: 50%;
