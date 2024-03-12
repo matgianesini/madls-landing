@@ -433,7 +433,7 @@ function func__elements__ep_prologo() {
 	let is_safari = (!!window.ApplePaySetupFeature || !!window.safari) && agentHas("Safari") && !agentHas("Chrome") && !agentHas("CriOS");
 
 	escenas.prologo = document.querySelector(".js--prologo__slide");
-	escenas.prologo_video = document.querySelector(".js--prologo__video");
+	// escenas.prologo_video = document.querySelector(".js--prologo__video");
 
 	if ( is_safari ) {
 		escenas.prologo.classList.add("safari");
@@ -443,13 +443,13 @@ function func__elements__ep_prologo() {
 
 	let seguir = false;
 
-	escenas.prologo_video.addEventListener("ended", (e) => {
-		// console.log( "Video stopped either because it has finished playing or no further data is available.");
-		// console.log("sin settimeout");
+	// escenas.prologo_video.addEventListener("ended", (e) => {
+	// 	// console.log( "Video stopped either because it has finished playing or no further data is available.");
+	// 	// console.log("sin settimeout");
 
-		func__skip_prologo()
+	// 	func__skip_prologo()
 
-	});
+	// });
 
 	if ( escenas.prologo_btn_skip ) {
 		escenas.prologo_btn_skip.addEventListener('click', function(e) {
