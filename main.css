@@ -19,6 +19,18 @@ a#lang_switcher {
   z-index: 1;
 }
 
+#fullscreen-toggle {
+  filter: invert(1);
+  width: 30px;
+  position: fixed;
+  right: 16px;
+  top: 8px;
+}
+
+#fullscreen-toggle:hover {
+  cursor: pointer;
+}
+
 #masthead {
   position: absolute;
   top: 20px;
