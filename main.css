@@ -39,6 +39,10 @@ a#lang_switcher {
   z-index: -1;
 }
 
+#luz img {
+  max-width: 30px;
+}
+
 #introbkgd {
   position: absolute;
   top: 0;
@@ -131,10 +135,11 @@ a#lang_switcher {
 }
 
 @media (min-width: 740px) {
-/*  #introvideopositioner video {
-    transform: translateX(-50%) translateY(-50%);
-    top: 35%;
-  }*/
+  #luz img {
+    margin-bottom: 7vh;
+    margin-left: 2vw;
+  }
+
   .introline {
     padding: 0 30px;
   }

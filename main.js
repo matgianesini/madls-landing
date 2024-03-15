@@ -25,17 +25,17 @@ function fadeLinesOnScroll() {
 
   // Fade out 'luz' as the user scrolls down
   var fadeStart = 100; // Start fade at 100px scroll, adjust as needed
-  var fadeUntil = 1600; // Completely faded at 800px scroll, adjust as needed
+  var fadeUntil = 1600; // Completely faded when scrolled this many pixels, adjust as needed
   var fadeRange = fadeUntil - fadeStart;
   var scrollY = window.scrollY;
   
-  if (scrollY > fadeStart) {
-    var opacity = 1 - ((scrollY - fadeStart) / fadeRange);
-    opacity = opacity < 0 ? 0 : opacity; // Ensure opacity is not negative
-    luz.style.opacity = opacity.toString();
-  } else {
-    luz.style.opacity = '1'; // Full opacity when above fadeStart
-  }
+  // if (scrollY > fadeStart) {
+  //   var opacity = 1 - ((scrollY - fadeStart) / fadeRange);
+  //   opacity = opacity < 0 ? 0 : opacity; // Ensure opacity is not negative
+  //   luz.style.opacity = opacity.toString();
+  // } else {
+  //   luz.style.opacity = '1'; // Full opacity when above fadeStart
+  // }
 
   // Down arrow fade logic
   if (window.scrollY > 10) {
