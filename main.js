@@ -101,7 +101,7 @@ function throttle(func, limit) {
   }
 }
 
-const adjustVideoPlaybackThrottled = throttle(adjustVideoPlayback, 100); // Adjust the 100ms to your needs
+const adjustVideoPlaybackThrottled = throttle(adjustVideoPlayback, 500); // Adjust the 100ms to your needs
 
 function desktopIntro(){
   console.log('desktopIntro()');
