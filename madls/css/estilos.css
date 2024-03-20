@@ -248,6 +248,36 @@ h6 {
 .body[data-scena="ep_six"] {
   perspective: 400px;
 }
+#uparrow {
+  display: block;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%) ;
+  top: 90%;
+  width: 50px;
+  height: 50px;
+  background: url("../../assets/up-arrow.svg") no-repeat center center;
+  animation: pulsate 3s ease-in-out infinite;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+}
+#uparrow.hiding {
+  opacity: 0;
+}
+@keyframes pulsate {
+    0% {
+        top: 87%;
+    }
+
+    50% {
+        top: 90%;
+    }
+
+    100% {
+        top: 87%;
+    }
+}
 .scene {
   position: relative;
   transform-style: preserve-3d;

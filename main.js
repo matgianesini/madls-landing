@@ -105,12 +105,27 @@ function throttle(func, limit) {
 
 const adjustVideoPlaybackThrottled = throttle(adjustVideoPlayback, 500); // Adjust the 100ms to your needs
 
+function ensureLastFrameAtBottom() {
+  const video = document.querySelector('video');
+  // Only proceed if video is defined and has a duration
+  if (video && video.duration) {
+    const scrollPosition = window.pageYOffset;
+    const windowInnerHeight = window.innerHeight;
+    const bodyHeight = document.body.offsetHeight;
+
+    if (scrollPosition + windowInnerHeight >= bodyHeight) {
+      video.currentTime = video.duration; // Set to last frame
+    }
+  }
+}
+
 function desktopIntro(){
   console.log('desktopIntro()');
   window.addEventListener('scroll', function() {
     fadeLinesOnScroll();
     adjustVideoPlaybackOptimized(); // Use the throttled version
     checkScrollBottomAndChangeBackground();
+    ensureLastFrameAtBottom(); // Ensure the video is on the last frame if at the bottom of the page
   }, false);
 }
 
