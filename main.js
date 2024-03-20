@@ -1,5 +1,5 @@
 document.getElementById('fullscreen-toggle').addEventListener('click', function() {
-  let elem = document.getElementById('main');
+  let elem = document.getElementById('eldest');
   
   if (!document.fullscreenElement) {
     if (elem.requestFullscreen) {
@@ -22,6 +22,8 @@ document.getElementById('fullscreen-toggle').addEventListener('click', function(
       document.msExitFullscreen();
     }
   }
+
+  // desktopIntro();
 });
 
 
