@@ -284,23 +284,21 @@ a {
 .modal-content {
   position: relative;
   background-color: #000000;
-  margin: 0 auto; /* 10% from the top and centered */
+/*  margin: 0 auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  border: 1px solid #888;*/
+  width: 100%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
 .close {
   color: #aaaaaa;
-  float: right;
-  font-size: 28px;
+  font-size: 48px;
   font-weight: bold;
+  position: absolute;
+  right: 2vw;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
+.close:hover {
   cursor: pointer;
 }
