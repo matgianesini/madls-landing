@@ -75,10 +75,10 @@ a#lang_switcher {
   width: 100%;
   height: 100%;
   position: absolute;
-  left: 50%;
+  scale: 2;
+  left: 100%;
   transform: translateX(-50%);
   top: 0;
-/*  scale: 2;*/
 }
 
 #introvideopositioner.hiding {
@@ -116,6 +116,10 @@ a#lang_switcher {
 @media (max-width: 460px) {
     #luz {
         margin-left: 2vw;
+    }
+    #introvideopositioner video {
+        left: 200%;
+        scale: 4;
     }
     #title_image {
         background-size: 70%;

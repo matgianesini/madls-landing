@@ -127,6 +127,9 @@ function ensureLastFrameAtBottom() {
 
     if (scrollPosition + windowInnerHeight >= bodyHeight) {
       video.currentTime = video.duration; // Set to last frame
+    //   video.style.display = "none";
+    // } else {
+    //   video.style.display = "block";
     }
   }
 }
