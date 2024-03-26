@@ -34,9 +34,10 @@ function fadeLinesOnScroll() {
   var wh = window.innerHeight;
   var offsetPoint = wh / 2; // Adjust as needed
   var centerpoint = offsetPoint;
+  var scrollY = window.scrollY;
 
   // Fade logic for intro lines
-  if (window.scrollY > introTop) {
+  if (scrollY > introTop) {
     document.getElementById('introvideopositioner').classList.remove('hiding');
 
     faders.forEach(function(fader) {
@@ -54,17 +55,16 @@ function fadeLinesOnScroll() {
 
   // Fade out 'luz' as the user scrolls down
   var fadeStart = 100; // Start fade at 100px scroll, adjust as needed
-  var fadeUntil = 1600; // Completely faded when scrolled this many pixels, adjust as needed
+  var fadeUntil = 1800; // Completely faded when scrolled this many pixels, adjust as needed
   var fadeRange = fadeUntil - fadeStart;
-  var scrollY = window.scrollY;
   
-  // if (scrollY > fadeStart) {
-  //   var opacity = 1 - ((scrollY - fadeStart) / fadeRange);
-  //   opacity = opacity < 0 ? 0 : opacity; // Ensure opacity is not negative
-  //   luz.style.opacity = opacity.toString();
-  // } else {
-  //   luz.style.opacity = '1'; // Full opacity when above fadeStart
-  // }
+  if (scrollY > fadeStart) {
+    var opacity = 1 - ((scrollY - fadeStart) / fadeRange);
+    opacity = opacity < 0 ? 0 : opacity; // Ensure opacity is not negative
+    luz.style.opacity = opacity.toString();
+  } else {
+    luz.style.opacity = '1'; // Full opacity when above fadeStart
+  }
 
   // Down arrow fade logic
   if (window.scrollY > 10) {
@@ -105,6 +105,18 @@ function throttle(func, limit) {
 
 const adjustVideoPlaybackThrottled = throttle(adjustVideoPlayback, 500); // Adjust the 100ms to your needs
 
+function ensureZeroFrameAtTop() {
+  const video = document.querySelector('video');
+  // Only proceed if video is defined
+  if (video) {
+    const scrollPosition = window.pageYOffset;
+
+    if (scrollPosition === 0) {
+      video.currentTime = 0; // Reset to first frame
+    }
+  }
+}
+
 function ensureLastFrameAtBottom() {
   const video = document.querySelector('video');
   // Only proceed if video is defined and has a duration
@@ -126,6 +138,7 @@ function desktopIntro(){
     adjustVideoPlaybackOptimized(); // Use the throttled version
     checkScrollBottomAndChangeBackground();
     ensureLastFrameAtBottom(); // Ensure the video is on the last frame if at the bottom of the page
+    ensureZeroFrameAtTop(); // Ensure the video resets to the first frame if at the top of the page
   }, false);
 }
 
