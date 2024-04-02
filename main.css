@@ -1,5 +1,16 @@
 @import url("https://use.typekit.net/esf0ynx.css");
 
+/* For Webkit browsers like Safari and Chrome */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge, and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 body {
   background: black;
   transition: background 0.5s ease;
