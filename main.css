@@ -93,7 +93,7 @@ a#lang_switcher {
     max-width: 100vw;
     height: 100vh;
     background: url("assets/img__titulo--esp.gif");
-/*    background-size: contain;*/
+    background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
     filter: invert(1);
