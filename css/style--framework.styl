@@ -1,0 +1,222 @@
+
+
+*,
+*:before,
+*:after
+	box-sizing: border-box
+	border 0
+	font-family inherit
+	font-size 100%
+	font-style inherit
+	font-weight inherit
+	margin 0
+	outline 0
+	padding 0
+	vertical-align top
+	cursor url(../assets/imgs/icon__cursor.png),auto
+	// cursor url(../assets/imgs/icon__cursor.png),auto
+	&:focus
+		outline 0
+	&.unselectable
+		-moz-user-select: -moz-none
+		-khtml-user-select: none
+		-webkit-user-select: none
+		-ms-user-select: none
+		user-select: none
+
+::-moz-selection
+	background negro
+	color blanco
+	text-shadow none
+
+::selection
+	background casi__negro
+	color #fff
+	text-shadow none
+
+a 
+	color el__color
+	text-decoration none
+	img
+		border 0
+	&:focus, &:active, &:hover
+		text-decoration underline
+
+blockquote
+q
+	quotes "" ""
+	&:before, &:after
+		content ""
+
+body
+	bg color__fondo
+	color el__color
+	font f__uno font__primary
+	inter 1.35
+	width 100%
+	flex()
+	flex-direction(column)
+	min-height: 100vh
+	cursor url(../assets/imgs/icon__cursor.png),auto
+	// cursor url(../assets/imgs/icon__cursor.png),auto
+
+button
+	border none
+	background none
+	cursor url(../assets/imgs/icon__cursor.png),pointer
+	// cursor url(../assets/imgs/icon__cursor.png),pointer
+	cursor pointer
+	-webkit-appearance:none
+	&:hover
+		cursor url(../assets/imgs/icon__cursor.png),pointer
+		// cursor url(../assets/imgs/icon__cursor.png),pointer
+		cursor pointer
+
+caption
+th
+td
+	font-weight normal
+	text-align left
+
+em
+	italic()
+
+fieldset
+	border none
+
+html
+	font f__uno font__primary
+	font-size 100%
+	overflow-y scroll
+	-webkit-text-size-adjust 100%
+	-ms-text-size-adjust 100%
+
+input,
+textarea
+	bg none
+	border none
+	box-sizing: border-box
+	padding 1rem
+
+img
+	max-width 100%
+	height auto
+	vertical-align top
+		
+ol, ul
+	list-style none
+
+p
+	inter 1.35
+
+// strong
+// 	font-weight: 800
+
+svg:not(:root)
+	overflow: hidden
+
+table
+	border-collapse separate
+	border-spacing 0
+
+input[type="text"]
+input[type="email"]
+input[type="search"]
+input[type="submit"]
+input[type="button"]
+	-webkit-appearance: none
+	-moz-appearance: none 
+	
+
+.animacion
+	transicion 0.3s all ease
+	&:after
+	&:before
+		transicion 0.3s all ease
+
+
+.bloques--flex
+	flex()
+
+.bloques--reticula
+	flex()
+	justify-content(space-between)
+	// p
+	// 	width: 0 Para que los párrafos no se extiendan
+
+.bloques--reticula--centrado
+	flex()
+	justify-content(center)
+	align-items(center)
+
+.bloques--reticula--around
+	flex()
+	justify-content(space-around)
+
+.bloques--reticula--derecha
+	flex()
+	justify-content(flex-end)
+
+.bloques--reticula__renglon
+	flex()
+	justify-content(space-between)
+	flex-wrap(wrap)
+
+.bloques__renglon
+	flex()
+	flex-wrap(wrap)
+
+.bloques__renglon--centrado
+	flex()
+	flex-wrap(wrap)
+	justify-content(center)
+
+.bloques--renglones
+	flex()
+	justify-content(space-between)
+	flex-direction(column)
+
+.bloques--renglones--centrado
+	align-items(center)
+	flex()
+	flex-direction(column)
+	justify-content(center)
+
+.bloque--descargas
+	margin: 2rem 0 1rem
+
+.bloque--fijo
+	-webkit-flex-shrink: 0
+	flex-shrink: 0
+
+.bloque--grow
+	-webkit-flex-grow: 1
+	flex-grow: 1
+
+.bloque--cuarto
+	width 24%
+
+.bloque--full
+	width 100%
+
+.bloque--mitad
+	width 49%
+
+.bloque--tercio
+	width calc( 98% / 3 )
+
+.bloque__columnas
+	margin-top: 1rem
+	-webkit-column-count: 2
+	-moz-column-count: 2
+	column-count: 2
+	-webkit-column-gap: 56px
+	-moz-column-gap: 56px
+	column-gap: 56px
+
+.bloque__columna--centrada
+	margin 0 auto
+	max-width: 690px
+
+.bloque
+	margin-top: 2rem

@@ -1,0 +1,247 @@
+//
+// Episode Six
+//
+
+// Las 8 paredes forman un octágono regular alrededor del usuario
+// (el centro de giro de la escena). Cada pared está a la distancia
+// que antes tenía front; las paredes laterales reparten el panorama
+// de wall-left / wall-right en tres tramos continuos.
+:root
+	--scene6-times 1.5
+	--scene6-apotema calc( 8190px * var(--scene6-times) ) // distancia del centro a cada pared
+	--scene6-lado calc( var(--scene6-apotema) * 0.828427 ) // 2 · tan(22.5°)
+	--scene6-traslape 2px // ancho extra (antes de scale(4)) para que las esquinas no dejen ver una línea negra
+	--scene6-alto calc( 1296px * var(--scene6-times) ) // alto antes de scale(4)
+	--scene6-centro-y -838px // altura del centro de las paredes (la que tenía front)
+
+
+.esc-6--ceiling
+.esc-6--front
+.esc-6--back
+.esc-6--background-front
+.esc-6--wall-left
+.esc-6--wall-right
+.esc-6--wall-left-2
+.esc-6--wall-right-2
+.esc-6--wall-left-3
+.esc-6--wall-right-3
+.esc-6--intro
+	position: absolute
+	top: calc( -540px * var(--scene6-times))
+	left: calc( -960px * var(--scene6-times))
+	z-index 1
+
+// Cada pared se centra en el origen, gira hacia su lado del octágono
+// y se aleja la apotema
+.esc-6--front
+.esc-6--back
+.esc-6--wall-left
+.esc-6--wall-right
+.esc-6--wall-left-2
+.esc-6--wall-right-2
+.esc-6--wall-left-3
+.esc-6--wall-right-3
+	--angulo 0deg
+	width: calc( var(--scene6-lado) / 4 + var(--scene6-traslape) )
+	height: var(--scene6-alto)
+	left: calc( var(--scene6-lado) / -8 - var(--scene6-traslape) / 2 )
+	top: calc( var(--scene6-alto) / -2 )
+	transform: translateY(var(--scene6-centro-y)) rotateY(var(--angulo)) translateZ(calc( var(--scene6-apotema) * -1 )) scale(4)
+	// opacity 0.8
+
+.esc-6--front
+	background url(../assets/imgs/esc-6--front.webp) no-repeat center center / cover
+
+.esc-6--back
+	--angulo 180deg
+	background url(../assets/imgs/esc-6--back.webp) no-repeat center center / cover
+
+// Panorama: el tramo 0% queda junto a back y el 100% junto a front (izquierda),
+// y al revés del lado derecho
+.esc-6--wall-left
+.esc-6--wall-left-2
+.esc-6--wall-left-3
+	background url(../assets/imgs/esc-6--wall-left.webp) no-repeat 0% 50% / 300% auto
+
+.esc-6--wall-right
+.esc-6--wall-right-2
+.esc-6--wall-right-3
+	background url(../assets/imgs/esc-6--wall-right.jpg) no-repeat 0% 50% / 300% auto
+
+.esc-6--wall-left
+	--angulo 45deg
+	background-position-x 100%
+
+.esc-6--wall-left-2
+	--angulo 90deg
+	background-position-x 50%
+
+.esc-6--wall-left-3
+	--angulo 135deg
+	background-position-x 0%
+
+.esc-6--wall-right
+	--angulo -45deg
+	background-position-x 0%
+
+.esc-6--wall-right-2
+	--angulo -90deg
+	background-position-x 50%
+
+.esc-6--wall-right-3
+	--angulo -135deg
+	background-position-x 100%
+
+// Techo y piso cubren el octágono (2 × apotema) y quedan en el borde
+// superior e inferior de las paredes
+.esc-6--floor
+.esc-6--ceiling
+	position: absolute
+	width: calc( var(--scene6-apotema) / 6.4 )
+	height: calc( var(--scene6-apotema) / 6.4 )
+	left: calc( var(--scene6-apotema) / -12.8 )
+	top: calc( var(--scene6-apotema) / -12.8 )
+	z-index 1
+
+.esc-6--floor
+	background url(../assets/imgs/esc-6--floor.webp) no-repeat center center / cover
+	transform: translateY(calc( var(--scene6-centro-y) + var(--scene6-alto) * 2 )) rotateX(90deg) scale(12.8)
+
+.esc-6--ceiling
+	background url(../assets/imgs/esc-6--ceiling.jpg) no-repeat center center
+	background-size 100% 100%
+	transform: translateY(calc( var(--scene6-centro-y) - var(--scene6-alto) * 2 )) rotateX(90deg) scale(12.8)
+
+.esc-6--intro
+	width: 700px
+	height: 600px
+	transform: rotateY(90deg) translateZ(-1900px) translate(650px, 150px)
+	left: 695px
+
+.imagen
+	&--esc-6--arbol
+		transform: translate(-1600px, -50px) translateZ(-400px) rotateY(75deg) scale(2)
+		width: 480px
+	&--esc-6--arbol-1
+		transform: translate(-3600px, -1800px) translateZ(-6000px) rotateY(45deg) scale(3.5)
+		width: 1200px
+	&--esc-6--arbol-2
+		transform: translate(600px, -1700px) translateZ(-6500px) scale(5.8)
+		width: 1200px
+	&--esc-6--arbol-3
+		transform: translate(-6200px, -1500px) translateZ(-000px) rotateY(100deg) scale(4)
+		width: 1200px
+	
+	&--esc-6--st-01
+		transform: translate(9000px, -1000px) translateZ(2000px) rotateY(-90deg) scale(22)
+		width: 400px
+	&--esc-6--st-02
+		transform: translate(-1000px, -400px) translateZ(4000px) rotateY(-15deg) scale(10)
+		width: 327px
+	&--esc-6--st-03
+		transform: translate(5600px, -1700px) translateZ(-3000px) rotateY(-60deg) scale(10)
+		  width: 295px
+	&--esc-6--st-04
+		transform: translate(1000px, 650px) translateZ(-3650px) rotateY(0deg) scale(2)
+		width: 274px
+	&--esc-6--st-04-2
+		transform: translate(-2200px, 650px) translateZ(1000px) rotateY(90deg) scale(3)
+		width: 274px
+	&--esc-6--st-05
+		transform: translate(-4000px, 800px) translateZ(-2300px) rotateY(75deg) scale(3)
+		width: 228px
+	&--esc-6--st-05-2
+		transform: translate(-1200px, 650px) translateZ(-2000px) rotateY(75deg) scale(2)
+		width: 228px
+		hide()
+	&--esc-6--st-06
+		transform: translate(1800px, 580px) translateZ(2500px) scale(3)
+		width: 151px
+	&--esc-6--st-06-2
+		transform: translate(-850px, 650px) translateZ(-2200px) rotateY(50deg) scale(3)
+		width: 151px
+	&--esc-6--st-07
+		transform: translate(4000px, 650px) translateZ(-1650px) rotateY(-65deg) scale(3.4)
+		width: 151px
+	&--esc-6--st-07-2
+		transform: translate(-1500px, 650px) translateZ(-500px) rotateY(75deg) scale(2)
+		width: 151px
+	&--esc-6--st-08
+		transform: translate(-600px, 650px) translateZ(1400px) rotateY(30deg) scale(1.5)
+		width: 469px
+	&--esc-6--st-08-2
+		transform: translate(-4500px, 700px) translateZ(-2000px) rotateY(75deg) scale(2.2)
+		width: 469px
+		hide()
+	&--esc-6--st-09
+		transform: translate(1600px, 650px) translateZ(-600px) rotateY(-45deg) scale(1)
+		width: 469px
+	&--esc-6--st-10
+		transform: translate(800px, 900px) translateZ(-6400px) rotateY(5deg) scale(5)
+		  width: 502px
+	&--esc-6--st-11
+		transform: translate(-2800px, 750px) translateZ(3600px) rotateY(-30deg) scale(4)
+		width: 600px
+	&--esc-6--st-11-2
+		transform: translate(-5400px, 950px) translateZ(1200px) rotateY(-70deg) scale(4)
+		width: 600px
+	&--esc-6--st-12
+		transform: translate(-3300px, 900px) translateZ(-4400px) rotateY(45deg) scale(5)
+		width: 600px
+	&--esc-6--st-13
+		transform: translate(4500px, 850px) translateZ(-4000px) rotateY(-45deg) scale(9)
+		width: 274px
+	&--esc-6--st-14
+		transform: translate(10000px, 1550px) translateZ(3000px) rotateY(80deg) scale(8)
+		width: 600px
+		
+	&--esc-6--st-15
+		transform: translate(4500px, 800px) translateZ(-650px) rotateY(-90deg) scale(3.4)
+		width: 274px
+		
+	&--esc-6--aves-3
+		transform: translate(4300px, -3200px) translateZ(-5300px) rotateY(-60deg) scale(5)
+		width: 355px
+	&--esc-6--cascada
+		transform: translate(8500px, -2150px) translateZ(6000px) rotateY(-90deg) rotateX(30deg) scale(3.5)
+		width: 327px
+	&--esc-6--nubes
+		// transform: translate(-3600px, -2000px) translateZ(-6000px) rotateY(45deg) scale(3.5)
+		transform: translate(-9500px, -4000px) translateZ(-4000px) rotateY(60deg) rotateZ(15deg) scale(5.5)
+		width: 480px
+	&--esc-6--sol
+		// transform: translate(1800px, -1200px) translateZ(3000px) scale(4)
+		transform: translate(-7000px, -3300px) translateZ(-5300px) rotateY(60deg) rotateZ(15deg) scale(6)
+		width: 480px
+		
+	&--esc-6--st
+		transform: translate(-5000px, -350px) translateZ(2500px) rotateY(150deg) scale(7)
+		width: 480px
+	&--esc-6--st-2
+		// Monumento
+		transform: translate(900px, 0px) translateZ(-1400px) rotateY(-25deg) scale(5)
+		width: 232px
+		
+	&--esc-6--tormenta
+		transform: translate(8500px, -4000px) translateZ(6000px) rotateY(-90deg) rotateX(30deg) scale(6)
+		// transform: translate(-5700px, -2300px) translateZ(-3300px) rotateY(60deg) rotateZ(15deg) scale(7)
+		width: 480px
+		// hide()
+
+	&--esc-6--arbusto
+		transform: translate(500px, -50px) translateZ(1600px) rotateY(30deg) scale(4.2)
+		width: 339px
+	&--esc-6--aves
+		transform: translate(-500px, -350px) translateZ(-4500px) scale(3.5)
+		width: 291px
+	&--esc-6--aves-2
+		transform: translate(500px, -1300px) translateZ(1600px) rotateY(30deg) scale(3)
+		width: 480px
+	&--esc-6--flores
+		transform: translate(600px, 800px) translateZ(-1000px) rotateY(-25deg) rotateX(30deg) scale(2.3)
+		width: 480px
+
+
+// [class^="imagen--esc-6--"], 
+// [class*=" imagen--esc-6--"]
+// 	display: none !important
