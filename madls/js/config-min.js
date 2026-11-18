@@ -1,1 +1,0 @@
-var menuSource=document.getElementById("contenedor-Template").innerHTML,menuTemplate=Handlebars.compile(menuSource);document.getElementById("corrupcionario").innerHTML=menuTemplate(contenidoInteractivo);
